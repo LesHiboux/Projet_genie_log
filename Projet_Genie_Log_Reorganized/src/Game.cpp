@@ -171,18 +171,22 @@ Skill Game::selectSkillJoueur()
 	std::cerr << "sélectionnez une compétence" << std::endl;
 	while (done!=true)
 	{
-		int select;	//faire des sélections
+		std::string select;	//faire des sélections
 		std::cin >> select;
-		while ( select<=0 || select > joueur.getNbSkills())
-		{
-			std::cin >> select;
+		if (select=="quitter") done=true;
+		else {
+			int select_skill=std::stoi(select);
+			while ( select_skill<=0 || select_skill > joueur.getNbSkills())
+			{
+				std::cin >> select_skill;
+			}
+			sort=joueur.getSkill(select_skill);
+			if (joueur.available(sort))
+			{
+				done=true;
+			}
+			else std::cerr << "Pas assez de mana" << std::endl;
 		}
-		sort=joueur.getSkill(select);
-		if (joueur.available(sort))
-		{
-			done=true;
-		}
-		else std::cerr << "Pas assez de mana" << std::endl;
 	}
 	return sort;
 }

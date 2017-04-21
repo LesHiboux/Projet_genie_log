@@ -16,11 +16,11 @@ class Interface
         void afficheMap(Map carte); // fini et testé
         void afficheSkill(Skill );
         void afficheCombat(Character , Skill , Character);
-        void afficheCombatDetails();
+        void afficheCombatDetails(Character , Skill , Character , Skill );
         void afficheWinF();
         void afficheWinC(Map carte); // fini à tester
         void afficheLoose();
-        void afficheSelectP();
+        void afficheSelectP(Character , Skill );
 };
 
 #endif // INTERFACE_H

@@ -29,7 +29,7 @@ class Game
 
 		//! Initialise la Map
 		Map getCarte();
-		
+
 		//! Initialise le Personnage du joueur,
 		/*!
 			\return true si bien initialisé,
@@ -42,14 +42,14 @@ class Game
 
 		//! Récupère le joueur
 		Character getJoueur();
-		
+
 		//! Gèrer le déroulement d'une partie
 		void partie();
 
 		//! Gère le combat
 		/*!
 			\param monstre Le monstre
-			
+
 			\return true: Le combat est gagné (le joueur n'est pas mort)
 			\return false: Le combat est perdu (mort du joueur)
 		*/

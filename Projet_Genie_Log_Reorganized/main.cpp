@@ -3,4 +3,5 @@
 int main()
 {
 	Game play = Game();
+	play.partie();
 }

@@ -6,7 +6,7 @@ using namespace std;
 void Interface::afficheCombat()
 {
     afficheMob();
-    for(int i = 0; i<40 ;i++){cout << "-";} //ligne séparation
+    for(int i = 0; i<40 ;i++){cout << "-";} //ligne sÃ©paration
     cout<<"\n"<<endl;
     affichePerso();
     cout<<"Que voulez-vous faire ?"<<endl;
@@ -20,28 +20,64 @@ void Interface::afficheCombatDetails()
 
 void Interface::afficheSkill()
 {
-    cout<<"     Action      Dégats      Cost"<<endl;
-    cout<<" 1- "<<"getSkill1 "<<" getDégats1 "<<" getCost1 "<<"\n"<<endl;
-    cout<<" 2- "<<"getSkill1 "<<" getDégats2 "<<" getCost2 "<<"\n"<<endl;
-    cout<<" 3- "<<"getSkill1 "<<" getDégats3 "<<" getCost3 "<<"\n"<<endl;
-    cout<<" 4- "<<"getSkill1 "<<" getDégats4 "<<" getCost4 "<<"\n"<<endl;
+    cout<<"     Action      DÃ©gats      Cost"<<endl;
+    cout<<" 1- "<<"getSkill1 "<<" getDÃ©gats1 "<<" getCost1 "<<"\n"<<endl;
+    cout<<" 2- "<<"getSkill1 "<<" getDÃ©gats2 "<<" getCost2 "<<"\n"<<endl;
+    cout<<" 3- "<<"getSkill1 "<<" getDÃ©gats3 "<<" getCost3 "<<"\n"<<endl;
+    cout<<" 4- "<<"getSkill1 "<<" getDÃ©gats4 "<<" getCost4 "<<"\n"<<endl;
 }
 
-void Interface::affichePerso()
+void Interface::affichePerso(Character perso)
 {
-    cout<<"Name perso \n"<<endl;
-    cout << "PV : (" << "PV" << "/" << "PV_max" << ") [" << "######--" << "] \n" << endl;
-    cout << "PM : (" << "PM" << "/" << "PM_max" << ") [" << "0000000-" << "] \n" << endl;
-    for(int i = 0; i<40 ;i++){cout << "-";} //ligne séparation
+    cout<<perso.getName()<<"\n"<<endl;
+    cout << "PV : (" << perso.getLife().first << "/" << perso.getLife().second << ")  [";
+    for (int i = 0; i < perso.getMaxLife(); i++)
+    {
+        if(i < perso.getLife().first)
+        {
+            cout << "#";
+        }
+        else
+        {
+            cout << "-";
+        }
+    }
+    cout<< "] \n" << endl;
+    
+    cout << "PM : (" << perso.getMana().first << "/" << perso.getMana().second << ")  [";
+    for (int i = 0; i < perso.getMaxMana(); i++)
+    {
+        if(i < perso.getMana().first)
+        {
+            cout << "0";
+        }
+        else
+        {
+            cout << "-";
+        }
+    }
+    cout << "] \n" << endl;
+    for(int i = 0; i<40 ;i++){cout << "-";} //ligne sÃ©paration
     cout<<"\n"<<endl;
     afficheSkill();
     cout<<"\n"<<endl;
 }
 
-void Interface::afficheMob()
+void Interface::afficheMob(Character mob)
 {
-    cout<<"Name mob \n"<<endl;
-    cout << "PV : (" << "PV" << "/" << "PV_max" << ") [" << "########" << "] \n" << endl;
+    cout<<mob.getName()<<"\n"<<endl;
+    cout << "PV : (" << mob.getLife().first << "/" << mob.getLife().second << ") [";
+    for (int i = 0; i < mob.getMaxLife(); i++)
+    {
+        if(i < mob.getLife().first)
+        {
+            cout << "#";
+        }
+        else
+        {
+            cout << "-";
+        }
+    }
 }
 
 void Interface::afficheSelectP()
@@ -61,7 +97,7 @@ void Interface::afficheLoose()
 
 void Interface::afficheWinC()
 {
-    cout<<"BRAVO !!!! Vous avez gagné ce combats :)"<<endl;
+    cout<<"BRAVO !!!! Vous avez gagnÃ© ce combats :)"<<endl;
     cout<<"Il vous reste "<<carte.mobRestants()<<" a battre."<<endl;
     cout<<"Continuez sur votre lancee victorieux aventurier !"<<endl;
 }

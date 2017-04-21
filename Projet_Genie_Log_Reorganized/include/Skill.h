@@ -7,15 +7,39 @@
 class Skill                                         // Compétence
 {
     public:
-        Skill();                                    // Ctor par défaut
-        Skill(std::string);                         // Ctor à partir d'un String
-        virtual ~Skill();                           // Dtor
-        std::string getName();                      // Renvoie le nom de la Compétence
-        int getDamage();                            // Renvoie les dégâts infligés par la Compétence
-        int getManaCost();                          // Renvoie le coût en Mana de la Compétence
-        int getPriority();                          // Renvoie le niveau de Priorité de la Compétence
-        bool getTarget();                           // Renvoie la Cible de la Compétence (0 Ennemi, 1 Allié)
-        bool available(int);                        // Renvoie si la Compétence est utilisable en fonction de la quantité de Mana restante au Character
+    
+        //! Constructeur de compétence
+        /*! Initialise avec des valeurs par défaut */
+        Skill();
+    
+        //! Constructeur de compétence
+        /*!
+            \param string représentant la chaine nécessaire à la construction
+        */
+        Skill(std::string);
+    
+        //! Destructeur virtuel
+        virtual ~Skill();
+        
+        //! Interface nom de la compétence
+        std::string getName();
+    
+        //! Interface des dégâts de la compétence
+        int getDamage();
+    
+        //! Interface du coût en mana de la compétence
+        int getManaCost();
+    
+        //! Interface de la priorité de la compétence
+        int getPriority();
+    
+        //! Interface de la cible de la compétence
+        /*! 0 Ennemi, 1 Allié */
+        bool getTarget();
+    
+        //! Fonction renvoyant si la Compétence est utilisable
+        /*! En fonction de la quantité de Mana restante au Character */
+        bool available(int);
 
     protected:
 

@@ -14,7 +14,7 @@ class Interface
         void affichePerso(Character ); //fini à tester
         void afficheMob(Character ); // fini à tester
         void afficheMap(Map carte); // fini et testé
-        void afficheSkill(Character ,Skill ); //fini à tester
+        void afficheSkill(Character ); //fini à tester
         void afficheCombat(Character , Skill , Character); //fini à tester
         void afficheCombatDetails(Character , Skill , Character , Skill ); //fini à tester
         void afficheWinF(); //fini à tester

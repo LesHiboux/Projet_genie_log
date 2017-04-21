@@ -4,6 +4,8 @@
 	Constructeurs, get et set
 	************************/
 
+//test
+
 Game::Game() {
 	carte=Map();
 	nbRestant=carte.mobRestants();

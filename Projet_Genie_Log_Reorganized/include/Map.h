@@ -7,10 +7,10 @@
 
 class Map
 {
-	std::pair<int,int> taille;	/*!< Variable contenant les dimensions de la map */
-	std::pair<int,int> positionJoueur;	/*!< Variable contenant la position du joueur (x,y) */
-	int** mapEntite;	/*!< Tableau contenant l'emplacement des monstres, des zones de soins, et du point de départ */
-	int** mapApparence;	/*!< Tableau utilisé pour l'apparence de la map */
+	std::pair<int,int> taille;		// Variable contenant les dimensions de la map
+	std::pair<int,int> positionJoueur;	// Variable contenant la position du joueur (x,y)
+	int** mapEntite;			// Tableau contenant l'emplacement des monstres, des zones de soins, et du point de départ
+	int** mapApparence;			// Tableau utilisé pour l'apparence de la map
 
 	public:
 		//! Constructeur de map
@@ -35,7 +35,7 @@ class Map
 	
 		//! Fonction servant à deplacer le personnage
 		/*!
-			/parametre x: un char représentant la direction du déplacement ('z','q','s' ou 'd')
+			\parametre x: un char représentant la direction du déplacement ('z','q','s' ou 'd')
 		*/
 		bool deplacer(char x);
 	

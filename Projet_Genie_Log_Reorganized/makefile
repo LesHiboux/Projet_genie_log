@@ -5,33 +5,42 @@ SRC = src/
 INC = include/
 OBJ = object/
 BIN = bin/
+PROJ = projet
+MAIN = main
+GAM = Game
+INT = Interface
+MAP = Map
+CHAR = Character
+SKI = Skill
+GAU = Gauge
 
-$(BIN)projet: $(OBJ)main.o $(OBJ)Game.o $(OBJ)Affichage.o $(OBJ)Map.o $(OBJ)Character.o $(OBJ)Skill.o $(OBJ)Gauge.o
+
+$(BIN)$(PROJ): $(OBJ)$(MAIN).o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
 	$(CC) $(STD) -o $@ $^ $(CFLAG)
 
-$(OBJ)main.o: main.cpp $(INC)Character.h $(INC)Skill.h $(INC)Gauge.h
+$(OBJ)$(MAIN).o: $(MAIN).cpp $(INC)$(GAM).h $(INC)$(INT).h $(INC)$(MAP).h $(INC)$(CHAR).h $(INC)$(SKI).h $(INC)$(GAU).h
 	$(CC) $(STD) -o $@ -c $< $(CFLAG)
 	
-$(OBJ)Game.o: $(SRC)Game.cpp $(INC)Game.h
+$(OBJ)$(GAM).o: $(SRC)$(GAM).cpp $(INC)$(GAM).h
 	$(CC) $(STD) -o $@ -c $< $(CFLAG)
 	
-$(OBJ)Affichage.o: $(SRC)Affichage.cpp $(INC)Affichage.h
+$(OBJ)$(INT).o: $(SRC)$(INT).cpp $(INC)$(INT).h
 	$(CC) $(STD) -o $@ -c $< $(CFLAG)
 	
-$(OBJ)Map.o: $(SRC)Map.cpp $(INC)Map.h
+$(OBJ)$(MAP).o: $(SRC)$(MAP).cpp $(INC)$(MAP).h
 	$(CC) $(STD) -o $@ -c $< $(CFLAG)
 
-$(OBJ)Character.o: $(SRC)Character.cpp $(INC)Character.h
+$(OBJ)$(CHAR).o: $(SRC)$(CHAR).cpp $(INC)$(CHAR).h
 	$(CC) $(STD) -o $@ -c $< $(CFLAG)
 
-$(OBJ)Skill.o: $(SRC)Skill.cpp $(INC)Skill.h
+$(OBJ)$(SKI).o: $(SRC)$(SKI).cpp $(INC)$(SKI).h
 	$(CC) $(STD) -o $@ -c $< $(CFLAG)
 
-$(OBJ)Gauge.o: $(SRC)Gauge.cpp $(INC)Gauge.h
+$(OBJ)$(GAU).o: $(SRC)$(GAU).cpp $(INC)$(GAU).h
 	$(CC) $(STD) -o $@ -c $< $(CFLAG)
 
 clean:
 	rm -f $(OBJ)*.o
 
 mrproper: clean
-	rm -f $(BIN)projet
+	rm -f $(BIN)$(PROJ)

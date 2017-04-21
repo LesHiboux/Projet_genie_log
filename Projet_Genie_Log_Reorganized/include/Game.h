@@ -1,8 +1,7 @@
 #include <stack>
 #include <time.h>
 
-#include "../include/Character.h"
-#include "../include/Affichage.h"
+#include "../include/Interface.h"
 
 #ifndef GAME_H
 #define GAME_H

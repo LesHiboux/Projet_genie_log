@@ -6,13 +6,16 @@ INC = include/
 OBJ = object/
 BIN = bin/
 
-$(BIN)projet: $(OBJ)main.o $(OBJ)Game.o $(OBJ)Map.o $(OBJ)Character.o $(OBJ)Skill.o $(OBJ)Gauge.o
+$(BIN)projet: $(OBJ)main.o $(OBJ)Game.o $(OBJ)Affichage.o $(OBJ)Map.o $(OBJ)Character.o $(OBJ)Skill.o $(OBJ)Gauge.o
 	$(CC) $(STD) -o $@ $^ $(CFLAG)
 
 $(OBJ)main.o: main.cpp $(INC)Character.h $(INC)Skill.h $(INC)Gauge.h
 	$(CC) $(STD) -o $@ -c $< $(CFLAG)
 	
 $(OBJ)Game.o: $(SRC)Game.cpp $(INC)Game.h
+	$(CC) $(STD) -o $@ -c $< $(CFLAG)
+	
+$(OBJ)Affichage.o: $(SRC)Affichage.cpp $(INC)Affichage.h
 	$(CC) $(STD) -o $@ -c $< $(CFLAG)
 	
 $(OBJ)Map.o: $(SRC)Map.cpp $(INC)Map.h

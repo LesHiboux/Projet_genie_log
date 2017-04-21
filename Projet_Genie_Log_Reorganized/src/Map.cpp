@@ -3,7 +3,7 @@
 Map::Map()
 {
 	int longueur, largeur, tampon;
-	std::ifstream fichier("../config/map.db", std::ios::in);
+	std::ifstream fichier("./config/map.db", std::ios::in);
 
 	if (fichier)
 	{

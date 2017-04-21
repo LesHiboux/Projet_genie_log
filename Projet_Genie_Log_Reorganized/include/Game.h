@@ -1,8 +1,7 @@
 #include <stack>
 #include <time.h>
 
-#include "../include/Character.h"
-#include "../include/Affichage.h"
+#include "../include/Interface.h"
 
 #ifndef GAME_H
 #define GAME_H
@@ -13,7 +12,7 @@ class Game
 	Map carte;				// La carte sur laquelle il joue
 	int nbRestant;				// Le nombre de monstres restants
 	std::stack <Character> pileMob;		// La pile contenant les monstres restants
-	Affichage vue;				// L'affichage de toutes les informations
+	Interface vue;				// L'affichage de toutes les informations
 
 	public:
 		//! Constucteur d'une partie
@@ -30,7 +29,7 @@ class Game
 
 		//! Initialise la Map
 		Map getCarte();
-		
+
 		//! Initialise le Personnage du joueur,
 		/*!
 			\return true si bien initialisé,
@@ -43,14 +42,14 @@ class Game
 
 		//! Récupère le joueur
 		Character getJoueur();
-		
+
 		//! Gèrer le déroulement d'une partie
 		void partie();
 
 		//! Gère le combat
 		/*!
 			\param monstre Le monstre
-			
+
 			\return true: Le combat est gagné (le joueur n'est pas mort)
 			\return false: Le combat est perdu (mort du joueur)
 		*/

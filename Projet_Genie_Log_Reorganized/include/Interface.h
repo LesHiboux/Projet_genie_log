@@ -13,12 +13,12 @@ class Interface
     public:
         void affichePerso(Character );
         void afficheMob(Character );
-        void afficheMap(Map carte); // fini et testé
+        void afficheMap(Map carte); // fini et testÃ©
         void afficheSkill(Skill );
-        void afficheCombat();
+        void afficheCombat(Character , Skill , Character);
         void afficheCombatDetails();
         void afficheWinF();
-        void afficheWinC(Map carte); // fini à tester
+        void afficheWinC(Map carte); // fini Ã  tester
         void afficheLoose();
         void afficheSelectP();
 };

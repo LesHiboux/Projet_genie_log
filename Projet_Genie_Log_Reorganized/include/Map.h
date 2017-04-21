@@ -47,7 +47,8 @@ class Map
 		/*! Se base sur la position du joueur */
 		bool verif_monstre();
 	
-		//*! Fonction 
+		//*! Fonction servant à enlever un monstre
+		/*! L'enlève du tableau d'entitées */
 		void unsetmob();
 };
 #endif

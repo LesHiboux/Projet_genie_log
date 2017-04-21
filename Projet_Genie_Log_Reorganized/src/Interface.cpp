@@ -3,12 +3,12 @@
 
 using namespace std;
 
-void Interface::afficheCombat()
+void Interface::afficheCombat(Character perso, Character mob)
 {
-    afficheMob();
+    afficheMob(Character mob);
     for(int i = 0; i<40 ;i++){cout << "-";} //ligne séparation
     cout<<"\n"<<endl;
-    affichePerso();
+    affichePerso(Character perso);
     cout<<"Que voulez-vous faire ?"<<endl;
 }
 
@@ -81,9 +81,9 @@ void Interface::afficheMob(Character mob)
     }
 }
 
-void Interface::afficheSelectP()
+void Interface::afficheSelectP(Character perso)
 {
-    affichePerso();
+    affichePerso(Character perso);
     cout<<"Voulez-vous jouer avec ce personnage ? [O/N] "<<endl;
 }
 
@@ -96,7 +96,7 @@ void Interface::afficheLoose()
     cout<<"  ||   \\____/  \\____/     |    |  |  |  |____   |____/   |____   |    |   |____/   0 "<<endl;
 }
 
-void Interface::afficheWinC()
+void Interface::afficheWinC(Map carte)
 {
     cout<<"BRAVO !!!! Vous avez gagné ce combats :)"<<endl;
     cout<<"Il vous reste "<<carte.mobRestants()<<" a battre."<<endl;

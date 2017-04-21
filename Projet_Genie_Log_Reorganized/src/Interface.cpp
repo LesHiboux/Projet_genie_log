@@ -12,19 +12,20 @@ void Interface::afficheCombat()
     cout<<"Que voulez-vous faire ?"<<endl;
 }
 
-void Interface::afficheCombatDetails()
+void Interface::afficheCombatDetails(Character perso, int skillChoix)
 {
-    cout<<"name A (perso/mob selon priorite)"<<" utilise "<<"skill choisi"<<", il inflige "<<"nb degats skill."<<endl;
-    cout<<"name B (perso/mob selon priorite)"<<" utilise "<<"skill choisi"<<", il inflige "<<"nb degats skill."<<endl;
+    Skill skill = perso.getSkill(skillChoix);
+    cout << perso.getName() << " utilise " << skill.getName() << ", il inflige " << skill.getDamage() << "de dégats." << endl;
 }
 
-void Interface::afficheSkill()
+void Interface::afficheSkill(Character perso)
 {
     cout<<"     Action      Dégats      Cost"<<endl;
-    cout<<" 1- "<<"getSkill1 "<<" getDégats1 "<<" getCost1 "<<"\n"<<endl;
-    cout<<" 2- "<<"getSkill1 "<<" getDégats2 "<<" getCost2 "<<"\n"<<endl;
-    cout<<" 3- "<<"getSkill1 "<<" getDégats3 "<<" getCost3 "<<"\n"<<endl;
-    cout<<" 4- "<<"getSkill1 "<<" getDégats4 "<<" getCost4 "<<"\n"<<endl;
+    for(int i = 1; i<perso.getNbSkill() ; i++)
+    {
+        Skill skill = perso.getSkill(i);
+        cout<<i<< "- " << skill.getName() << skill.getDamage() << skill.getManaCost() <<"\n"<<endl;
+    }
 }
 
 void Interface::affichePerso(Character perso)

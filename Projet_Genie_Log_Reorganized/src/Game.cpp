@@ -73,7 +73,7 @@ void Game::setPileMob()
 				//On se déplace tant qu'on ne rencontre pas de monstre
 			while (carte.verif_monstre()!=true)
 			{
-				vue.affichage_map(carte);
+				vue.afficheMap(carte);
 				std::cin >> direction;
 				if (direction=="quitter") {
 					std::cout<<"Merci d'avoir joué!"<<std::endl;

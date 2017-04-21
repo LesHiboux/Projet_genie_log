@@ -36,8 +36,9 @@ class Game
 		
 		/*!
 			Initialise le Personnage du joueur,
-			retourne true si bien initialisé,
-			false sinon
+			
+			\return true si bien initialisé,
+			\return false sinon
 		*/
 		bool selection_perso();
 
@@ -51,50 +52,44 @@ class Game
 		*/
 		Character getJoueur();
 		
-
-		
-			//Fonction gérant le déroulement d'une partie
 		/*!
 			Gèrer le déroulement d'une partie
 		*/
 		void partie();
-			//Fonction de combat (joueur vs un monstre)
 
 		/*!
 			Gère le combat
-			\var Character monstre
-				Le monstre
+			
+			\param monstre Le monstre
+			
+			\return true: Le combat est gagné (le joueur n'est pas mort)
+			\return false: Le combat est perdu (mort du joueur)
 		*/
 		bool combat(Character monstre);
-			//Fonction pour choisir une compétence d'un joueur
 
 		/*!
 			Permet au joueur de choisir son sort
 		*/
 		Skill selectSkillJoueur();
-			//Fonction pour choisir une compétence d'un monstre
 
 		/*!
 			Permet au monstre de choisir sa compétence
-			\var Character monstre
+			\param monstre Le monstre
 		*/
 		Skill selectSkillMonstre(Character monstre);
-			//Fonction qui calcul les domages et réduction de mana pour 1 tour et indique si c'est la fin du combat (l'un des deux characters à 0pv)
 
 		/*!
 			Gère un tour:
 				-calcul des priorités (le joueur ou le monstre joue en premier)
 				-fait le calcul des dommages et la diminution du mana
-				-return:
-					-true si le combat est fini (l'un des deux character sont mort)
-					-false si le combat n'est pas fini
 
-			\var Skill sortJoueur
-			\var Character &monstre
-			\var Skill sortMonstre
-				Le sort du monstre
-			\var bool &victoire
-				Viérifie si le combat est gagné
+			\param sortJoueur Le sort du joueur
+			\param monstre Le monstre
+			\param sortMonstre Le sort du monstre
+			\param victoire Viérifie si le combat est gagné
+
+			\return true si le combat est fini (l'un des deux Characteur est mort)
+			\return false si le combat n'est pas fini
 		*/
 		bool tour(Skill sortJoueur, Character &monstre, Skill sortMonstre, bool &victoire);
 };

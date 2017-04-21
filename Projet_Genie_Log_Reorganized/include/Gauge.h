@@ -8,13 +8,39 @@
 class Gauge                                         // Jauge
 {
     public:
+        //!Constructeur de Gauge par défault
         Gauge();                                    // Ctor par défaut
-        Gauge(std::string, std::string);            // Ctor à partir d'un String
+        
+        //!Constructeur de Gauge
+        /*!Construit à partir d'une string
+           \param Name le nom de la gauge
+           \param gauge string contenant les infos de la gauge: val min et val max
+        */
+        Gauge(std::string name, std::string gauge);            // Ctor à partir d'un String
+    
+        //!Destructuer de Gauge
         virtual ~Gauge();                           // Dtor
+    
+        //!Interface de Gauge
+        /*!
+            Retourne une pair <Restant, Max>
+        */
         std::pair <int, int> getValMax();           // Renvoie la paire <Restant, Max>
+    
+        //!Interface de Gauge
+        /*! Retourne la valeur Max */
         int getMax();                               // Renvoie la valeur Max
+    
+        //!Interface de Gauge
+        /*! Retourne la Valeur Restante */
         int getVal();                               // Renvoie la valeur Restant
-        void edit(int);                             // Modifie la valeur Restant selon une valeur donnée (Valeur négative = Régénération)
+    
+        //!
+        /*! Modifie la valeur Restante
+            Restant = Restant - value
+            \param value valeur pour modifier la valeur Restant (value <0 Régénération)
+        */
+        void edit(int value);                             // Modifie la valeur Restant selon une valeur donnée (Valeur négative = Régénération)
 
     protected:
 

@@ -12,7 +12,7 @@ class Game
 	Map carte;				// La carte sur laquelle il joue
 	int nbRestant;				// Le nombre de monstres restants
 	std::stack <Character> pileMob;		// La pile contenant les monstres restants
-	Affichage vue;				// L'affichage de toutes les informations
+	Interface vue;				// L'affichage de toutes les informations
 
 	public:
 		//! Constucteur d'une partie

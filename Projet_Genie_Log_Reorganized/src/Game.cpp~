@@ -4,8 +4,6 @@
 	Constructeurs, get et set
 	************************/
 
-//test
-
 Game::Game() {
 	carte=Map();
 	nbRestant=carte.mobRestants();
@@ -73,7 +71,7 @@ void Game::setPileMob()
 				//On se déplace tant qu'on ne rencontre pas de monstre
 			while (carte.verif_monstre()!=true)
 			{
-				vue.afficheMap(carte);
+				vue.affichage_map(carte);
 				std::cin >> direction;
 				if (direction=="quitter") {
 					std::cout<<"Merci d'avoir joué!"<<std::endl;
@@ -341,7 +339,7 @@ bool Game::tour(Skill sortJoueur, Character &monstre, Skill sortMonstre, bool &v
 				return  true;
 			}
 	}
-	//A la fin du tour, si les deux son encore en vie, le combat n'est pas fini
+	//A la fi du tour, si les deux son encore en vie, le combat n'est pas fini
 	return false;
 }
 

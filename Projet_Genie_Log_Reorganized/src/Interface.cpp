@@ -5,10 +5,10 @@ using namespace std;
 
 void Interface::afficheCombat(Character perso, Character mob)
 {
-    afficheMob(Character mob);
+    afficheMob(mob);
     for(int i = 0; i<40 ;i++){cout << "-";} //ligne séparation
     cout<<"\n"<<endl;
-    affichePerso(Character perso);
+    affichePerso(perso);
     cout<<"Que voulez-vous faire ?"<<endl;
 }
 
@@ -21,7 +21,7 @@ void Interface::afficheCombatDetails(Character perso, int skillChoix)
 void Interface::afficheSkill(Character perso)
 {
     cout<<"     Action      Dégats      Cost"<<endl;
-    for(int i = 1; i<perso.getNbSkill() ; i++)
+    for(int i = 1; i<perso.getNbSkills() ; i++)
     {
         Skill skill = perso.getSkill(i);
         cout<<i<< "- " << skill.getName() << skill.getDamage() << skill.getManaCost() <<"\n"<<endl;
@@ -44,7 +44,7 @@ void Interface::affichePerso(Character perso)
         }
     }
     cout<< "] \n" << endl;
-    
+
     cout << "PM : (" << perso.getMana().first << "/" << perso.getMana().second << ")  [";
     for (int i = 0; i < perso.getMaxMana(); i++)
     {
@@ -60,7 +60,9 @@ void Interface::affichePerso(Character perso)
     cout << "] \n" << endl;
     for(int i = 0; i<40 ;i++){cout << "-";} //ligne séparation
     cout<<"\n"<<endl;
-    afficheSkill();
+
+    afficheSkill(perso);
+
     cout<<"\n"<<endl;
 }
 
@@ -83,7 +85,7 @@ void Interface::afficheMob(Character mob)
 
 void Interface::afficheSelectP(Character perso)
 {
-    affichePerso(Character perso);
+    affichePerso(perso);
     cout<<"Voulez-vous jouer avec ce personnage ? [O/N] "<<endl;
 }
 

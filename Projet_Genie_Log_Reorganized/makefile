@@ -15,6 +15,9 @@ SKI = Skill
 GAU = Gauge
 
 
+$(BIN)$(PROJ).exe: $(OBJ)$(MAIN).o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
+	$(CC) $(STD) -o $@ $^ $(CFLAG)
+
 $(BIN)$(PROJ): $(OBJ)$(MAIN).o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
 	$(CC) $(STD) -o $@ $^ $(CFLAG)
 

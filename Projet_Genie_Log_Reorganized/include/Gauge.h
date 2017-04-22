@@ -21,18 +21,16 @@ class Gauge                                         // Jauge
         //!Destructeur de Gauge
         virtual ~Gauge();
     
-        //!Interface de Gauge
-        /*!
-            Retourne une pair <Restant, Max>
-        */
+        //!Interface valeurs de la Gauge
+        /*! \return Une pair <Restant, Max> */
         std::pair <int, int> getValMax();
     
-        //!Interface de Gauge
-        /*! Retourne la valeur Max */
+        //!Interface valeur Max
+        /*! \return Un entier représentant la valeur Max */
         int getMax();
     
-        //!Interface de Gauge
-        /*! Retourne la Valeur Restante */
+        //!Interface valeur restante
+        /*! \return Un entier représentant la valeur Restante */
         int getVal();
     
         //!Modifie la valeur Restante

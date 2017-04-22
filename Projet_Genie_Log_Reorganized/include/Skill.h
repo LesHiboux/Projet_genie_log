@@ -14,31 +14,43 @@ class Skill                                         // Compétence
     
         //! Constructeur de compétence
         /*!
-            \param string représentant la chaine nécessaire à la construction
+            Construit à partir d'une string
+            \param skill string représentant la chaine nécessaire à la construction
         */
-        Skill(std::string);
+        Skill(std::string skill);
     
-        //! Destructeur virtuel
+        //! Destructeur virtuel de Skill
         virtual ~Skill();
         
         //! Interface nom de la compétence
+        /*! \return Une String représentant le nom du skill */
         std::string getName();
     
         //! Interface des dégâts de la compétence
+        /*! \return Un rentier représentant la valeur des dommage du skill (si <0 = soin) */
         int getDamage();
     
         //! Interface du coût en mana de la compétence
+        /*! \return Un entier représentant le coût en mana de la compétence (<0 = régénération) */
         int getManaCost();
     
         //! Interface de la priorité de la compétence
+        /*! \return Un entier représentant la priorité de l'attaque */
         int getPriority();
     
         //! Interface de la cible de la compétence
-        /*! 0 Ennemi, 1 Allié */
+        /*! 
+            \return true: soi-même
+            \return false: Ennemi;
+         */
         bool getTarget();
     
         //! Fonction renvoyant si la Compétence est utilisable
-        /*! En fonction de la quantité de Mana restante au Character */
+        /*!
+            En fonction de la quantité de Mana restante au Character 
+            \return true: Skill utilisable
+            \return false: sinon
+        */
         bool available(int);
 
     protected:

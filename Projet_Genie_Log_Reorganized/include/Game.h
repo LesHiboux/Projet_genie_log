@@ -16,19 +16,16 @@ class Game
 
 	public:
 		//! Constucteur d'une partie
-		/*!
-			Constucteur de Game, initialise:
-				-Catre: Map
-				-nbRestant: nombre de mob à tuer pour gagner
-				-plieMob: la pile regroupant tous les mob à tuer
+		/*! initialise:\n
+		*		-Catre: Map \n
+		*		-nbRestant: int nombre de mob à tuer pour gagner \n
+		*		-plieMob: stack<Character> la pile regroupant tous les mob à tuer
 		*/
+
 		Game();
 
 		//! Initialise la pile regroupant les mob
 		void setPileMob();
-
-		//! Initialise la Map
-		Map getCarte();
 
 		//! Initialise le Personnage du joueur,
 		/*!
@@ -37,10 +34,18 @@ class Game
 		*/
 		bool selection_perso();
 
-		//! Récupère le nombre de mob à tuer pour gagner
+		//! Interface Carte
+		/*!
+			\return Une Map représentant la cartre du jeux
+		*/
+		Map getCarte();
+
+		//! Interface nombre de Mob restant
+		/*! \return Un entier représentant le nombre de monstre retant à tuer pour gagner */
 		int getNbRestant();
 
-		//! Récupère le joueur
+		//! Interface Joueur
+		/*! \return Un Character représentant le joueur */
 		Character getJoueur();
 
 		//! Gèrer le déroulement d'une partie
@@ -56,6 +61,9 @@ class Game
 		bool combat(Character monstre);
 
 		//! Permet au joueur de choisir son sort
+		/*!	\param quitter Permet de savoir si le joueur veut quitter le jeux
+			\return Skill choisie par le joueur
+		*/
 		Skill selectSkillJoueur();
 
 		//! Permet au monstre de choisir sa compétence
@@ -66,8 +74,8 @@ class Game
 
 		//! Gestion d'un tour
 		/*!
-			Gère un tour:
-				-calcul des priorités (le joueur ou le monstre joue en premier)
+			Gère un tour: \n
+				-calcul des priorités (le joueur ou le monstre joue en premier) \n
 				-fait le calcul des dommages et la diminution du mana
 
 			\param sortJoueur Le sort du joueur

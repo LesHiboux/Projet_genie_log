@@ -149,12 +149,13 @@ bool Game::combat(Character monstre)
 	bool victoire = false;		//dit si on as gagnés
 	bool finCombat=false;		//dit si c'est la fin du combat
 		//bool pour savoir si le joueur veux quitter
-	//bool quitter=false;
+	bool quitter=false;
 	while (finCombat!=true)
 	{
 		//au départ, on affiche les infos du mob et du joueur + compétences du joueur
 		Skill sortJoueur, sortMonstre;
-		sortJoueur=selectSkillJoueur();
+		sortJoueur=selectSkillJoueur(quitter);
+		if (quitter==true) return victoire;
 		std::cerr<<sortJoueur.getName()<<", "<<sortJoueur.getDamage()<<", "<<joueur.getLife().first<<std::endl;
 		sortMonstre=selectSkillMonstre(monstre);
 		std::cerr<<sortMonstre.getName()<<", "<<sortMonstre.getDamage()<<", "<<monstre.getLife().first<<std::endl;
@@ -164,7 +165,7 @@ bool Game::combat(Character monstre)
 	return victoire;
 }
 
-Skill Game::selectSkillJoueur()
+Skill Game::selectSkillJoueur(bool &quitter)
 {
 	bool done=false; //vérifie si la compétence a bien été choisie
 	Skill sort;
@@ -173,7 +174,11 @@ Skill Game::selectSkillJoueur()
 	{
 		std::string select;	//faire des sélections
 		std::cin >> select;
-		if (select=="quitter") done=true;
+		if (select=="quitter") {
+			done=true;
+			quitter=true;
+			sort=Skill();
+		}
 		else {
 			int select_skill=std::stoi(select);
 			while ( select_skill<=0 || select_skill > joueur.getNbSkills())

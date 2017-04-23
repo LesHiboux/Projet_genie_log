@@ -64,7 +64,7 @@ class Game
 		/*!	\param quitter Permet de savoir si le joueur veut quitter le jeux
 			\return Skill choisie par le joueur
 		*/
-		Skill selectSkillJoueur();
+		Skill selectSkillJoueur(bool &quitter);
 
 		//! Permet au monstre de choisir sa compétence
 		/*!

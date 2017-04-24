@@ -12,10 +12,9 @@ void Interface::afficheCombat(Character perso, Character mob)
     cout<<"Que voulez-vous faire ?"<<endl;
 }
 
-void Interface::afficheCombatDetails(Character perso, int skillChoix)
+void Interface::afficheCombatDetails(Character perso, Skill skill)
 {
-    Skill skill = perso.getSkill(skillChoix);
-    cout << perso.getName() << " utilise " << skill.getName() << ", il inflige " << skill.getDamage() << "de dégats." << endl;
+    cout << perso.getName() << " utilise " << skill.getName() << ", il inflige " << skill.getDamage() << " de dégats." << endl;
 }
 
 void Interface::afficheSkill(Character perso)
@@ -24,7 +23,7 @@ void Interface::afficheSkill(Character perso)
     for(int i = 1; i<perso.getNbSkills() ; i++)
     {
         Skill skill = perso.getSkill(i);
-        cout<<i<< "- " << skill.getName() << skill.getDamage() << skill.getManaCost() <<"\n"<<endl;
+        cout<<i<< "- " << skill.getName() << "     " << skill.getDamage() << "          " << skill.getManaCost() <<"\n"<<endl;
     }
 }
 
@@ -81,6 +80,7 @@ void Interface::afficheMob(Character mob)
             cout << "-";
         }
     }
+    cout<<"]\n"<<endl;
 }
 
 void Interface::afficheSelectP(Character perso)
@@ -91,8 +91,8 @@ void Interface::afficheSelectP(Character perso)
 
 void Interface::afficheLoose()
 {
-    cout<<"\\    /  ____               ____    __    ____   ____    ____    ____    ____   | "<<endl;
-    cout<<" \\  /  /    \\  |    |     /    \\  |  \\  |       |    \\   |       /    \\   | "<<endl;
+    cout<<"\\    /  ____               ____    __    ____   _____     ____    ____    _____   | "<<endl;
+    cout<<" \\  /  /    \\  |    |     /    \\  |  \\  |       |    \\   |       /    \\   |    \\ "<<endl;
     cout<<"  \\/   |    |  |    |     |____|  |__/  |__     |    |   |__     |____|   |    |   | "<<endl;
     cout<<"  ||   |    |  |    |     |    |  |  \\  |       |    |   |       |    |   |    |     "<<endl;
     cout<<"  ||   \\____/  \\____/     |    |  |  |  |____   |____/   |____   |    |   |____/   0 "<<endl;
@@ -101,7 +101,7 @@ void Interface::afficheLoose()
 void Interface::afficheWinC(Map carte)
 {
     cout<<"BRAVO !!!! Vous avez gagné ce combats :)"<<endl;
-    cout<<"Il vous reste "<<carte.mobRestants()<<" a battre."<<endl;
+    cout<<"Il vous reste "<<carte.mobRestants()<<" monstres a battre."<<endl;
     cout<<"Continuez sur votre lancee victorieux aventurier !"<<endl;
 }
 

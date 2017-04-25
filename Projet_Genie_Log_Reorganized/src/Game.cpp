@@ -39,7 +39,7 @@ void Game::setPileMob()
 		{
 			getline(mobFile, characterString);
 
-			std::cerr << characterString << std::endl;
+			//std::cerr << characterString << std::endl;
 			Character mobTmp(characterString);
 			pileMob.push(mobTmp);
 		}
@@ -100,17 +100,21 @@ void Game::setPileMob()
 			victoire=combat(monstre);
 			if (victoire)
 			{
-				//Afficher victoire combat
+					//Afficher victoire combat
+				vue.afficheWinC(carte);
 				nbRestant--;
 				if (nbRestant<=0) finPartie=true;
 			}
 			else
 			{
-				std::cerr<<"you died..."<<std::endl;
+					//Affiche perdu...
+				vue.afficheLoose();
+				//std::cerr<<"you died..."<<std::endl;
 				return;
 				//Afficher you died
 			}
 		}
+		vue.afficheWinF();
 		//Afficher victoire totale!!!
 	}
 
@@ -122,14 +126,21 @@ bool Game::selection_perso() {
 		getline(liste_persos, perso);
 		while (!liste_persos.eof()){
 			joueur = Character(perso);
-			//affichage_selection_perso();
-			std::cerr << joueur.getName() << std::endl;
-			std::cerr << "o: joueur | n: suivant" << std::endl;
+				//affichage_selection_perso;
+			vue.afficheSelectP(joueur);
+			//std::cerr << joueur.getName() << std::endl;
+			//std::cerr << "o: joueur | n: suivant" << std::endl;
 			std::cin >> choix;
-			if (choix=="quitter") return false;
+			if (choix=="quitter") {
+				std::cout<<"Merci d'avoir joué!"<<std::endl;
+				return false;
+			}
 			else {
-				while (choix!="o" && choix!="n") std::cout << "erreur entrez o ou n" << std::endl;
-				if (choix=="o") return true;
+				while (choix!="o" && choix!="n") {
+					std::cout << "erreur entrez o ou n" << std::endl;
+					std::cin >> choix;
+				}
+ 				if (choix=="o") return true;
 				getline(liste_persos, perso);
 			}
 		}
@@ -145,23 +156,25 @@ bool Game::selection_perso() {
 	********************/
 bool Game::combat(Character monstre)
 {
-	std::cerr << "la" << std::endl;
 	bool victoire = false;		//dit si on as gagnés
 	bool finCombat=false;		//dit si c'est la fin du combat
 		//bool pour savoir si le joueur veux quitter
 	bool quitter=false;
 	while (finCombat!=true)
 	{
-		//au départ, on affiche les infos du mob et du joueur + compétences du joueur
+			//au départ, on affiche les infos du mob et du joueur + compétences du joueur
+		//vue.afficheMob(monstre);
+		//vue.affichePerso(joueur);
+		vue.afficheCombat(joueur, monstre);
 		Skill sortJoueur, sortMonstre;
 		sortJoueur=selectSkillJoueur(quitter);
 		if (quitter==true) return victoire;
-		std::cerr<<sortJoueur.getName()<<", "<<sortJoueur.getDamage()<<", "<<joueur.getLife().first<<std::endl;
+		//std::cerr<<sortJoueur.getName()<<", "<<sortJoueur.getDamage()<<", "<<joueur.getLife().first<<std::endl;
 		sortMonstre=selectSkillMonstre(monstre);
-		std::cerr<<sortMonstre.getName()<<", "<<sortMonstre.getDamage()<<", "<<monstre.getLife().first<<std::endl;
+		//std::cerr<<sortMonstre.getName()<<", "<<sortMonstre.getDamage()<<", "<<monstre.getLife().first<<std::endl;
 		finCombat=tour(sortJoueur, monstre, sortMonstre, victoire);
 	}
-	std::cerr<<victoire<<std::endl;
+	//std::cerr<<victoire<<std::endl;
 	return victoire;
 }
 
@@ -169,12 +182,13 @@ Skill Game::selectSkillJoueur(bool &quitter)
 {
 	bool done=false; //vérifie si la compétence a bien été choisie
 	Skill sort;
-	std::cerr << "sélectionnez une compétence" << std::endl;
+	//std::cerr << "sélectionnez une compétence" << std::endl;
 	while (done!=true)
 	{
 		std::string select;	//faire des sélections
 		std::cin >> select;
 		if (select=="quitter") {
+			std::cout<<"Merci d'avoir joué!"<<std::endl;
 			done=true;
 			quitter=true;
 			sort=Skill();
@@ -220,20 +234,22 @@ bool Game::tour(Skill sortJoueur, Character &monstre, Skill sortMonstre, bool &v
 	int prioriteJoueur;
 	int manaCostJoueur=sortJoueur.getManaCost();
 	int damageJoueur=sortJoueur.getDamage();
-	std::cerr<<"mana cost:"<<manaCostJoueur<<", damage joueur:"<<damageJoueur<<std::endl;
+	//std::cerr<<"mana cost:"<<manaCostJoueur<<", damage joueur:"<<damageJoueur<<std::endl;
 
 	int manaCostMonstre=sortMonstre.getManaCost();
 	int damageMonstre=sortMonstre.getDamage();
 	int prioriteMonstre;
-	std::cerr<<"mana cost monstre:"<<manaCostMonstre<<", damage mob:"<<damageJoueur<<std::endl;
+	//std::cerr<<"mana cost monstre:"<<manaCostMonstre<<", damage mob:"<<damageJoueur<<std::endl;
 
 	prioriteJoueur=joueur.getSpeed() + sortJoueur.getPriority();
 	prioriteMonstre=monstre.getSpeed() + sortMonstre.getPriority();
 	if (prioriteJoueur>=prioriteMonstre)
 	{
-			std::cerr << "la" << std::endl;
 			//Le joueur joue en premier
-			joueur.editMana(manaCostJoueur);	//Calcul du cout en mana
+				//Calcul du cout en mana
+			joueur.editMana(manaCostJoueur);
+				//Affiche les détails de l'action
+			vue.afficheCombatDetails(joueur, sortJoueur);
 			bool cible=sortJoueur.getTarget();
 			if (cible==true)	//Si sible==true, on cible soit-meme
 			{
@@ -244,28 +260,30 @@ bool Game::tour(Skill sortJoueur, Character &monstre, Skill sortMonstre, bool &v
 				monstre.editLife(damageJoueur);
 			}
 
-			/*if (monstre.isAlive()==false && joueur.isAlive()==false)
+			if (monstre.isAlive()==false && joueur.isAlive()==false)
 			{
-				std::cerr << "la1" << std::endl;
+				//std::cerr << "la1" << std::endl;
 				victoire=false;
 				return true;
 			}
-			else */if (monstre.isAlive()==false)
+			else if (monstre.isAlive()==false)
 			{
-				std::cerr << "la2" << std::endl;
-				std::cerr<<"monstre vie:"<<monstre.getLife().first<<std::endl;
+				//std::cerr << "la2" << std::endl;
+				//std::cerr<<"monstre vie:"<<monstre.getLife().first<<std::endl;
 				victoire=true;
 				return  true;
 			}
 			else if (joueur.isAlive()==false)
 			{
-				std::cerr << "la3" << std::endl;
+				//std::cerr << "la3" << std::endl;
 				victoire=false;
 				return  true;
 			}
 
 			//Le monstre en second
 			monstre.editMana(manaCostMonstre);
+				//Affiche les détails de l'action
+			vue.afficheCombatDetails(monstre, sortMonstre);
 			cible=sortMonstre.getTarget();
 			if (cible==true)
 			{
@@ -296,6 +314,8 @@ bool Game::tour(Skill sortJoueur, Character &monstre, Skill sortMonstre, bool &v
 	{
 			//Le monstre joue en premier
 			monstre.editMana(manaCostMonstre);
+				//Affiche les détails de l'action
+			vue.afficheCombatDetails(monstre, sortMonstre);
 			bool cible=sortMonstre.getTarget();
 			if (cible==true)
 			{
@@ -324,6 +344,8 @@ bool Game::tour(Skill sortJoueur, Character &monstre, Skill sortMonstre, bool &v
 
 			//Le joueur joue en second
 			joueur.editMana(manaCostJoueur);	//Calcul du cout en mana
+				//Affiche les détails de l'action
+			vue.afficheCombatDetails(joueur, sortJoueur);
 			cible=sortJoueur.getTarget();
 			if (cible==true)	//Si sible==true, on cible soit-meme
 			{

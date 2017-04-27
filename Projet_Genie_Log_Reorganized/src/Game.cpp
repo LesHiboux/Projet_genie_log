@@ -7,9 +7,16 @@
 //test
 
 Game::Game() {
-	carte=Map();
-	nbRestant=carte.mobRestants();
-	setPileMob();
+	try
+	{
+		carte=Map();
+		nbRestant=carte.mobRestants();
+		setPileMob();
+	}
+	catch (string const& err)
+	{
+		std::cerr<<err<<std::endl;
+	}
 }
 
 int Game::getNbRestant()

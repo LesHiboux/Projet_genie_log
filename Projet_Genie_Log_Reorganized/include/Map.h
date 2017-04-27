@@ -1,5 +1,6 @@
 #include <iostream>
 #include <fstream>
+#include <string>
 #include <utility>
 
 #ifndef MAP_H
@@ -16,6 +17,10 @@ class Map
 		//! Constructeur de map
 		/*! Récuperer les informations du fichier map.db pour créer la map */
 		Map();
+	
+		//! Analyse du fichier map
+		/*! Détecte les erreurs du fichier map.txt */
+		void FormatTest();
 	
 		//! Interface du tableau d'entitées
 		/*! \return Un tableau des entitées */

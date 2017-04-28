@@ -16,12 +16,14 @@ Character::Character(std::string character)
     character = character.substr(1);
     try
     {
-        std::string testchara, testGauge, testGaugeBis testSkills;
+        std::string testchara, testGauge, testGaugeBis testSkills, testSkillsBis;
+        int testNbSkills; testTarg;
         testchara = character;
         
         // TEST ;
-        int i = 0;
-        while (testchara.find(';')
+        int i, j;
+        i = j = 0;
+        while (testchara.find(';'))
         {
             i++;
             testchara = testchara.substr(testchara.find_fors_of(';') + 1);
@@ -38,15 +40,14 @@ Character::Character(std::string character)
         testGauge = testchara.substr(0, testchara.find_first_of(';'));
         testGaugeBis = testGauge;
         i = 0;
-        while (testGaugeBis.find('/')
+        while (testGaugeBis.find('/'))
         {
             i++;
             testGaugeBis = testGaugeBis.substr(testchara.find_fors_of('/') + 1);
         }
-        if (i != 1)
-        {
-            throw 2;
-        }
+        
+        if (i != 1) throw 2;
+        
         testGaugeBis = testGauge.substr(0, character.find_first_of('/'));
         for (i = 0; i < testGaugeBis.length(); i++)
         {
@@ -63,15 +64,14 @@ Character::Character(std::string character)
         testGauge = testchara.substr(0, testchara.find_first_of(';'));
         testGaugeBis = testGauge;
         i = 0;
-        while (testGaugeBis.find('/')
+        while (testGaugeBis.find('/'))
         {
             i++;
             testGaugeBis = testGaugeBis.substr(testchara.find_fors_of('/') + 1);
         }
-        if (i != 1)
-        {
-            throw 3;
-        }
+        
+        if (i != 1) throw 3;
+        
         testGaugeBis = testGauge.substr(0, character.find_first_of('/'));
         for (i = 0; i < testGaugeBis.length(); i++)
         {
@@ -82,12 +82,50 @@ Character::Character(std::string character)
         {
             if (!isdigit(testGaugeBis[i])) throw 3;
         }
+        
+        // TEST Skills
+        testchara = testchara.substr(testchara.find_firs_of(';') + 1);
+        testSkills = testchara.substr(0, testchara.find_first_of(';'));
+        for (i = 0; i < testSkills.length(); i++)
+        {
+            if (!isdigit(testSkills[i])) throw 4;
+        }
+        testNbSkills = std::stoi(testSkills);
+        for (i = 0; i < testNbSkills; i++)
+        {
+            testchara = testchara.substr(testchara.find_firs_of(';') + 1);
+            testSkills = testchara.substr(0, testchara.find_first_of(';'));
+            testSkillsBis = testSkills;
+            j = 0;
+            while (testSkillsBis.find('/'))
+            {
+                j++;
+                testSkillsBis = testSkillsBis.substr(testSkills.find_first_of('/') + 1);
+            }
+            
+            if (j != 4) throw 5;
+            for (j = 0; j < 3; j++)
+            {
+                testSkills = testSkills.substr(testSkills.find_first_of('/') + 1);
+                testSkillsBis = testSkills.substr(0, testSkills.find_first_of('/'));
+                for (i = 0; i < testSkillsBis.length(); i++)
+                {
+                    if (!isdigit(testSkillsBis[i])) throw 5;
+                }
+            }
+            testSkills = testSkills.substr(testSkills.find_first_of('/') + 1);
+            if (testSkills.length() > 1) throw 5;
+            if (!isdigit(testSkills[0])) throw 5;
+            testTarg = std::stoi(testSkills);
+            if (testTarg != 1 && testTarg != 0) throw 5;
+        }
     }
     catch(int error_code)
     {
         switch (error_code)
+        {
             case 1:
-                throw std::string("Toutes les donnees n'ont pas ete entrees.";
+                throw std::string("Toutes les donnees n'ont pas ete entrees.");
                 break;
             case 2:
                 throw std::string("Donnees HP invalides.");
@@ -104,6 +142,7 @@ Character::Character(std::string character)
             default:
                 throw std::string("Donnees du Character invalides!");
                 break;
+        }
     }
     name = character.substr(0, character.find_first_of(';'));
     character = character.substr(character.find_first_of(';') + 1);

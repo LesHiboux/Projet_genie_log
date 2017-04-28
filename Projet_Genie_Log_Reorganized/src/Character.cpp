@@ -14,6 +14,45 @@ Character::Character(std::string character)
 {
     //ctor
     character = character.substr(1);
+    try
+    {
+        std::string testchara, testHP, testMP, testSkills;
+        int testHPVal, testMPVal, testNbS;
+        testchara = character;
+        int i = 0;
+        while (testchara.find(';')
+        {
+            i++;
+            testchara = testchara.substr(testchara.find_fors_of(';'));
+        }
+        if (i < 5) throw 1;
+        testchara = character;
+        testchara = testchara.substr(testchara.find_firs_of(';'));
+        testHP = testchara.substr(0, character.find_first_of(';'));
+        testHPVal = 
+    }
+    catch(int error_code)
+    {
+        switch (error_code)
+            case 1:
+                std::cerr << "Toutes les donnees n'ont pas ete entrees." << std::endl;
+                break;
+            case 2:
+                std::cerr << "Donnees HP invalides." << std::endl;
+                break;
+            case 3:
+                std::cerr << "Donnees MP invalides." << std::endl;
+                break;
+            case 4:
+                std::cerr << "Nombre de Skills invalide." << std::endl;
+                break;
+            case 5:
+                std::cerr << "Donnees sur l'un des skills invalides." << std::endl;
+                break;
+            default:
+                std::cerr << "Donnees du Character invalides!" << std::endl;
+                break;
+    }
     name = character.substr(0, character.find_first_of(';'));
     character = character.substr(character.find_first_of(';') + 1);
     HP = Gauge("Life", character.substr(0, character.find_first_of(';')));

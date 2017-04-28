@@ -197,6 +197,15 @@ bool Map::verif_monstre()
 	return false;
 }
 
+bool Map::verif_Soin()
+{
+	if (mapEntite[positionJoueur.first][positionJoueur.second] == 2) //numeros d'une case heal
+	{
+		return true;
+	}
+	return false;
+}
+
 void Map::unsetmob()
 {
 	mapEntite[positionJoueur.first][positionJoueur.second] = 0;

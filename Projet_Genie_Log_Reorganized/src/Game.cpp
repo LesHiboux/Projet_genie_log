@@ -15,7 +15,7 @@ Game::Game() {
 	}
 	catch (string const& err)
 	{
-		std::cerr<<err<<std::endl;
+		throw string("test");
 	}
 }
 

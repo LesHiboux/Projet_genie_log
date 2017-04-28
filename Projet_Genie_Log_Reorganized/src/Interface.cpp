@@ -32,7 +32,7 @@ void Interface::afficheCombat(Character perso, Character mob)
 void Interface::afficheCombatDetails(Character perso, Skill skill)
 {
     cout << perso.getName() << " utilise " << skill.getName() << ", il inflige " << skill.getDamage() << " de dégats." << endl;
-    system("sleep 2");
+    system("sleep 1");
     cout<<endl;
 }
 

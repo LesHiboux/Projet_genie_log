@@ -114,9 +114,11 @@ void Interface::afficheLoose()
 
 void Interface::afficheWinC(Map carte)
 {
+    cout<<"\n"<<endl;
     cout<<"BRAVO !!!! Vous avez gagné ce combats :)"<<endl;
     cout<<"Il vous reste "<<carte.mobRestants()<<" monstres a battre."<<endl;
     cout<<"Continuez sur votre lancee victorieux aventurier !"<<endl;
+    system("sleep 2");
 }
 
 void Interface::afficheWinF()

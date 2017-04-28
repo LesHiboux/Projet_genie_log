@@ -7,18 +7,10 @@ using namespace std;
 
 //test
 
-Game::Game()
-{
-	try
-	{
-		carte=Map();
-		nbRestant=carte.mobRestants();
-		setPileMob();
-	}
-	catch (const std::string & err)
-	{
-		throw err;
-	}
+Game::Game() {
+	carte=Map();
+	nbRestant=carte.mobRestants();
+	setPileMob();
 }
 
 int Game::getNbRestant()

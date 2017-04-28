@@ -58,7 +58,7 @@ class Game
 			\return true: Le combat est gagné (le joueur n'est pas mort)
 			\return false: Le combat est perdu (mort du joueur)
 		*/
-		bool combat(Character monstre);
+		bool combat(Character monstre, bool &quitter);
 
 		//! Permet au joueur de choisir son sort
 		/*!	\param quitter Permet de savoir si le joueur veut quitter le jeux

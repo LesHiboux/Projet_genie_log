@@ -14,8 +14,9 @@ Game::Game()
 		carte=Map();
 		nbRestant=carte.mobRestants();
 		setPileMob();
+		partie();
 	}
-	catch (const std::string & err)
+	catch (const string & err)
 	{
 		throw err;
 	}
@@ -73,7 +74,15 @@ void Game::setPileMob()
 	{
 		bool victoire=false;
 		bool finPartie=false;
-		if(!selection_perso()) return;
+		//try
+		//{
+			if(!selection_perso()) return;
+		/*}
+		catch (const string & err)
+		{
+			throw err;
+		}*/
+		vue.afficheDebutJeu();
 			//Variable pour choisir une direction ou aller sur la carte
 		string direction;
 		while (finPartie==false)
@@ -82,7 +91,7 @@ void Game::setPileMob()
 				//On se déplace tant qu'on ne rencontre pas de monstre
 			while (carte.verif_monstre()!=true)
 			{
-				vue.afficheMap(carte);
+				vue.afficheMap(carte, joueur);
 				cin >> direction;
 				if (direction=="quitter") {
 					cout<<"Merci d'avoir joué!"<<endl;
@@ -97,17 +106,28 @@ void Game::setPileMob()
 						return;
 					}
 				}
-				/*while (direction!="z" || direction!="Z" || direction!="q" || direction!="Q" || direction!="s" || direction!="S" || direction!="d" || direction!="D")
+					//Heal si case soin
+				if (carte.verif_Soin())
 				{
-					cerr<<"Choisissez une direction"<<endl;
-					cin>> direction;
-				}*/
+					pair <int, int> vieJoueur=joueur.getLife();
+					if (vieJoueur.first <= vieJoueur.second/2)
+					{
+						int soin=vieJoueur.second/2;
+						joueur.editLife(0-soin);
+						carte.unsetmob();
+					}
+				}
 			}
 			Character monstre=pileMob.top();
 			pileMob.pop();
 			carte.unsetmob();
-			victoire=combat(monstre);
-			if (victoire)
+			bool quitter=false;
+			victoire=combat(monstre, quitter);
+			if (quitter==true)
+			{
+				return;
+			}
+			else if (victoire)
 			{
 					//Afficher victoire combat
 				vue.afficheWinC(carte);
@@ -134,7 +154,14 @@ bool Game::selection_perso() {
 		string choix;
 		getline(liste_persos, perso);
 		while (!liste_persos.eof()){
-			joueur = Character(perso);
+			///try
+			//{
+				joueur = Character(perso);
+			/*}
+			catch (const string & err)
+			{
+				throw err;
+			}*/
 				//affichage_selection_perso;
 			vue.afficheSelectP(joueur);
 			//cerr << joueur.getName() << endl;
@@ -160,19 +187,21 @@ bool Game::selection_perso() {
 		liste_persos.close();
 		return selection_perso();
 	}
-	else cerr << "Impossible d'ouvrir le fichier" << endl;
+	else cerr<<"Impossible d'ouvrir le fichier"<<endl;
+		//throw  string("Impossible d'ouvrir le fichier");
 	return false;
 }
 
 	/********************
 		   combat
 	********************/
-bool Game::combat(Character monstre)
+bool Game::combat(Character monstre, bool &quitter)
 {
 	bool victoire = false;		//dit si on as gagnés
 	bool finCombat=false;		//dit si c'est la fin du combat
 		//bool pour savoir si le joueur veux quitter
-	bool quitter=false;
+	quitter=false;
+	vue.afficheCombatDebut(joueur, monstre);
 	while (finCombat!=true)
 	{
 			//au départ, on affiche les infos du mob et du joueur + compétences du joueur
@@ -385,6 +414,8 @@ bool Game::tour(Skill sortJoueur, Character &monstre, Skill sortMonstre, bool &v
 				return  true;
 			}
 	}
+	joueur.editMana(-1);
+	monstre.editMana(-1);
 	//A la fin du tour, si les deux son encore en vie, le combat n'est pas fini
 	return false;
 }

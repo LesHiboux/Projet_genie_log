@@ -3,6 +3,14 @@
 
 using namespace std;
 
+void Interface::afficheCombatDebut(Character perso, Character mob)
+{
+    cout<<"Vous rencontrez un monstre : \n "<<endl;
+    affichemob(mob);
+    cout<<"Que le combat commence !!"<<endl;
+    afficheCombat(Character perso, Character mob);
+}
+
 void Interface::afficheCombat(Character perso, Character mob)
 {
     afficheMob(mob);

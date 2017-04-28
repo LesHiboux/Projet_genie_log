@@ -13,7 +13,7 @@ class Interface
         void afficheMob(Character);                         
         void afficheMap(Map carte);                         
         void afficheSkill(Character);                        
-        void afficheCombatDebut(Character, Caracter);       
+        void afficheCombatDebut(Character, Character);       
         void afficheCombat(Character, Character);           
         void afficheCombatDetails(Character, Skill);        
         void afficheWinF();                                 

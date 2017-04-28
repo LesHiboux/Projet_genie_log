@@ -14,7 +14,7 @@ Game::Game()
 		nbRestant=carte.mobRestants();
 		setPileMob();
 	}
-	catch (const string & err)
+	catch (const std::string & err)
 	{
 		throw err;
 	}

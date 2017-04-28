@@ -3,6 +3,11 @@
 
 using namespace std;
 
+void Interface::afficheDebutJeu()
+{
+    cout<<"Bienvenue dans notre jeu valeureux combatant \n C'est ici que ta légende commence, \n Va et renvoie dans les profondeurs de l'enfer ces monstres !! "<<endl;
+}
+
 void Interface::afficheCombatDebut(Character perso, Character mob)
 {
     cout<<"Vous rencontrez un monstre : \n "<<endl;
@@ -99,8 +104,8 @@ void Interface::afficheSelectP(Character perso)
 
 void Interface::afficheLoose()
 {
-    cout<<"\\    /  ____               ____    __    ____   _____     ____    ____    _____   | "<<endl;
-    cout<<" \\  /  /    \\  |    |     /    \\  |  \\  |       |    \\   |       /    \\   |    \\ "<<endl;
+    cout<<"\\    /  ____               ____    __    ____   _____     ____    ____    _____    | "<<endl;
+    cout<<" \\  /  /    \\  |    |     /    \\  |  \\  |       |    \\   |       /    \\   |    \\   | "<<endl;
     cout<<"  \\/   |    |  |    |     |____|  |__/  |__     |    |   |__     |____|   |    |   | "<<endl;
     cout<<"  ||   |    |  |    |     |    |  |  \\  |       |    |   |       |    |   |    |     "<<endl;
     cout<<"  ||   \\____/  \\____/     |    |  |  |  |____   |____/   |____   |    |   |____/   0 "<<endl;

@@ -52,8 +52,8 @@ Map::Map()
 void Map::FormatTest()
 {
 	int longueur, largeur;
-	string detection="", tampon="";
-	ifstream fichier("./config/map.db", ios::in);
+	std::string detection="", tampon="";
+	std::ifstream fichier("./config/map.db", std::ios::in);
 	
 	if (fichier)
 	{	

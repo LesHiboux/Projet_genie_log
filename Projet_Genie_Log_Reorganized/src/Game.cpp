@@ -6,7 +6,8 @@
 
 //test
 
-Game::Game() {
+Game::Game()
+{
 	try
 	{
 		carte=Map();
@@ -15,7 +16,7 @@ Game::Game() {
 	}
 	catch (string const& err)
 	{
-		throw string("test");
+		throw err;
 	}
 }
 

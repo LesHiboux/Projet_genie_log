@@ -56,5 +56,5 @@ bool Skill::getTarget()
 
 bool Skill::available(int MP)
 {
-    return MP > mana_cost;
+    return MP >= mana_cost;
 }

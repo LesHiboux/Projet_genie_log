@@ -18,28 +18,69 @@ Character::Character(std::string character)
     {
         std::string testchara, testGauge, testGaugeBis testSkills;
         testchara = character;
+        
+        // TEST ;
         int i = 0;
         while (testchara.find(';')
         {
             i++;
-            testchara = testchara.substr(testchara.find_fors_of(';'));
+            testchara = testchara.substr(testchara.find_fors_of(';') + 1);
         }
-        if (i != 5) throw 1;
+        if (i != 5)
+        {
+            throw 1;
+        }
         testchara = character;
-        testchara = testchara.substr(testchara.find_firs_of(';'));
-        testGauge = testchara.substr(0, character.find_first_of(';'));
+               
+        testchara = testchara.substr(testchara.find_firs_of(';') + 1);
+        
+        // TEST HP
+        testGauge = testchara.substr(0, testchara.find_first_of(';'));
         testGaugeBis = testGauge;
         i = 0;
         while (testGaugeBis.find('/')
         {
             i++;
-            testGaugeBis = testGaugeBis.substr(testchara.find_fors_of('/'));
+            testGaugeBis = testGaugeBis.substr(testchara.find_fors_of('/') + 1);
         }
-        if (i != 1) throw 2;
-        testGauge = testchara.substr(0, character.find_first_of('/'));
-        for (i = 0; i < testGauge.length(); i++)
+        if (i != 1)
         {
-            if (!isdigit(testGauge[i])) throw 2;
+            throw 2;
+        }
+        testGaugeBis = testGauge.substr(0, character.find_first_of('/'));
+        for (i = 0; i < testGaugeBis.length(); i++)
+        {
+            if (!isdigit(testGaugeBis[i])) throw 2;
+        }
+        testGaugeBis = testGauge.substr(testGauge.find_first_of('/') + 1);
+        for (i = 0; i < testGaugeBis.length(); i++)
+        {
+            if (!isdigit(testGaugeBis[i])) throw 2;
+        }
+        
+        // TEST MP  
+        testchara = testchara.substr(testchara.find_firs_of(';') + 1);
+        testGauge = testchara.substr(0, testchara.find_first_of(';'));
+        testGaugeBis = testGauge;
+        i = 0;
+        while (testGaugeBis.find('/')
+        {
+            i++;
+            testGaugeBis = testGaugeBis.substr(testchara.find_fors_of('/') + 1);
+        }
+        if (i != 1)
+        {
+            throw 3;
+        }
+        testGaugeBis = testGauge.substr(0, character.find_first_of('/'));
+        for (i = 0; i < testGaugeBis.length(); i++)
+        {
+            if (!isdigit(testGaugeBis[i])) throw 3;
+        }
+        testGaugeBis = testGauge.substr(testGauge.find_first_of('/') + 1);
+        for (i = 0; i < testGaugeBis.length(); i++)
+        {
+            if (!isdigit(testGaugeBis[i])) throw 3;
         }
     }
     catch(int error_code)

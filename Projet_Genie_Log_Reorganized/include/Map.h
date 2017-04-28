@@ -58,6 +58,14 @@ class Map
 		*/
 		bool verif_monstre();
 	
+		//! Fonction indiquant la présence ou non d'une case de soin
+		/*!
+			Se base sur la position du joueur
+			\return true: le joueur est sur une case où il est soigné
+			\return false: sinon
+		*/
+		bool verif_Soin();
+	
 		//! Fonction servant à enlever un monstre
 		/*! L'enlève du tableau d'entitées */
 		void unsetmob();

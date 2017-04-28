@@ -2,6 +2,13 @@
 
 int main()
 {
-	Game play = Game();
-	play.partie();
+	try
+	{
+		Game play = Game();
+		play.partie();
+	}
+	catch (string const& err)
+	{
+		std::cerr<<err<<std::endl;
+	}
 }

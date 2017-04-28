@@ -6,7 +6,7 @@ Map::Map()
 	{
 		FormatTest();
 	}
-	catch (const string & err)
+	catch (const std::string & err)
 	{
 		throw err;
 	}
@@ -66,7 +66,7 @@ void Map::FormatTest()
 		else
 		{
 			fichier.close();
-			throw string("Unexpected map settings, initial variables not clear.");
+			throw std::string("Unexpected map settings, initial variables not clear.");
 		}
 		tampon=detection="";
 		
@@ -78,13 +78,13 @@ void Map::FormatTest()
 		if (detection.length()-1!=longueur*largeur*2)
 		{
 			fichier.close();
-			throw string("Unexpected map settings, table length not accurate.");
+			throw std::string("Unexpected map settings, table length not accurate.");
 		}
 	fichier.close();
 	}
 	else
 	{
-		throw string("Reading of map.db is impossible");
+		throw std::string("Reading of map.db is impossible");
 	}
 }
 int** Map::getMapEntite()

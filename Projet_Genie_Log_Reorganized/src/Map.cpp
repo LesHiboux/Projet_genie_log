@@ -6,10 +6,9 @@ Map::Map()
 	{
 		FormatTest();
 	}
-	catch (string const& err)
+	catch (const string & err)
 	{
-		throw string("Unexpected map settings.");
-		return;
+		throw err;
 	}
 	
 	int longueur, largeur, tampon;
@@ -66,9 +65,8 @@ void Map::FormatTest()
 		}
 		else
 		{
-			throw string("Unexpected map settings.");
 			fichier.close();
-			return;
+			throw string("Unexpected map settings, initial variables not clear.");
 		}
 		tampon=detection="";
 		
@@ -79,16 +77,14 @@ void Map::FormatTest()
 		}
 		if (detection.length()-1!=longueur*largeur*2)
 		{
-			throw string("Unexpected map settings.");
 			fichier.close();
-			return;
+			throw string("Unexpected map settings, table length not accurate.");
 		}
 	fichier.close();
 	}
 	else
 	{
-		throw string("Reading of map.txt is impossible");
-		return;
+		throw string("Reading of map.db is impossible");
 	}
 }
 int** Map::getMapEntite()

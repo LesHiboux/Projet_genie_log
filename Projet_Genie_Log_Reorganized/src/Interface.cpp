@@ -138,9 +138,23 @@ void Interface::afficheWinF()
     cout<<"  ||   \\____/  \\____/      \\/  \\/      |   |    \\|   0"<<endl;
 }
 
-void Interface::afficheMap(Map carte)
+void Interface::afficheMap(Map carte, Character perso)
 {
     system("clear");
+    cout<<perso.getName()<<"\n"<<endl;
+    cout << "PV : (" << perso.getLife().first << "/" << perso.getLife().second << ")  [";
+    for (int i = 0; i < perso.getMaxLife(); i++)
+    {
+        if(i < perso.getLife().first)
+        {
+            cout << "#";
+        }
+        else
+        {
+            cout << "-";
+        }
+    }
+    cout<< "] \n" << endl;
     cout<<"Monstres restant : "<<carte.mobRestants()<<endl;
     int ** map = carte.getMapApparence();
     for(int i = 0; i<carte.getTaille().first; i++)

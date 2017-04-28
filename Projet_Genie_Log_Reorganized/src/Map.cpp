@@ -77,7 +77,7 @@ void Map::FormatTest()
 			fichier >> tampon;
 			detection+=tampon;
 		}
-		if (detection.length()!=longueur*largeur*2)
+		if (detection.length()-1!=longueur*largeur*2)
 		{
 			throw string("Unexpected map settings.");
 			fichier.close();

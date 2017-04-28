@@ -2,6 +2,15 @@
 
 Map::Map()
 {
+	try
+	{
+		FormatTest();
+	}
+	catch (const std::string & err)
+	{
+		throw err;
+	}
+	
 	int longueur, largeur, tampon;
 	std::ifstream fichier("./config/map.db", std::ios::in);
 
@@ -38,12 +47,46 @@ Map::Map()
 		fichier.close();
 		std::cout << "Map loaded" << std::endl;
 	}
-	else
-	{
-		std::cout << "Lecture du fichier map impossible" << std::endl;
-	}
 }
 
+void Map::FormatTest()
+{
+	int longueur, largeur;
+	std::string detection="", tampon="";
+	std::ifstream fichier("./config/map.db", std::ios::in);
+	
+	if (fichier)
+	{	
+		fichier >> tampon >> detection;
+		if (isdigit(tampon[0]) && isdigit(detection[0]))
+		{
+			longueur=stoi(tampon);
+			largeur=stoi(detection);
+		}
+		else
+		{
+			fichier.close();
+			throw std::string("Unexpected map settings, initial variables not clear.");
+		}
+		tampon=detection="";
+		
+		while (!fichier.eof())
+		{
+			fichier >> tampon;
+			detection+=tampon;
+		}
+		if (detection.length()-1!=longueur*largeur*2)
+		{
+			fichier.close();
+			throw std::string("Unexpected map settings, table length not accurate.");
+		}
+	fichier.close();
+	}
+	else
+	{
+		throw std::string("Reading of map.db is impossible");
+	}
+}
 int** Map::getMapEntite()
 {
 	return mapEntite;

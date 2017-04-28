@@ -8,6 +8,7 @@
 class Interface
 {
     public:
+        void Interface::afficheDebutJeu();                  //fini à tester
         void affichePerso(Character);                       //fini à tester
         void afficheMob(Character);                         // fini à tester
         void afficheMap(Map carte);                         // fini et testé

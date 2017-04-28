@@ -11,7 +11,7 @@ class Interface
         void afficheDebutJeu();                             
         void affichePerso(Character);                       
         void afficheMob(Character);                         
-        void afficheMap(Map carte);                         
+        void afficheMap(Map carte, Character);                         
         void afficheSkill(Character);                        
         void afficheCombatDebut(Character, Character);       
         void afficheCombat(Character, Character);           

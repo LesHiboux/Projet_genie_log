@@ -8,18 +8,18 @@
 class Interface
 {
     public:
-        void Interface::afficheDebutJeu();                  //fini à tester
-        void affichePerso(Character);                       //fini à tester
-        void afficheMob(Character);                         // fini à tester
-        void afficheMap(Map carte);                         // fini et testé
-        void afficheSkill(Character);                       //fini à tester
-        void afficheCombatDebut(Character, Caracter);       //fini à tester
-        void afficheCombat(Character, Character);           //fini à tester
-        void afficheCombatDetails(Character, Skill);        //fini à tester
-        void afficheWinF();                                 //fini à tester
-        void afficheWinC(Map carte);                        // fini à tester
-        void afficheLoose();                                //fini à tester
-        void afficheSelectP(Character);                     //fini à tester
+        void afficheDebutJeu();                             
+        void affichePerso(Character);                       
+        void afficheMob(Character);                         
+        void afficheMap(Map carte);                         
+        void afficheSkill(Character);                        
+        void afficheCombatDebut(Character, Caracter);       
+        void afficheCombat(Character, Character);           
+        void afficheCombatDetails(Character, Skill);        
+        void afficheWinF();                                 
+        void afficheWinC(Map carte);                        
+        void afficheLoose();                                
+        void afficheSelectP(Character);                     
 };
 
 #endif // INTERFACE_H

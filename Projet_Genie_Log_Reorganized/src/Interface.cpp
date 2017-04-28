@@ -6,6 +6,7 @@ using namespace std;
 void Interface::afficheDebutJeu()
 {
     cout<<"Bienvenue dans notre jeu valeureux combatant \n C'est ici que ta légende commence, \n Va et renvoie dans les profondeurs de l'enfer ces monstres !! "<<endl;
+    system("sleep 3");
 }
 
 void Interface::afficheCombatDebut(Character perso, Character mob)

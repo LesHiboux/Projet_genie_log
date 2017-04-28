@@ -17,7 +17,6 @@ Character::Character(std::string character)
     try
     {
         std::string testchara, testHP, testMP, testSkills;
-        int testHPVal, testMPVal, testNbS;
         testchara = character;
         int i = 0;
         while (testchara.find(';')
@@ -25,11 +24,22 @@ Character::Character(std::string character)
             i++;
             testchara = testchara.substr(testchara.find_fors_of(';'));
         }
-        if (i < 5) throw 1;
+        if (i != 5) throw 1;
         testchara = character;
         testchara = testchara.substr(testchara.find_firs_of(';'));
         testHP = testchara.substr(0, character.find_first_of(';'));
-        testHPVal = 
+        i = 0;
+        while (testHP.find('/')
+        {
+            i++;
+            testchara = testchara.substr(testchara.find_fors_of('/'));
+        }
+        if (i != 1) throw 2;
+        testHP = testchara.substr(0, character.find_first_of('/'));
+        for (i = 0; i < testHP.length(); i++)
+        {
+            if (!isdigit(testHP[i])) throw 2;
+        }
     }
     catch(int error_code)
     {

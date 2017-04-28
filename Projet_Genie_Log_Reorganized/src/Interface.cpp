@@ -5,20 +5,23 @@ using namespace std;
 
 void Interface::afficheDebutJeu()
 {
+    system("clear");
     cout<<"Bienvenue dans notre jeu valeureux combatant \n C'est ici que ta légende commence, \n Va et renvoie dans les profondeurs de l'enfer ces monstres !! "<<endl;
-    system("sleep 3");
+    system("sleep 4");
 }
 
 void Interface::afficheCombatDebut(Character perso, Character mob)
 {
+    system("clear");
     cout<<"Vous rencontrez un monstre : \n "<<endl;
     afficheMob(mob);
     cout<<"Que le combat commence !!"<<endl;
-    afficheCombat(perso, mob);
+    system("sleep 3");
 }
 
 void Interface::afficheCombat(Character perso, Character mob)
 {
+    system("clear");
     afficheMob(mob);
     for(int i = 0; i<40 ;i++){cout << "-";} //ligne séparation
     cout<<"\n"<<endl;
@@ -29,6 +32,8 @@ void Interface::afficheCombat(Character perso, Character mob)
 void Interface::afficheCombatDetails(Character perso, Skill skill)
 {
     cout << perso.getName() << " utilise " << skill.getName() << ", il inflige " << skill.getDamage() << " de dégats." << endl;
+    system("sleep 1");
+    cout<<endl;
 }
 
 void Interface::afficheSkill(Character perso)
@@ -99,6 +104,7 @@ void Interface::afficheMob(Character mob)
 
 void Interface::afficheSelectP(Character perso)
 {
+    system("clear");
     affichePerso(perso);
     cout<<"Voulez-vous jouer avec ce personnage ? [O/N] "<<endl;
 }

@@ -7,7 +7,7 @@ int main()
 		Game play = Game();
 		play.partie();
 	}
-	catch (string const& err)
+	catch (const string & err)
 	{
 		std::cerr<<err<<std::endl;
 	}

@@ -1,4 +1,5 @@
 #include "../include/Game.h"
+using namespace std;
 
 	/************************
 	Constructeurs, get et set
@@ -37,17 +38,17 @@ Map Game::getCarte()
 
 void Game::setPileMob()
 {
-	std::fstream mobFile;
-	mobFile.open("./config/monstres.db", std::fstream::in);
+	fstream mobFile;
+	mobFile.open("./config/monstres.db", fstream::in);
 	if (mobFile.is_open())
 	{
 		Character mobTmp;
-		std::string characterString;
+		string characterString;
 		for (int i=0; i<nbRestant; i++)
 		{
 			getline(mobFile, characterString);
 
-			//std::cerr << characterString << std::endl;
+			//cerr << characterString << endl;
 			Character mobTmp(characterString);
 			pileMob.push(mobTmp);
 		}
@@ -55,7 +56,7 @@ void Game::setPileMob()
 	}
 	else
 	{
-		std::cerr << "Lecture du fichier monstres impossible" << std::endl;
+		cerr << "Lecture du fichier monstres impossible" << endl;
 	}
 }
 
@@ -74,7 +75,7 @@ void Game::setPileMob()
 		bool finPartie=false;
 		if(!selection_perso()) return;
 			//Variable pour choisir une direction ou aller sur la carte
-		std::string direction;
+		string direction;
 		while (finPartie==false)
 		{
 			//vue.afficheMap();
@@ -82,17 +83,17 @@ void Game::setPileMob()
 			while (carte.verif_monstre()!=true)
 			{
 				vue.afficheMap(carte);
-				std::cin >> direction;
+				cin >> direction;
 				if (direction=="quitter") {
-					std::cout<<"Merci d'avoir joué!"<<std::endl;
+					cout<<"Merci d'avoir joué!"<<endl;
 					return;
 				}
 				while(!carte.deplacer(direction[0]))
 				{
-					std::cerr << "Choisissez une direction" << std::endl;
-					std::cin >> direction;
+					cerr << "Choisissez une direction" << endl;
+					cin >> direction;
 					if (direction=="quitter") {
-						std::cout<<"Merci d'avoir joué!"<<std::endl;
+						cout<<"Merci d'avoir joué!"<<endl;
 						return;
 					}
 				}
@@ -117,7 +118,7 @@ void Game::setPileMob()
 			{
 					//Affiche perdu...
 				vue.afficheLoose();
-				//std::cerr<<"you died..."<<std::endl;
+				//cerr<<"you died..."<<endl;
 				return;
 				//Afficher you died
 			}
@@ -127,35 +128,39 @@ void Game::setPileMob()
 	}
 
 bool Game::selection_perso() {
-	std::ifstream liste_persos("./config/liste_persos.db");
+	ifstream liste_persos("./config/liste_persos.db");
 	if(liste_persos){
-		std::string perso;
-		std::string choix;
+		string perso;
+		string choix;
 		getline(liste_persos, perso);
 		while (!liste_persos.eof()){
 			joueur = Character(perso);
 				//affichage_selection_perso;
 			vue.afficheSelectP(joueur);
-			//std::cerr << joueur.getName() << std::endl;
-			//std::cerr << "o: joueur | n: suivant" << std::endl;
-			std::cin >> choix;
+			//cerr << joueur.getName() << endl;
+			//cerr << "o: joueur | n: suivant" << endl;
+			cin >> choix;
 			if (choix=="quitter") {
-				std::cout<<"Merci d'avoir joué!"<<std::endl;
+				cout<<"Merci d'avoir joué!"<<endl;
 				return false;
 			}
 			else {
-				while (choix!="o" && choix!="n") {
-					std::cout << "erreur entrez o ou n" << std::endl;
-					std::cin >> choix;
+				while (choix!="o" && choix!="n" && choix!="O" && choix!="N") {
+					cout << "erreur entrez o ou n" << endl;
+					cin >> choix;
+					if (choix=="quitter") {
+						cout<<"Merci d'avoir joué!"<<endl;
+						return false;
+					}
 				}
- 				if (choix=="o") return true;
+ 				if (choix=="o" || choix=="O") return true;
 				getline(liste_persos, perso);
 			}
 		}
 		liste_persos.close();
 		return selection_perso();
 	}
-	else std::cerr << "Impossible d'ouvrir le fichier" << std::endl;
+	else cerr << "Impossible d'ouvrir le fichier" << endl;
 	return false;
 }
 
@@ -177,12 +182,12 @@ bool Game::combat(Character monstre)
 		Skill sortJoueur, sortMonstre;
 		sortJoueur=selectSkillJoueur(quitter);
 		if (quitter==true) return victoire;
-		//std::cerr<<sortJoueur.getName()<<", "<<sortJoueur.getDamage()<<", "<<joueur.getLife().first<<std::endl;
+		//cerr<<sortJoueur.getName()<<", "<<sortJoueur.getDamage()<<", "<<joueur.getLife().first<<endl;
 		sortMonstre=selectSkillMonstre(monstre);
-		//std::cerr<<sortMonstre.getName()<<", "<<sortMonstre.getDamage()<<", "<<monstre.getLife().first<<std::endl;
+		//cerr<<sortMonstre.getName()<<", "<<sortMonstre.getDamage()<<", "<<monstre.getLife().first<<endl;
 		finCombat=tour(sortJoueur, monstre, sortMonstre, victoire);
 	}
-	//std::cerr<<victoire<<std::endl;
+	//cerr<<victoire<<endl;
 	return victoire;
 }
 
@@ -190,29 +195,29 @@ Skill Game::selectSkillJoueur(bool &quitter)
 {
 	bool done=false; //vérifie si la compétence a bien été choisie
 	Skill sort;
-	//std::cerr << "sélectionnez une compétence" << std::endl;
+	//cerr << "sélectionnez une compétence" << endl;
 	while (done!=true)
 	{
-		std::string select;	//faire des sélections
-		std::cin >> select;
+		string select;	//faire des sélections
+		cin >> select;
 		if (select=="quitter") {
-			std::cout<<"Merci d'avoir joué!"<<std::endl;
+			cout<<"Merci d'avoir joué!"<<endl;
 			done=true;
 			quitter=true;
 			sort=Skill();
 		}
+		else if (!isdigit(select[0])) cout<<"Erreur ce sort n'existe pas:";
 		else {
-			int select_skill=std::stoi(select);
-			while ( select_skill<=0 || select_skill > joueur.getNbSkills())
-			{
-				std::cin >> select_skill;
+			int select_skill=stoi(select);
+			if ( select_skill<=0 || select_skill > joueur.getNbSkills()) cout<<"Erreur ce sort n'existe pas:";
+			else {
+				sort=joueur.getSkill(select_skill);
+				if (joueur.available(sort))
+				{
+					done=true;
+				}
+				else cerr << "Pas assez de mana.Choisissez un autre sort:";
 			}
-			sort=joueur.getSkill(select_skill);
-			if (joueur.available(sort))
-			{
-				done=true;
-			}
-			else std::cerr << "Pas assez de mana" << std::endl;
 		}
 	}
 	return sort;
@@ -242,12 +247,12 @@ bool Game::tour(Skill sortJoueur, Character &monstre, Skill sortMonstre, bool &v
 	int prioriteJoueur;
 	int manaCostJoueur=sortJoueur.getManaCost();
 	int damageJoueur=sortJoueur.getDamage();
-	//std::cerr<<"mana cost:"<<manaCostJoueur<<", damage joueur:"<<damageJoueur<<std::endl;
+	//cerr<<"mana cost:"<<manaCostJoueur<<", damage joueur:"<<damageJoueur<<endl;
 
 	int manaCostMonstre=sortMonstre.getManaCost();
 	int damageMonstre=sortMonstre.getDamage();
 	int prioriteMonstre;
-	//std::cerr<<"mana cost monstre:"<<manaCostMonstre<<", damage mob:"<<damageJoueur<<std::endl;
+	//cerr<<"mana cost monstre:"<<manaCostMonstre<<", damage mob:"<<damageJoueur<<endl;
 
 	prioriteJoueur=joueur.getSpeed() + sortJoueur.getPriority();
 	prioriteMonstre=monstre.getSpeed() + sortMonstre.getPriority();
@@ -270,20 +275,20 @@ bool Game::tour(Skill sortJoueur, Character &monstre, Skill sortMonstre, bool &v
 
 			if (monstre.isAlive()==false && joueur.isAlive()==false)
 			{
-				//std::cerr << "la1" << std::endl;
+				//cerr << "la1" << endl;
 				victoire=false;
 				return true;
 			}
 			else if (monstre.isAlive()==false)
 			{
-				//std::cerr << "la2" << std::endl;
-				//std::cerr<<"monstre vie:"<<monstre.getLife().first<<std::endl;
+				//cerr << "la2" << endl;
+				//cerr<<"monstre vie:"<<monstre.getLife().first<<endl;
 				victoire=true;
 				return  true;
 			}
 			else if (joueur.isAlive()==false)
 			{
-				//std::cerr << "la3" << std::endl;
+				//cerr << "la3" << endl;
 				victoire=false;
 				return  true;
 			}

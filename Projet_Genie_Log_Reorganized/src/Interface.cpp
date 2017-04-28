@@ -33,7 +33,7 @@ void Interface::afficheCombatDetails(Character perso, Skill skill)
 void Interface::afficheSkill(Character perso)
 {
     cout<<"     Action      Dégats      Cost"<<endl;
-    for(int i = 1; i<perso.getNbSkills() ; i++)
+    for(int i = 1; i<=perso.getNbSkills() ; i++)
     {
         Skill skill = perso.getSkill(i);
         cout<<i<< "- " << skill.getName() << "     " << skill.getDamage() << "          " << skill.getManaCost() <<"\n"<<endl;

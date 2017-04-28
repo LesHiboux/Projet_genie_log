@@ -16,7 +16,7 @@ Character::Character(std::string character)
     character = character.substr(1);
     try
     {
-        std::string testchara, testHP, testMP, testSkills;
+        std::string testchara, testGauge, testGaugeBis testSkills;
         testchara = character;
         int i = 0;
         while (testchara.find(';')
@@ -27,40 +27,41 @@ Character::Character(std::string character)
         if (i != 5) throw 1;
         testchara = character;
         testchara = testchara.substr(testchara.find_firs_of(';'));
-        testHP = testchara.substr(0, character.find_first_of(';'));
+        testGauge = testchara.substr(0, character.find_first_of(';'));
+        testGaugeBis = testGauge;
         i = 0;
-        while (testHP.find('/')
+        while (testGaugeBis.find('/')
         {
             i++;
-            testchara = testchara.substr(testchara.find_fors_of('/'));
+            testGaugeBis = testGaugeBis.substr(testchara.find_fors_of('/'));
         }
         if (i != 1) throw 2;
-        testHP = testchara.substr(0, character.find_first_of('/'));
-        for (i = 0; i < testHP.length(); i++)
+        testGauge = testchara.substr(0, character.find_first_of('/'));
+        for (i = 0; i < testGauge.length(); i++)
         {
-            if (!isdigit(testHP[i])) throw 2;
+            if (!isdigit(testGauge[i])) throw 2;
         }
     }
     catch(int error_code)
     {
         switch (error_code)
             case 1:
-                std::cerr << "Toutes les donnees n'ont pas ete entrees." << std::endl;
+                throw std::string("Toutes les donnees n'ont pas ete entrees.";
                 break;
             case 2:
-                std::cerr << "Donnees HP invalides." << std::endl;
+                throw std::string("Donnees HP invalides.");
                 break;
             case 3:
-                std::cerr << "Donnees MP invalides." << std::endl;
+                throw std::string("Donnees MP invalides.");
                 break;
             case 4:
-                std::cerr << "Nombre de Skills invalide." << std::endl;
+                throw std::string("Nombre de Skills invalide.");
                 break;
             case 5:
-                std::cerr << "Donnees sur l'un des skills invalides." << std::endl;
+                throw std::string("Donnees sur l'un des skills invalides.");
                 break;
             default:
-                std::cerr << "Donnees du Character invalides!" << std::endl;
+                throw std::string("Donnees du Character invalides!");
                 break;
     }
     name = character.substr(0, character.find_first_of(';'));

@@ -104,6 +104,7 @@ void Interface::afficheSelectP(Character perso)
 
 void Interface::afficheLoose()
 {
+    system("clear");
     cout<<"\\    /  ____               ____    __    ____   _____     ____    ____    _____    | "<<endl;
     cout<<" \\  /  /    \\  |    |     /    \\  |  \\  |       |    \\   |       /    \\   |    \\   | "<<endl;
     cout<<"  \\/   |    |  |    |     |____|  |__/  |__     |    |   |__     |____|   |    |   | "<<endl;
@@ -113,13 +114,16 @@ void Interface::afficheLoose()
 
 void Interface::afficheWinC(Map carte)
 {
+    cout<<"\n"<<endl;
     cout<<"BRAVO !!!! Vous avez gagné ce combats :)"<<endl;
     cout<<"Il vous reste "<<carte.mobRestants()<<" monstres a battre."<<endl;
     cout<<"Continuez sur votre lancee victorieux aventurier !"<<endl;
+    system("sleep 2");
 }
 
 void Interface::afficheWinF()
 {
+    system("clear");
     cout<<"\\    /  ____                           0   |\\    |   |"<<endl;
     cout<<" \\  /  /    \\  |    |   \\          /       | \\   |   |"<<endl;
     cout<<"  \\/   |    |  |    |    \\        /    |   |  \\  |   |"<<endl;
@@ -129,6 +133,7 @@ void Interface::afficheWinF()
 
 void Interface::afficheMap(Map carte)
 {
+    system("clear");
     cout<<"Monstres restant : "<<carte.mobRestants()<<endl;
     int ** map = carte.getMapApparence();
     for(int i = 0; i<carte.getTaille().first; i++)

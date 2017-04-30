@@ -30,3 +30,15 @@ et doit suivre le pattern suivant:
   / \
  / ! \		NE PAS PLACER LES ZONES MONSTRES HORS D'ATTEINTE DU JOUEUR
 /_____\
+
+
+
+
+
+
+Liste des monstre
+
+le fichier doit etre nommé comme suit: ./config/monstres.db
+chaque lignes représetent un monstre ayant le meme pattern qu'un character
+le nombre de ligne (nombre de monstre) >= nombre de monstre décris dans map (nombre de cases monstre)
+L'apparition des monstre se fera dans l'ordre inverse des lignes du document

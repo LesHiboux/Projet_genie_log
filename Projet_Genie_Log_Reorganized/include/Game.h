@@ -1,5 +1,6 @@
 #include <stack>
 #include <time.h>
+#include <stdexcept>
 
 #include "../include/Interface.h"
 

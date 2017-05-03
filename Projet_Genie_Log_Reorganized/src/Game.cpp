@@ -20,10 +20,6 @@ Game::Game()
 	{
 		throw err;
 	}
-	catch (const out_of_range& err)
-	{
-		throw string("erreur pas asser de mostre");
-	}
 }
 
 int Game::getNbRestant()
@@ -51,11 +47,27 @@ void Game::setPileMob()
 		string characterString;
 		for (int i=0; i<nbRestant; i++)
 		{
+			/*try 
+			{
+				mobFile.eof();
+			}
+			catch (const out_of_range& err)
+			{
+				throw string("erreur pas asser de mostre");
+			}*/
 			if (!mobFile.eof())
 			{
+				cerr<<"la"<<endl;
 				getline(mobFile, characterString);
-				//cerr << characterString << endl;
-				Character mobTmp(characterString);
+				cerr << characterString << endl;
+				try
+				{
+					mobTmp=Character(characterString);
+				}
+				catch (...)
+				{
+					throw string("erreur de configuration du fichier monstres");
+				}
 				pileMob.push(mobTmp);
 			}
 			else throw string("erreur pas assé de monstres");
@@ -162,14 +174,14 @@ bool Game::selection_perso() {
 		string choix;
 		getline(liste_persos, perso);
 		while (!liste_persos.eof()){
-			///try
-			//{
-				joueur = Character(perso);
-			/*}
-			catch (const string & err)
+			try
 			{
-				throw err;
-			}*/
+				joueur = Character(perso);
+			}
+			catch (...)
+			{
+				throw string("erreur de configuration du fichier liste_persos");
+			}
 				//affichage_selection_perso;
 			vue.afficheSelectP(joueur);
 			//cerr << joueur.getName() << endl;

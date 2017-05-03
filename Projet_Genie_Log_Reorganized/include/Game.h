@@ -20,7 +20,8 @@ class Game
 		/*! initialise:\n
 		*		-Catre: Map \n
 		*		-nbRestant: int nombre de mob à tuer pour gagner \n
-		*		-plieMob: stack<Character> la pile regroupant tous les mob à tuer
+		*		-plieMob: stack<Character> la pile regroupant tous les mob à tuer\n
+		*		-lance le jeux
 		*/
 
 		Game();
@@ -55,6 +56,7 @@ class Game
 		//! Gère le combat
 		/*!
 			\param monstre Le monstre
+			\param quitter Permet de savoir si le joueur veut quitter le jeux
 
 			\return true: Le combat est gagné (le joueur n'est pas mort)
 			\return false: Le combat est perdu (mort du joueur)
@@ -62,7 +64,9 @@ class Game
 		bool combat(Character monstre, bool &quitter);
 
 		//! Permet au joueur de choisir son sort
-		/*!	\param quitter Permet de savoir si le joueur veut quitter le jeux
+		/*!
+			\param monstre Permet de connaitre le monstre contre qui le joueur doit se battre
+			\param quitter Permet de savoir si le joueur veut quitter le jeux
 			\return Skill choisie par le joueur
 		*/
 		Skill selectSkillJoueur(bool &quitter);

@@ -57,9 +57,8 @@ void Game::setPileMob()
 			}*/
 			if (!mobFile.eof())
 			{
-				cerr<<"la"<<endl;
 				getline(mobFile, characterString);
-				cerr << characterString << endl;
+				//cerr << characterString << endl;
 				try
 				{
 					mobTmp=Character(characterString);

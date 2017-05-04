@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unsetmob',['unsetmob',['../class_map.html#ac66a790ec7b408ce0b28fe1add89c45f',1,'Map']]]
+  ['tour',['tour',['../class_game.html#a854c0cb4951df8b26fd0bb8ebf9b0169',1,'Game']]]
 ];

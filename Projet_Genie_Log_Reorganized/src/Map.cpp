@@ -124,7 +124,6 @@ bool Map::deplacer(char x)
 				std::cout << "Deplacement impossible" << std::endl;
 				return false;
 			}
-			std::cerr << "la" << std::endl;
 			positionJoueur = std::make_pair(coordI-1,coordJ);
 			return true;
 			break;

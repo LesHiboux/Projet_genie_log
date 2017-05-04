@@ -47,17 +47,36 @@ void Game::setPileMob()
 		string characterString;
 		for (int i=0; i<nbRestant; i++)
 		{
-			getline(mobFile, characterString);
-
-			//cerr << characterString << endl;
-			Character mobTmp(characterString);
-			pileMob.push(mobTmp);
+			/*try 
+			{
+				mobFile.eof();
+			}
+			catch (const out_of_range& err)
+			{
+				throw string("erreur pas assez de monstres");
+			}*/
+			if (!mobFile.eof())
+			{
+				getline(mobFile, characterString);
+				//cerr << characterString << endl;
+				try
+				{
+					mobTmp=Character(characterString);
+				}
+				catch (...)
+				{
+					throw string("erreur de configuration du fichier monstres");
+				}
+				pileMob.push(mobTmp);
+			}
+			else throw string("erreur pas assé de monstres");
 		}
 		mobFile.close();
 	}
 	else
 	{
-		cerr << "Lecture du fichier monstres impossible" << endl;
+		throw string("Lecture du fichier monstres impossible");
+		//cerr << "Lecture du fichier monstres impossible" << endl;
 	}
 }
 
@@ -74,14 +93,14 @@ void Game::setPileMob()
 	{
 		bool victoire=false;
 		bool finPartie=false;
-		//try
-		//{
+		try
+		{
 			if(!selection_perso()) return;
-		/*}
+		}
 		catch (const string & err)
 		{
 			throw err;
-		}*/
+		}
 		vue.afficheDebutJeu();
 			//Variable pour choisir une direction ou aller sur la carte
 		string direction;
@@ -154,14 +173,14 @@ bool Game::selection_perso() {
 		string choix;
 		getline(liste_persos, perso);
 		while (!liste_persos.eof()){
-			///try
-			//{
-				joueur = Character(perso);
-			/*}
-			catch (const string & err)
+			try
 			{
-				throw err;
-			}*/
+				joueur = Character(perso);
+			}
+			catch (...)
+			{
+				throw string("erreur de configuration du fichier liste_persos");
+			}
 				//affichage_selection_perso;
 			vue.afficheSelectP(joueur);
 			//cerr << joueur.getName() << endl;
@@ -187,8 +206,8 @@ bool Game::selection_perso() {
 		liste_persos.close();
 		return selection_perso();
 	}
-	else cerr<<"Impossible d'ouvrir le fichier"<<endl;
-		//throw  string("Impossible d'ouvrir le fichier");
+	//else cerr<<"Impossible d'ouvrir le fichier"<<endl;
+	throw  string("Impossible d'ouvrir le fichier liste_persos");
 	return false;
 }
 

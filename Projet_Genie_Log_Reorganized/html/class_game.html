@@ -91,12 +91,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a64b2b59eb9101c318a69faaec75b8f08"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a64b2b59eb9101c318a69faaec75b8f08">partie</a> ()</td></tr>
 <tr class="memdesc:a64b2b59eb9101c318a69faaec75b8f08"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gèrer le déroulement d'une partie.  <a href="#a64b2b59eb9101c318a69faaec75b8f08">More...</a><br /></td></tr>
 <tr class="separator:a64b2b59eb9101c318a69faaec75b8f08"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4013c87adfefb0373aacca02574e89ec"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a4013c87adfefb0373aacca02574e89ec">combat</a> (<a class="el" href="class_character.html">Character</a> monstre)</td></tr>
-<tr class="memdesc:a4013c87adfefb0373aacca02574e89ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gère le combat.  <a href="#a4013c87adfefb0373aacca02574e89ec">More...</a><br /></td></tr>
-<tr class="separator:a4013c87adfefb0373aacca02574e89ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac94b3f431a5e75e61fac3aa0bf9b98b2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_skill.html">Skill</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#ac94b3f431a5e75e61fac3aa0bf9b98b2">selectSkillJoueur</a> ()</td></tr>
-<tr class="memdesc:ac94b3f431a5e75e61fac3aa0bf9b98b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet au joueur de choisir son sort.  <a href="#ac94b3f431a5e75e61fac3aa0bf9b98b2">More...</a><br /></td></tr>
-<tr class="separator:ac94b3f431a5e75e61fac3aa0bf9b98b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a437b1e7536b60ebbf90c4f2f1445bac7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a437b1e7536b60ebbf90c4f2f1445bac7">combat</a> (<a class="el" href="class_character.html">Character</a> monstre, bool &amp;quitter)</td></tr>
+<tr class="memdesc:a437b1e7536b60ebbf90c4f2f1445bac7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gère le combat.  <a href="#a437b1e7536b60ebbf90c4f2f1445bac7">More...</a><br /></td></tr>
+<tr class="separator:a437b1e7536b60ebbf90c4f2f1445bac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2750f7438677ad1697fde860074ca530"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_skill.html">Skill</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a2750f7438677ad1697fde860074ca530">selectSkillJoueur</a> (bool &amp;quitter)</td></tr>
+<tr class="memdesc:a2750f7438677ad1697fde860074ca530"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet au joueur de choisir son sort.  <a href="#a2750f7438677ad1697fde860074ca530">More...</a><br /></td></tr>
+<tr class="separator:a2750f7438677ad1697fde860074ca530"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a94698b08320df0e1bf3a8fee10e0c77b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_skill.html">Skill</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game.html#a94698b08320df0e1bf3a8fee10e0c77b">selectSkillMonstre</a> (<a class="el" href="class_character.html">Character</a> monstre)</td></tr>
 <tr class="memdesc:a94698b08320df0e1bf3a8fee10e0c77b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet au monstre de choisir sa compétence.  <a href="#a94698b08320df0e1bf3a8fee10e0c77b">More...</a><br /></td></tr>
 <tr class="separator:a94698b08320df0e1bf3a8fee10e0c77b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,13 +124,14 @@ Public Member Functions</h2></td></tr>
 <p>initialise:<br />
  -Catre: <a class="el" href="class_map.html">Map</a> <br />
  -nbRestant: int nombre de mob à tuer pour gagner <br />
- -plieMob: stack&lt;Character&gt; la pile regroupant tous les mob à tuer </p>
+ -plieMob: stack&lt;Character&gt; la pile regroupant tous les mob à tuer<br />
+ -lance le jeux </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4013c87adfefb0373aacca02574e89ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4013c87adfefb0373aacca02574e89ec">&#9670;&nbsp;</a></span>combat()</h2>
+<a id="a437b1e7536b60ebbf90c4f2f1445bac7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a437b1e7536b60ebbf90c4f2f1445bac7">&#9670;&nbsp;</a></span>combat()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -139,8 +140,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">bool Game::combat </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_character.html">Character</a>&#160;</td>
-          <td class="paramname"><em>monstre</em></td><td>)</td>
+          <td class="paramname"><em>monstre</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>quitter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -148,7 +159,8 @@ Public Member Functions</h2></td></tr>
 <p>Gère le combat. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">monstre</td><td>Le monstre</td></tr>
+    <tr><td class="paramname">monstre</td><td>Le monstre </td></tr>
+    <tr><td class="paramname">quitter</td><td>Permet de savoir si le joueur veut quitter le jeux</td></tr>
   </table>
   </dd>
 </dl>
@@ -259,8 +271,8 @@ false sinon </dd></dl>
 
 </div>
 </div>
-<a id="ac94b3f431a5e75e61fac3aa0bf9b98b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac94b3f431a5e75e61fac3aa0bf9b98b2">&#9670;&nbsp;</a></span>selectSkillJoueur()</h2>
+<a id="a2750f7438677ad1697fde860074ca530"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2750f7438677ad1697fde860074ca530">&#9670;&nbsp;</a></span>selectSkillJoueur()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -268,7 +280,8 @@ false sinon </dd></dl>
         <tr>
           <td class="memname"><a class="el" href="class_skill.html">Skill</a> Game::selectSkillJoueur </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool &amp;&#160;</td>
+          <td class="paramname"><em>quitter</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -277,6 +290,7 @@ false sinon </dd></dl>
 <p>Permet au joueur de choisir son sort. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">monstre</td><td>Permet de connaitre le monstre contre qui le joueur doit se battre </td></tr>
     <tr><td class="paramname">quitter</td><td>Permet de savoir si le joueur veut quitter le jeux </td></tr>
   </table>
   </dd>

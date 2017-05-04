@@ -73,6 +73,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0f5ad0fd4563497b4214038cbca8b582"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a0f5ad0fd4563497b4214038cbca8b582">Map</a> ()</td></tr>
 <tr class="memdesc:a0f5ad0fd4563497b4214038cbca8b582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructeur de map.  <a href="#a0f5ad0fd4563497b4214038cbca8b582">More...</a><br /></td></tr>
 <tr class="separator:a0f5ad0fd4563497b4214038cbca8b582"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca8dd22105df5e43204a2558b76152a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#aca8dd22105df5e43204a2558b76152a6">FormatTest</a> ()</td></tr>
+<tr class="memdesc:aca8dd22105df5e43204a2558b76152a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analyse du fichier map.  <a href="#aca8dd22105df5e43204a2558b76152a6">More...</a><br /></td></tr>
+<tr class="separator:aca8dd22105df5e43204a2558b76152a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05b182653806a00806b7d30be1fbb907"><td class="memItemLeft" align="right" valign="top">int **&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a05b182653806a00806b7d30be1fbb907">getMapEntite</a> ()</td></tr>
 <tr class="memdesc:a05b182653806a00806b7d30be1fbb907"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_interface.html">Interface</a> du tableau d'entitées.  <a href="#a05b182653806a00806b7d30be1fbb907">More...</a><br /></td></tr>
 <tr class="separator:a05b182653806a00806b7d30be1fbb907"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -94,6 +97,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a178a1de0614b540f8f1108eaa268bd67"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a178a1de0614b540f8f1108eaa268bd67">verif_monstre</a> ()</td></tr>
 <tr class="memdesc:a178a1de0614b540f8f1108eaa268bd67"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction indiquant la présence ou non d'un monstre.  <a href="#a178a1de0614b540f8f1108eaa268bd67">More...</a><br /></td></tr>
 <tr class="separator:a178a1de0614b540f8f1108eaa268bd67"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a307da32e2943986c2730da0076126d25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#a307da32e2943986c2730da0076126d25">verif_Soin</a> ()</td></tr>
+<tr class="memdesc:a307da32e2943986c2730da0076126d25"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction indiquant la présence ou non d'une case de soin.  <a href="#a307da32e2943986c2730da0076126d25">More...</a><br /></td></tr>
+<tr class="separator:a307da32e2943986c2730da0076126d25"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac66a790ec7b408ce0b28fe1add89c45f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_map.html#ac66a790ec7b408ce0b28fe1add89c45f">unsetmob</a> ()</td></tr>
 <tr class="memdesc:ac66a790ec7b408ce0b28fe1add89c45f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fonction servant à enlever un monstre.  <a href="#ac66a790ec7b408ce0b28fe1add89c45f">More...</a><br /></td></tr>
 <tr class="separator:ac66a790ec7b408ce0b28fe1add89c45f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -146,6 +152,26 @@ Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>true: le joueur peut se déplcer dans cette dirrection </dd>
 <dd>
 false: sinon </dd></dl>
+
+</div>
+</div>
+<a id="aca8dd22105df5e43204a2558b76152a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca8dd22105df5e43204a2558b76152a6">&#9670;&nbsp;</a></span>FormatTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Map::FormatTest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Analyse du fichier map. </p>
+<p>Détecte les erreurs du fichier map.txt </p>
 
 </div>
 </div>
@@ -286,6 +312,28 @@ false: sinon </dd></dl>
 
 <p>Fonction indiquant la présence ou non d'un monstre. </p>
 <p>Se base sur la position du joueur </p><dl class="section return"><dt>Returns</dt><dd>true: le joueur est sur une case où se situe un monstre </dd>
+<dd>
+false: sinon </dd></dl>
+
+</div>
+</div>
+<a id="a307da32e2943986c2730da0076126d25"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a307da32e2943986c2730da0076126d25">&#9670;&nbsp;</a></span>verif_Soin()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Map::verif_Soin </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fonction indiquant la présence ou non d'une case de soin. </p>
+<p>Se base sur la position du joueur </p><dl class="section return"><dt>Returns</dt><dd>true: le joueur est sur une case où il est soigné </dd>
 <dd>
 false: sinon </dd></dl>
 

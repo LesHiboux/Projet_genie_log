@@ -53,7 +53,7 @@ void Game::setPileMob()
 			}
 			catch (const out_of_range& err)
 			{
-				throw string("erreur pas asser de mostre");
+				throw string("erreur pas assez de monstres");
 			}*/
 			if (!mobFile.eof())
 			{

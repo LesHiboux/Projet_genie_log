@@ -63,10 +63,14 @@ void Game::setPileMob()
 				{
 					mobTmp=Character(characterString);
 				}
-				catch (...)
+				catch(const string & err)
+				{
+					throw err;
+				}
+				/*catch (...)
 				{
 					throw string("erreur de configuration du fichier monstres");
-				}
+				}*/
 				pileMob.push(mobTmp);
 			}
 			else throw string("erreur pas assé de monstres");
@@ -177,10 +181,14 @@ bool Game::selection_perso() {
 			{
 				joueur = Character(perso);
 			}
-			catch (...)
+			catch(const string & err)
+			{
+				throw err;
+			}
+			/*catch (...)
 			{
 				throw string("erreur de configuration du fichier liste_persos");
-			}
+			}*/
 				//affichage_selection_perso;
 			vue.afficheSelectP(joueur);
 			//cerr << joueur.getName() << endl;

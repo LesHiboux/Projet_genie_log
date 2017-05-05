@@ -14,7 +14,7 @@ CHAR = Character
 SKI = Skill
 GAU = Gauge
 
-make: mrproper $(BIN)$(PROJ).exe $(BIN)$(PROJ)
+make: $(BIN)$(PROJ).exe $(BIN)$(PROJ)
 
 $(BIN)$(PROJ).exe: $(OBJ)$(MAIN).o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
 	$(CC) $(STD) -o $@ $^ $(CFLAG)

@@ -8,6 +8,7 @@
 class Interface
 {
     public:
+        void afficheTHEGAME();
         void afficheDebutJeu();                             
         void affichePerso(Character);                       
         void afficheMob(Character);                         

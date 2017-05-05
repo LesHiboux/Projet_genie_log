@@ -145,6 +145,10 @@ Character::Character(std::string character)
             {
                 testSkills = testSkills.substr(testSkills.find_first_of('/') + 1);
                 testSkillsBis = testSkills.substr(0, testSkills.find_first_of('/'));
+		if (testSkillsBis[0] == '-' && j < 2)
+		{
+			testSkillsBis = testSkillsBis.substr(1);
+		}
                 for (int k = 0; k < testSkillsBis.length(); k++)
                 {
                     if (!isdigit(testSkillsBis[k]))

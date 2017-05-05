@@ -74,3 +74,16 @@ Exemple: {Player 1;20/20;12/12;3;Attaque de base/3/0/2/0;Attaque puissante/8/3/2
             De même pour sa Mana qui est à un maximum de 12 points.
             Il a 3 compétences nommées "Attaque de base", "Attaque puissante" et "Soin".
             Vous pourrez voir qu'un sort de régénération prend une valeur négative pour la statistique qu'elle régénère.
+
+
+
+/!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
+/!\ S'assurer que "TheGame.exe" puisse bel et bien être exécuté /!\
+/!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\ /!\
+
+
+
+De plus, pour chacun des choix que vous devrez faire, il faudra entrer votre choix puis taper sur la touche "Entrée".
+
+Par exemple, en combat, pour choisir la compétence 2, il faut d'abord entrer la valeur "2" puis faire "Entrée".
+De même pour un déplacement sur la map, entrer "z", "q", "s" ou "d" puis faire "Entrée".

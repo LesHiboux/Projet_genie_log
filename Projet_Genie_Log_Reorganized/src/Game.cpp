@@ -9,6 +9,7 @@ using namespace std;
 
 Game::Game()
 {
+	vue.afficheTHEGAME();
 	try
 	{
 		carte=Map();

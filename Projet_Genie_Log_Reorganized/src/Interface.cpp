@@ -3,10 +3,23 @@
 
 using namespace std;
 
+void Interface::afficheTHEGAME()
+{
+        system("clear");  
+	cout<<endl<<endl<<endl;                                            
+	cout<<"			_/_/_/_/_/  _/    _/  _/_/_/_/        _/_/_/    _/_/    _/      _/  _/_/_/_/"<<endl;
+	cout<<"			   _/      _/    _/  _/            _/        _/    _/  _/_/  _/_/  _/"<<endl;         
+	cout<<"			  _/      _/_/_/_/  _/_/_/        _/  _/_/  _/_/_/_/  _/  _/  _/  _/_/_/"<<endl;      
+	cout<<"			 _/      _/    _/  _/            _/    _/  _/    _/  _/      _/  _/"<<endl;           
+	cout<<"			_/      _/    _/  _/_/_/_/        _/_/_/  _/    _/  _/      _/  _/_/_/_/"<<endl;
+	cout<<endl;
+	system("sleep 3");
+}
+
 void Interface::afficheDebutJeu()
 {
     system("clear");
-    cout<<"Bienvenue dans notre jeu valeureux combatant \n C'est ici que ta légende commence, \n Va et renvoie dans les profondeurs de l'enfer ces monstres !! "<<endl;
+    cout<<"         Bienvenue dans notre jeu valeureux combattant \n             C'est ici que ta légende commence, \n           Va et renvoie dans les profondeurs de l'enfer ces monstres !! "<<endl;
     system("sleep 4");
 }
 

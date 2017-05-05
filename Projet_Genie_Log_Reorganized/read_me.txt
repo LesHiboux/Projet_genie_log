@@ -83,7 +83,7 @@ Exemple: {Player 1;20/20;12/12;3;Attaque de base/3/0/2/0;Attaque puissante/8/3/2
 
 
 
-De plus, pour chacun des choix que vous devrez faire, il faudra entrer votre choix puistaper sur la touche "Entrée".
+De plus, pour chacun des choix que vous devrez faire, il faudra entrer votre choix puis taper sur la touche "Entrée".
 
 Par exemple, en combat, pour choisir la compétence 2, il faut d'abord entrer la valeur "2" puis faire "Entrée".
 De même pour un déplacement sur la map, entrer "z", "q", "s" ou "d" puis faire "Entrée".

@@ -50,6 +50,9 @@ Chaques lignes représentent un personnage
 Après le dernier personnage, le fichier doit se terminé par une ligne vide
 
 
+Lors d'un combat, si le joueur et le monstre ont la même vitesse, le joueur est prioritaire.
+  Je vérifie après chaques actions (attaque du joueur ou du monstre) si l'un des deux characters est mort, ainsi, les deux characters ne sont pas sencés mourir en même temps
+    Mais si celà devais arriver, le joueur étant mort, le combat et le jeux seraient perdu.
 
 
 

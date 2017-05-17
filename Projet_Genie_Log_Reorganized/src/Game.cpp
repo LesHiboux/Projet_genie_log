@@ -23,6 +23,11 @@ Game::Game()
 	}
 }
 
+Game::Game(Character joueur)
+{
+	this->joueur=joueur;
+}
+
 int Game::getNbRestant()
 {
 	return nbRestant;
@@ -100,7 +105,8 @@ void Game::setPileMob()
 		bool finPartie=false;
 		try
 		{
-			if(!selection_perso()) return;
+			int nbPersos=0;
+			if(!selection_perso(nbPersos)) return;
 		}
 		catch (const string & err)
 		{
@@ -171,12 +177,25 @@ void Game::setPileMob()
 		//Afficher victoire totale!!!
 	}
 
-bool Game::selection_perso() {
+bool Game::selection_perso(int &nbPersos) {
 	ifstream liste_persos("./config/liste_persos.db");
 	if(liste_persos){
 		string perso;
 		string choix;
 		getline(liste_persos, perso);
+
+		if (nbPersos==0)
+		{
+			while(!liste_persos.eof())
+			{
+				nbPersos++;
+				getline(liste_persos, perso);
+			}
+			return selection_perso(nbPersos);
+		}
+
+		int i=1;
+
 		while (!liste_persos.eof()){
 			try
 			{
@@ -192,6 +211,7 @@ bool Game::selection_perso() {
 			}*/
 				//affichage_selection_perso;
 			vue.afficheSelectP(joueur);
+			cerr<<i<<"/"<<nbPersos<<endl;
 			//cerr << joueur.getName() << endl;
 			//cerr << "o: joueur | n: suivant" << endl;
 			cin >> choix;
@@ -211,9 +231,10 @@ bool Game::selection_perso() {
  				if (choix=="o" || choix=="O") return true;
 				getline(liste_persos, perso);
 			}
+			i++;
 		}
 		liste_persos.close();
-		return selection_perso();
+		return selection_perso(nbPersos);
 	}
 	//else cerr<<"Impossible d'ouvrir le fichier"<<endl;
 	throw  string("Impossible d'ouvrir le fichier liste_persos");

@@ -16,6 +16,11 @@ GAU = Gauge
 
 make: $(BIN)$(PROJ).exe $(BIN)$(PROJ)
 
+combat: $(BIN)combat.exe
+
+$(BIN)combat.exe: $(OBJ)$(MAIN)Combat.o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
+	$(CC) $(STD) -o $@ $^ $(CFLAG)
+
 $(BIN)$(PROJ).exe: $(OBJ)$(MAIN).o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
 	$(CC) $(STD) -o $@ $^ $(CFLAG)
 
@@ -23,6 +28,9 @@ $(BIN)$(PROJ): $(OBJ)$(MAIN).o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OB
 	$(CC) $(STD) -o $@ $^ $(CFLAG)
 
 $(OBJ)$(MAIN).o: $(MAIN).cpp $(INC)$(GAM).h $(INC)$(INT).h $(INC)$(MAP).h $(INC)$(CHAR).h $(INC)$(SKI).h $(INC)$(GAU).h
+	$(CC) $(STD) -o $@ -c $< $(CFLAG)
+
+$(OBJ)$(MAIN)Combat.o: $(MAIN)Combat.cpp $(INC)$(GAM).h $(INC)$(INT).h $(INC)$(MAP).h $(INC)$(CHAR).h $(INC)$(SKI).h $(INC)$(GAU).h
 	$(CC) $(STD) -o $@ -c $< $(CFLAG)
 	
 $(OBJ)$(GAM).o: $(SRC)$(GAM).cpp $(INC)$(GAM).h

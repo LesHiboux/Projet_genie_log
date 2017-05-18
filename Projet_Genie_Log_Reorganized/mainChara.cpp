@@ -8,13 +8,13 @@ int main()
 
     Character player2("{Bryan;15/15;10;1;Lancer de banane/1/0/1/0;70}");                                            // Erreur mana
 
-    Character player3("{Bryan;15/15;10/10;2;Lancer de banane/1/0/1/0;70}");                                         // Erreur nb Skills < nb demandé
+    Character player3("{Bryan;15/15;10/10;2;Lancer de banane/1/0/1/0;70}");                                         // Erreur nb Skills < nb demandÃ©
 
-    Character player4("{Bryan;15/15;10/10;1;Lancer de banane/1/0/1/0; Lancer de tomate/1/0/1/0;70}");               // Erreur nb Skills > nb demandé
+    Character player4("{Bryan;15/15;10/10;1;Lancer de banane/1/0/1/0; Lancer de tomate/1/0/1/0;70}");               // Erreur nb Skills > nb demandÃ©
 
-    Character player5("{Bryan;15/15;10/10;1;Lancer de banane/1/0/-1/0;70}");                                        // Erreur Skill priorité invalide
+    Character player5("{Bryan;15/15;10/10;1;Lancer de banane/1/0/-1/0;70}");                                        // Erreur Skill prioritÃ© invalide
 
-    Character player5("{Bryan;15/15;10/10;1;Lancer de banane/-1/-0/1/1;70}");                                       // Chara fonctionnel -- Demonstration degats/mana_cost négatifs (régén) fonctionnel + cible soi-même (target = 1)
+    Character player5("{Bryan;15/15;10/10;1;Lancer de banane/-1/-0/1/1;70}");                                       // Chara fonctionnel -- Demonstration degats/mana_cost nÃ©gatifs (rÃ©gÃ©n) fonctionnel + cible soi-mÃªme (target = 1)
 
     Character player6("{Bryan;15/15;10/10;1;Lancer de banane/1/0/1/0;}");                                           // Erreur speed
 
@@ -53,33 +53,33 @@ void affiche(Character player)
 
         std::cout << "## ## " << std::flush;
 
-        std::cout << " -- " << "Coût en Mana: " << skill.getManaCost() << std::endl << std::flush;
+        std::cout << " -- " << "CoÃ»t en Mana: " << skill.getManaCost() << std::endl << std::flush;
 
         std::cout << "## ## " << std::flush;
 
-        std::cout << "-- " << "Niveau de priorité: " << skill.getPriority() << std::endl << std::flush;
+        std::cout << "-- " << "Niveau de prioritÃ©: " << skill.getPriority() << std::endl << std::flush;
 
         std::cout << "## ## " << std::flush;
 
         if (skill.getTarget == 0)
             std::cout << "-- " << "Cible: Monstre" << std::endl << std::flush;
         else
-            std::cout << "-- " << "Cible: Lui-même" << std::endl << std::flush;
+            std::cout << "-- " << "Cible: Lui-mÃªme" << std::endl << std::flush;
 
         std::cout << "## ## " << std::flush;
 
         if (player.available(skill))
-            std::cout << "Compétence utilisable (assez de mana)" << std::endl << std::flush;
+            std::cout << "CompÃ©tence utilisable (assez de mana)" << std::endl << std::flush;
 
         else
-            std::cout << "Compétence inutilisable (pas assez de mana)" << std::endl << std::flush;
+            std::cout << "CompÃ©tence inutilisable (pas assez de mana)" << std::endl << std::flush;
     }
 
     std::cout << "## " << std::flush;
 
     std::cout << "Speed: " << player.getSpeed() << std::endl << std::flush;
 
-    std::cout << std::endl << std::endl << "Tests sur la vie (le résultat serait le même sur le Mana)" << std::endl << std::flush;
+    std::cout << std::endl << std::endl << "Tests sur la vie (le rÃ©sultat serait le mÃªme sur le Mana)" << std::endl << std::flush;
 
     std::cout << "Vie actuelle: " << player.getLife().first << std::flush;
 
@@ -91,12 +91,12 @@ void affiche(Character player)
     player.editLife(-6)
     std::cout << " || Regain de 6 PV || " << std::flush;
 
-    std::cout << "Vie restante: " << player.getLife().first << std::endl << std::flush;                             // Démonstration que Vie actuelle <= Vie mac
+    std::cout << "Vie restante: " << player.getLife().first << std::endl << std::flush;                             // DÃ©monstration que Vie actuelle <= Vie mac
 
     player.editLife(20)
     std::cout << " || Perte de 20 PV || " << std::flush;
 
-    std::cout << "Vie restante: " << player.getLife().first << std::endl << std::flush;                              // Démonstration que Vie actuelle >= 0
+    std::cout << "Vie restante: " << player.getLife().first << std::endl << std::flush;                              // DÃ©monstration que Vie actuelle >= 0
 
     player.editLife(-6)
     std::cout << " || Regain de 6 PV || " << std::endl << std::flush;
@@ -113,7 +113,4 @@ void affiche(Character player)
         std::cout << "Joueur vivant" << std::endl << std::flush;
     else
         std::cout << "Joueur mort" << std::endl << std::flush;
-
-
-
 }

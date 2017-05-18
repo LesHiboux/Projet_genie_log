@@ -39,7 +39,7 @@ et doit suivre le pattern suivant:
 Liste des monstres
 
 - Le fichier doit être nommé comme suit: ./config/monstres.db
-- Chaque ligne représete un monstre suivant le meme paterne qu'un Character
+- Chaque ligne représente un monstre suivant le meme paterne qu'un Character
 - Le nombre de lignes (nombre de monstres) >= nombre de monstres décrits dans map (nombre de cases monstre)
 - L'apparition des monstres se fera dans l'ordre inverse des lignes du document
 

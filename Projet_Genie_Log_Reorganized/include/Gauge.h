@@ -42,8 +42,8 @@ class Gauge                                         // Jauge
     
         //!Verifie la valeur
         /*! 
-            Si restant > max, restant = max
-            Si restant < 0, restant = 0
+            Si Restant > Max, Restant = Max
+            Si Restant < 0, Restant = 0
         */
         void check();
 

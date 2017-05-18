@@ -75,7 +75,7 @@ $(OBJ)$(GAU).o: $(SRC)$(GAU).cpp $(INC)$(GAU).h
 
 clean:
 	rm -f $(OBJ)*.o
-	rm -f *~
+	rm -rf *~
 
 mrproper: clean
 	rm -f $(BIN)$(PROJ)*

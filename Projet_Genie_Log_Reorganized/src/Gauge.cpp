@@ -12,6 +12,7 @@ Gauge::Gauge(std::string name, std::string gauge)
     //ctor
     this->name = name;
     ValueMax = std::make_pair(std::stoi(gauge.substr(0, gauge.find_first_of('/'))), std::stoi(gauge.substr(gauge.find_first_of('/') + 1)));
+    check();
 }
 
 Gauge::~Gauge()

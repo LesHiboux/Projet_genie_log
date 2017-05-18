@@ -45,3 +45,9 @@ void Gauge::edit(int value)
     else if (value > ValueMax.first) ValueMax = std::make_pair(0, ValueMax.second);
     else ValueMax = std::make_pair(ValueMax.first - value, ValueMax.second);
 }
+
+void Gauge::check()
+{
+    if (ValueMax.first > ValueMax.second) ValueMax.first = ValueMax.second;
+    else if (ValueMax.first < 0) ValueMax.first = 0;
+}

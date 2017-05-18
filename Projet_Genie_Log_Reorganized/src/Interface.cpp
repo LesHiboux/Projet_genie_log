@@ -115,10 +115,11 @@ void Interface::afficheMob(Character mob)
     cout<<"]\n"<<endl;
 }
 
-void Interface::afficheSelectP(Character perso)
+void Interface::afficheSelectP(Character perso, int nbPersos, int i)
 {
     system("clear");
     affichePerso(perso);
+	cout<<i<<"/"<<nbPersos<<endl;
     cout<<"Voulez-vous jouer avec ce personnage ? [O/N] "<<endl;
 }
 

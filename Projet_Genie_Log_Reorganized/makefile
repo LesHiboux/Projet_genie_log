@@ -14,11 +14,19 @@ CHAR = Character
 SKI = Skill
 GAU = Gauge
 
+# Création du projet principal
+
 make: $(BIN)$(PROJ).exe $(BIN)$(PROJ)
 
-combat: $(BIN)combat $(BIN)combat.exe
+$(BIN)$(PROJ).exe: $(OBJ)$(MAIN).o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
+	$(CC) $(STD) -o $@ $^ $(CFLAG)
 
-chara: $(BIN)chara $(BIN)chara.exe
+$(BIN)$(PROJ): $(OBJ)$(MAIN).o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
+	$(CC) $(STD) -o $@ $^ $(CFLAG)
+
+# Création des executables pour les tests unitaires
+
+combat: $(BIN)combat $(BIN)combat.exe
 
 $(BIN)combat.exe: $(OBJ)$(MAIN)Combat.o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
 	$(CC) $(STD) -o $@ $^ $(CFLAG)
@@ -26,17 +34,15 @@ $(BIN)combat.exe: $(OBJ)$(MAIN)Combat.o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MA
 $(BIN)combat: $(OBJ)$(MAIN)Combat.o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
 	$(CC) $(STD) -o $@ $^ $(CFLAG)
 
+chara: $(BIN)chara $(BIN)chara.exe
+
 $(BIN)chara.exe: $(OBJ)$(MAIN)Chara.o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
 	$(CC) $(STD) -o $@ $^ $(CFLAG)
 
 $(BIN)chara: $(OBJ)$(MAIN)Chara.o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
 	$(CC) $(STD) -o $@ $^ $(CFLAG)
-
-$(BIN)$(PROJ).exe: $(OBJ)$(MAIN).o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
-	$(CC) $(STD) -o $@ $^ $(CFLAG)
-
-$(BIN)$(PROJ): $(OBJ)$(MAIN).o $(OBJ)$(GAM).o $(OBJ)$(INT).o $(OBJ)$(MAP).o $(OBJ)$(CHAR).o $(OBJ)$(SKI).o $(OBJ)$(GAU).o
-	$(CC) $(STD) -o $@ $^ $(CFLAG)
+	
+# Création des .o
 
 $(OBJ)$(MAIN).o: $(MAIN).cpp $(INC)$(GAM).h $(INC)$(INT).h $(INC)$(MAP).h $(INC)$(CHAR).h $(INC)$(SKI).h $(INC)$(GAU).h
 	$(CC) $(STD) -o $@ -c $< $(CFLAG)
@@ -64,6 +70,8 @@ $(OBJ)$(SKI).o: $(SRC)$(SKI).cpp $(INC)$(SKI).h
 
 $(OBJ)$(GAU).o: $(SRC)$(GAU).cpp $(INC)$(GAU).h
 	$(CC) $(STD) -o $@ -c $< $(CFLAG)
+
+# Nettoyage
 
 clean:
 	rm -f $(OBJ)*.o

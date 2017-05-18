@@ -205,15 +205,8 @@ bool Game::selection_perso(int &nbPersos) {
 			{
 				throw err;
 			}
-			/*catch (...)
-			{
-				throw string("erreur de configuration du fichier liste_persos");
-			}*/
 				//affichage_selection_perso;
-			vue.afficheSelectP(joueur);
-			cerr<<i<<"/"<<nbPersos<<endl;
-			//cerr << joueur.getName() << endl;
-			//cerr << "o: joueur | n: suivant" << endl;
+			vue.afficheSelectP(joueur, nbPersos, i);
 			cin >> choix;
 			if (choix=="quitter") {
 				cout<<"Merci d'avoir joué!"<<endl;

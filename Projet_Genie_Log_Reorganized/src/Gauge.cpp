@@ -12,6 +12,7 @@ Gauge::Gauge(std::string name, std::string gauge)
     //ctor
     this->name = name;
     ValueMax = std::make_pair(std::stoi(gauge.substr(0, gauge.find_first_of('/'))), std::stoi(gauge.substr(gauge.find_first_of('/') + 1)));
+    check();
 }
 
 Gauge::~Gauge()
@@ -44,4 +45,10 @@ void Gauge::edit(int value)
     }
     else if (value > ValueMax.first) ValueMax = std::make_pair(0, ValueMax.second);
     else ValueMax = std::make_pair(ValueMax.first - value, ValueMax.second);
+}
+
+void Gauge::check()
+{
+    if (ValueMax.first > ValueMax.second) ValueMax.first = ValueMax.second;
+    else if (ValueMax.first < 0) ValueMax.first = 0;
 }

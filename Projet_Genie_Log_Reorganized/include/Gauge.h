@@ -39,6 +39,13 @@ class Gauge                                         // Jauge
             \param value valeur pour modifier la valeur Restant (value <0 Régénération)
         */
         void edit(int value);
+    
+        //!Verifie la valeur
+        /*! 
+            Si Restant > Max, Restant = Max
+            Si Restant < 0, Restant = 0
+        */
+        void check();
 
     protected:
 

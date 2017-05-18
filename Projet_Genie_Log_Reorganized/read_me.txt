@@ -15,10 +15,10 @@ Fichier de configuration de la map:
 Le fichier de la map doit etre enregistré sous le format "map.db"
 et doit suivre le pattern suivant:
 
-4		(nombre de ligne de la map)
-6		(nombre de colonne de la map)
+4		(nombre de lignes de la map)
+6		(nombre de colonnes de la map)
 000000
-001000		(matrice des entitées de la map)
+001000		(matrice des entités de la map)
 000300		(0=case vide; 1=case monstre; 2=zone de soin; 3=zone de départ)
 020000
 
@@ -36,20 +36,23 @@ et doit suivre le pattern suivant:
 
 
 
-Liste des monstre
+Liste des monstres
 
-le fichier doit etre nommé comme suit: ./config/monstres.db
-chaque lignes représetent un monstre ayant le meme pattern qu'un character
-le nombre de ligne (nombre de monstre) >= nombre de monstre décris dans map (nombre de cases monstre)
-L'apparition des monstre se fera dans l'ordre inverse des lignes du document
+- Le fichier doit être nommé comme suit: ./config/monstres.db
+- Chaque ligne représente un monstre suivant le meme pattern qu'un Character
+- Le nombre de lignes (nombre de monstres) >= nombre de monstres décrits dans map (nombre de cases monstre)
+- L'apparition des monstres se fera dans l'ordre inverse des lignes du document
 
 
 Liste des personnages jouables
-Le fichier doit se nommer: ./config/liste_persos.db
-Chaques lignes représentent un personnage
-Après le dernier personnage, le fichier doit se terminé par une ligne vide
+- Le fichier doit se nommer: ./config/liste_persos.db
+- Chaques ligne représente un personnage
+- Après le dernier personnage, le fichier doit se terminer par une ligne vide
 
 
+Lors d'un combat, si le joueur et le monstre ont la même vitesse, le joueur est prioritaire.
+            Je vérifie après chaques action (attaque du joueur ou du monstre) si l'un des deux characters est mort, ainsi, les deux characters ne sont pas censés mourir en même temps
+            Mais si cela devait arriver, le joueur étant mort, le combat et le jeu seraient perdus.
 
 
 
@@ -63,7 +66,7 @@ Exemple: 15/20
 Les compétences:
             Nom de la compétence/Dégâts/Coût en Mana/Priorité/Cible
 Exemple: Attaque de base/3/0/2/0
-            L'attaque se nomme "Attaque de base", fait 3 de dégâts, ne coûte pas de Mana, a un niveau de priorité de 2 et cible l'ennemi. Pour se cibler soit-même, il faut mettre un 1 à la place du 0 de la Cible.
+            L'attaque se nomme "Attaque de base", fait 3 de dégâts, ne coûte pas de Mana, a un niveau de priorité de 2 et cible l'ennemi. Pour se cibler soi-même, il faut mettre un 1 à la place du 0 de la Cible.
             
 Enfin, le personnage en général:
             {Nom du personnage;Jauge de Vie; Jauge de Mana;Nombre de Compétences;Compétence 1;Compétence 2;...(autant qu'il y a de Compétences);Vitesse}

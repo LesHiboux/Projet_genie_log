@@ -23,8 +23,10 @@ class Game
 		*		-plieMob: stack<Character> la pile regroupant tous les mob à tuer\n
 		*		-lance le jeux
 		*/
-
 		Game();
+
+		//!Constructeur pour initialiser seulement le Character joueur
+		Game(Character joueur);
 
 		//! Initialise la pile regroupant les mob
 		void setPileMob();
@@ -34,7 +36,7 @@ class Game
 			\return true si bien initialisé,
 			\return false sinon
 		*/
-		bool selection_perso();
+		bool selection_perso(int &nbJoueur);
 
 		//! Interface Carte
 		/*!

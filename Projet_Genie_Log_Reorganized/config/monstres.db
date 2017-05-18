@@ -1,10 +1,24 @@
-{Gobelin;15/15;8/8;3;Coup de poing/1/0/2/0;Coup de massue/3/1/1/0;Coup de dague/2/1/3/0;60}
-{Gobelin;15/15;8/8;3;Coup de poing/1/0/2/0;Coup de massue/3/1/1/0;Coup de dague/2/1/3/0;60}
-{Gobelin;15/15;8/8;3;Coup de poing/1/0/2/0;Coup de massue/3/1/1/0;Coup de dague/2/1/3/0;60}
-{Gobelin;15/15;8/8;3;Coup de poing/1/0/2/0;Coup de massue/3/1/1/0;Coup de dague/2/1/3/0;60}
-{Gobelin;15/15;8/8;3;Coup de poing/1/0/2/0;Coup de massue/3/1/1/0;Coup de dague/2/1/3/0;60}
-{Gobelin;15/15;8/8;3;Coup de poing/1/0/2/0;Coup de massue/3/1/1/0;Coup de dague/2/1/3/0;60}
-{Gobelin;15/15;8/8;3;Coup de poing/1/0/2/0;Coup de massue/3/1/1/0;Coup de dague/2/1/3/0;60}
-{Gobelin;15/15;8/8;3;Coup de poing/1/0/2/0;Coup de massue/3/1/1/0;Coup de dague/2/1/3/0;60}
-{Gobelin;15/15;8/8;3;Coup de poing/1/0/2/0;Coup de massue/3/1/1/0;Coup de dague/2/1/3/0;60}
-{Gobelin;15/15;8/8;3;Coup de poing/1/0/2/0;Coup de massue/3/1/1/0;Coup de dague/2/1/3/0;60}
+{Boss Kong;50/50;15/30;4;Lancer de Banane/6/1/60/0;Manger de Banane/-2/-5/0/1;Frappe Atlas/8/10/0/0;Frappe Esotérique/50/30/0/0;20}
+{Vamipre Alliacé;25/25;20/20;2;Suce-sang/5/3/60/0;Aspire-Ail/3/-5/0/1;80}
+{Bonhomme de Neige;1/1;20/20;1;Boule de Neige/15/10/120/0;0}
+{Villageois en Colère;20/20;0/0;2;Coup de Colère/4/0/30/0;Relax/-5/0/0/1;50}
+{Villageois en Colère;20/20;0/0;2;Coup de Colère/4/0/30/0;Relax/-5/0/0/1;50}
+{Villageois en Colère;20/20;0/0;2;Coup de Colère/4/0/30/0;Relax/-5/0/0/1;50}
+{Truite Antipathique;4/4;0/1;3;Regard Vide/1/0/15/0;Trempette/0/-1/0/0;Coup de queue/25/1/0/0;80}
+{Gobelin;15/15;8/8;3;Coup de poing/1/0/30/0;Coup de massue/3/1/15/0;Coup de dague/2/1/45/0;60}
+{Renard;12/12;4/4;3;Coup de queue/2/0/30/0;Regard attendrissant/3/2/120/0;Repos/-5/-4/180/1;90}
+{Renard;12/12;4/4;3;Coup de queue/2/0/30/0;Regard attendrissant/3/2/120/0;Repos/-5/-4/180/1;90}
+
+
+
+
+
+-- Monstres préparés à l'avance --
+
+{Gobelin;15/15;8/8;3;Coup de poing/1/0/30/0;Coup de massue/3/1/15/0;Coup de dague/2/1/45/0;60}
+{Renard;12/12;4/4;3;Coup de queue/2/0/30/0;Regard attendrissant/3/2/120/0;Repos/-5/-4/180/1;90}
+{Truite Antipathique;4/4;0/1;3;Regard Vide/1/0/15/0;Trempette/0/-1/0/0;Coup de queue/25/1/0/0;80}
+{Villageois en Colère;20/20;0/0;2;Coup de Colère/4/0/30/0;Relax/-5/0/0/1;50}
+{Bonhomme de Neige;1/1;20/20;1;Boule de Neige/15/10/120/0;0}
+{Vamipre Alliacé;25/25;20/20;2;Suce-sang/5/3/60/0;Aspire-Ail/3/-5/0/1;80}
+{Boss Kong;50/50;15/30;4;Lancer de Banane/6/1/60/0;Manger de Banane/-2/-5/0/1;Frappe Atlas/8/10/0/0;Frappe Esotérique/50/30/0/0;20}

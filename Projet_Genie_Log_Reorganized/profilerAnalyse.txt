@@ -1,0 +1,1249 @@
+Flat profile:
+
+Each sample counts as 0.01 seconds.
+ no time accumulated
+
+  %   cumulative   self              self     total           
+ time   seconds   seconds    calls  Ts/call  Ts/call  name    
+  0.00      0.00     0.00      866     0.00     0.00  Gauge::getValMax()
+  0.00      0.00     0.00      818     0.00     0.00  Gauge::getMax()
+  0.00      0.00     0.00      710     0.00     0.00  Character::getLife()
+  0.00      0.00     0.00      675     0.00     0.00  Character::getMaxLife()
+  0.00      0.00     0.00      390     0.00     0.00  int&& std::forward<int>(std::remove_reference<int>::type&)
+  0.00      0.00     0.00      330     0.00     0.00  Map::getTaille()
+  0.00      0.00     0.00      300     0.00     0.00  Map::getPosition()
+  0.00      0.00     0.00      252     0.00     0.00  Gauge::~Gauge()
+  0.00      0.00     0.00      220     0.00     0.00  Gauge::Gauge(Gauge const&)
+  0.00      0.00     0.00      168     0.00     0.00  Skill::~Skill()
+  0.00      0.00     0.00      167     0.00     0.00  int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int)
+  0.00      0.00     0.00      167     0.00     0.00  std::stoi(std::string const&, unsigned long*, int)
+  0.00      0.00     0.00      156     0.00     0.00  Character::getMana()
+  0.00      0.00     0.00      143     0.00     0.00  Character::getMaxMana()
+  0.00      0.00     0.00      119     0.00     0.00  Character::~Character()
+  0.00      0.00     0.00      112     0.00     0.00  int& std::forward<int&>(std::remove_reference<int&>::type&)
+  0.00      0.00     0.00      110     0.00     0.00  Character::Character(Character const&)
+  0.00      0.00     0.00      109     0.00     0.00  Skill::Skill(Skill const&)
+  0.00      0.00     0.00       85     0.00     0.00  std::pair<int, int>::operator=(std::pair<int, int>&&)
+  0.00      0.00     0.00       73     0.00     0.00  Skill::getDamage()
+  0.00      0.00     0.00       70     0.00     0.00  Character::getNbSkills()
+  0.00      0.00     0.00       66     0.00     0.00  Gauge::getVal()
+  0.00      0.00     0.00       61     0.00     0.00  Skill::Skill()
+  0.00      0.00     0.00       59     0.00     0.00  Skill::operator=(Skill const&)
+  0.00      0.00     0.00       57     0.00     0.00  Skill::getManaCost()
+  0.00      0.00     0.00       57     0.00     0.00  Character::getSkill(int)
+  0.00      0.00     0.00       55     0.00     0.00  Skill::getName()
+  0.00      0.00     0.00       51     0.00     0.00  Character::getName()
+  0.00      0.00     0.00       48     0.00     0.00  Character::isAlive()
+  0.00      0.00     0.00       44     0.00     0.00  Gauge::edit(int)
+  0.00      0.00     0.00       42     0.00     0.00  bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
+  0.00      0.00     0.00       40     0.00     0.00  std::pair<int, int>::pair<int, int&, void>(int&&, int&)
+  0.00      0.00     0.00       40     0.00     0.00  std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int, int&>(int&&, int&)
+  0.00      0.00     0.00       32     0.00     0.00  std::pair<int, int>::pair<int, int, void>(int&&, int&&)
+  0.00      0.00     0.00       32     0.00     0.00  std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int, int>(int&&, int&&)
+  0.00      0.00     0.00       28     0.00     0.00  Gauge::operator=(Gauge const&)
+  0.00      0.00     0.00       28     0.00     0.00  Character::editMana(int)
+  0.00      0.00     0.00       28     0.00     0.00  std::pair<int, int>::operator=(std::pair<int, int> const&)
+  0.00      0.00     0.00       21     0.00     0.00  Skill::Skill(std::string)
+  0.00      0.00     0.00       18     0.00     0.00  Gauge::Gauge()
+  0.00      0.00     0.00       18     0.00     0.00  Skill::getPriority()
+  0.00      0.00     0.00       18     0.00     0.00  Skill::available(int)
+  0.00      0.00     0.00       18     0.00     0.00  Character::getSpeed()
+  0.00      0.00     0.00       18     0.00     0.00  Character::available(Skill)
+  0.00      0.00     0.00       16     0.00     0.00  Skill::getTarget()
+  0.00      0.00     0.00       16     0.00     0.00  Character::editLife(int)
+  0.00      0.00     0.00       16     0.00     0.00  Interface::afficheCombatDetails(Character, Skill)
+  0.00      0.00     0.00       14     0.00     0.00  Gauge::Gauge(std::string, std::string)
+  0.00      0.00     0.00       13     0.00     0.00  Map::mobRestants()
+  0.00      0.00     0.00       13     0.00     0.00  Map::verif_monstre()
+  0.00      0.00     0.00       13     0.00     0.00  Interface::affichePerso(Character)
+  0.00      0.00     0.00       13     0.00     0.00  Interface::afficheSkill(Character)
+  0.00      0.00     0.00       13     0.00     0.00  std::_Deque_iterator<Character, Character&, Character*>::_Deque_iterator(std::_Deque_iterator<Character, Character&, Character*> const&)
+  0.00      0.00     0.00       12     0.00     0.00  Interface::afficheMob(Character)
+  0.00      0.00     0.00       12     0.00     0.00  std::__deque_buf_size(unsigned long)
+  0.00      0.00     0.00       11     0.00     0.00  bool std::operator!=<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
+  0.00      0.00     0.00       10     0.00     0.00  Map::verif_Soin()
+  0.00      0.00     0.00       10     0.00     0.00  Map::getMapApparence()
+  0.00      0.00     0.00       10     0.00     0.00  Map::deplacer(char)
+  0.00      0.00     0.00       10     0.00     0.00  Interface::afficheMap(Map, Character)
+  0.00      0.00     0.00        9     0.00     0.00  Game::selectSkillJoueur(bool&)
+  0.00      0.00     0.00        9     0.00     0.00  Game::selectSkillMonstre(Character)
+  0.00      0.00     0.00        9     0.00     0.00  Game::tour(Skill, Character&, Skill, bool&)
+  0.00      0.00     0.00        9     0.00     0.00  Interface::afficheCombat(Character, Character)
+  0.00      0.00     0.00        7     0.00     0.00  Character::Character(std::string)
+  0.00      0.00     0.00        7     0.00     0.00  Character::operator=(Character const&)
+  0.00      0.00     0.00        6     0.00     0.00  std::pair<int, int>::pair<int&, int, void>(int&, int&&)
+  0.00      0.00     0.00        6     0.00     0.00  std::remove_reference<std::_Deque_iterator<Character, Character&, Character*>&>::type&& std::move<std::_Deque_iterator<Character, Character&, Character*>&>(std::_Deque_iterator<Character, Character&, Character*>&)
+  0.00      0.00     0.00        6     0.00     0.00  std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int&, int>(int&, int&&)
+  0.00      0.00     0.00        5     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_M_get_Tp_allocator()
+  0.00      0.00     0.00        5     0.00     0.00  std::pair<int, int>::pair<int&, int&, void>(int&, int&)
+  0.00      0.00     0.00        5     0.00     0.00  std::deque<Character, std::allocator<Character> >::end()
+  0.00      0.00     0.00        5     0.00     0.00  std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int&, int&>(int&, int&)
+  0.00      0.00     0.00        4     0.00     0.00  Interface::afficheSelectP(Character)
+  0.00      0.00     0.00        4     0.00     0.00  __gnu_cxx::new_allocator<Character*>::new_allocator()
+  0.00      0.00     0.00        4     0.00     0.00  __gnu_cxx::new_allocator<Character*>::~new_allocator()
+  0.00      0.00     0.00        4     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_M_get_Tp_allocator() const
+  0.00      0.00     0.00        4     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_M_get_map_allocator() const
+  0.00      0.00     0.00        4     0.00     0.00  std::allocator<Character*>::allocator<Character>(std::allocator<Character> const&)
+  0.00      0.00     0.00        4     0.00     0.00  std::allocator<Character*>::~allocator()
+  0.00      0.00     0.00        4     0.00     0.00  std::_Deque_iterator<Character, Character&, Character*>::_M_set_node(Character**)
+  0.00      0.00     0.00        4     0.00     0.00  std::_Deque_iterator<Character, Character&, Character*>::_S_buffer_size()
+  0.00      0.00     0.00        4     0.00     0.00  std::_Deque_iterator<Character, Character&, Character*>::_Deque_iterator()
+  0.00      0.00     0.00        3     0.00     0.00  Map::unsetmob()
+  0.00      0.00     0.00        3     0.00     0.00  Game::combat(Character, bool&)
+  0.00      0.00     0.00        3     0.00     0.00  Interface::afficheCombatDebut(Character, Character)
+  0.00      0.00     0.00        3     0.00     0.00  void __gnu_cxx::new_allocator<Character>::destroy<Character>(Character*)
+  0.00      0.00     0.00        3     0.00     0.00  _ZN9__gnu_cxx13new_allocatorI9CharacterE9constructIS1_IRKS1_EEEvPT_DpOT0_
+  0.00      0.00     0.00        3     0.00     0.00  std::_Deque_iterator<Character, Character&, Character*>::operator*() const
+  0.00      0.00     0.00        3     0.00     0.00  std::_Deque_iterator<Character, Character&, Character*>::operator--()
+  0.00      0.00     0.00        3     0.00     0.00  std::deque<Character, std::allocator<Character> >::back()
+  0.00      0.00     0.00        3     0.00     0.00  std::deque<Character, std::allocator<Character> >::pop_back()
+  0.00      0.00     0.00        3     0.00     0.00  std::deque<Character, std::allocator<Character> >::push_back(Character const&)
+  0.00      0.00     0.00        3     0.00     0.00  std::stack<Character, std::deque<Character, std::allocator<Character> > >::pop()
+  0.00      0.00     0.00        3     0.00     0.00  std::stack<Character, std::deque<Character, std::allocator<Character> > >::top()
+  0.00      0.00     0.00        3     0.00     0.00  std::stack<Character, std::deque<Character, std::allocator<Character> > >::push(Character const&)
+  0.00      0.00     0.00        3     0.00     0.00  std::remove_reference<Character**&>::type&& std::move<Character**&>(Character**&)
+  0.00      0.00     0.00        3     0.00     0.00  std::remove_reference<unsigned long&>::type&& std::move<unsigned long&>(unsigned long&)
+  0.00      0.00     0.00        3     0.00     0.00  Character const& std::forward<Character const&>(std::remove_reference<Character const&>::type&)
+  0.00      0.00     0.00        3     0.00     0.00  operator new(unsigned long, void*)
+  0.00      0.00     0.00        2     0.00     0.00  Map::FormatTest()
+  0.00      0.00     0.00        2     0.00     0.00  Map::Map()
+  0.00      0.00     0.00        2     0.00     0.00  Character::Character()
+  0.00      0.00     0.00        2     0.00     0.00  Interface::afficheWinC(Map)
+  0.00      0.00     0.00        2     0.00     0.00  __gnu_cxx::new_allocator<Character>::deallocate(Character*, unsigned long)
+  0.00      0.00     0.00        2     0.00     0.00  __gnu_cxx::new_allocator<Character>::allocate(unsigned long, void const*)
+  0.00      0.00     0.00        2     0.00     0.00  __gnu_cxx::new_allocator<Character>::~new_allocator()
+  0.00      0.00     0.00        2     0.00     0.00  __gnu_cxx::new_allocator<Character*>::deallocate(Character**, unsigned long)
+  0.00      0.00     0.00        2     0.00     0.00  __gnu_cxx::new_allocator<Character*>::allocate(unsigned long, void const*)
+  0.00      0.00     0.00        2     0.00     0.00  __gnu_cxx::new_allocator<Character>::max_size() const
+  0.00      0.00     0.00        2     0.00     0.00  __gnu_cxx::new_allocator<Character*>::max_size() const
+  0.00      0.00     0.00        2     0.00     0.00  std::allocator<Character>::~allocator()
+  0.00      0.00     0.00        2     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::~_Deque_impl()
+  0.00      0.00     0.00        2     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_map(unsigned long)
+  0.00      0.00     0.00        2     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_M_create_nodes(Character**, Character**)
+  0.00      0.00     0.00        2     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_node()
+  0.00      0.00     0.00        2     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_M_destroy_nodes(Character**, Character**)
+  0.00      0.00     0.00        2     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_map(Character**, unsigned long)
+  0.00      0.00     0.00        2     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_M_initialize_map(unsigned long)
+  0.00      0.00     0.00        2     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_node(Character*)
+  0.00      0.00     0.00        2     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::~_Deque_base()
+  0.00      0.00     0.00        2     0.00     0.00  void std::_Destroy_aux<false>::__destroy<Character*>(Character*, Character*)
+  0.00      0.00     0.00        2     0.00     0.00  std::deque<Character, std::allocator<Character> >::_M_destroy_data(std::_Deque_iterator<Character, Character&, Character*>, std::_Deque_iterator<Character, Character&, Character*>, std::allocator<Character> const&)
+  0.00      0.00     0.00        2     0.00     0.00  std::deque<Character, std::allocator<Character> >::_M_destroy_data_aux(std::_Deque_iterator<Character, Character&, Character*>, std::_Deque_iterator<Character, Character&, Character*>)
+  0.00      0.00     0.00        2     0.00     0.00  std::deque<Character, std::allocator<Character> >::begin()
+  0.00      0.00     0.00        2     0.00     0.00  std::deque<Character, std::allocator<Character> >::~deque()
+  0.00      0.00     0.00        2     0.00     0.00  unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  0.00      0.00     0.00        2     0.00     0.00  std::remove_reference<std::allocator<Character>&>::type&& std::move<std::allocator<Character>&>(std::allocator<Character>&)
+  0.00      0.00     0.00        2     0.00     0.00  std::remove_reference<std::deque<Character, std::allocator<Character> >&>::type&& std::move<std::deque<Character, std::allocator<Character> >&>(std::deque<Character, std::allocator<Character> >&)
+  0.00      0.00     0.00        2     0.00     0.00  void std::swap<std::_Deque_iterator<Character, Character&, Character*> >(std::_Deque_iterator<Character, Character&, Character*>&, std::_Deque_iterator<Character, Character&, Character*>&)
+  0.00      0.00     0.00        2     0.00     0.00  void std::_Destroy<Character*>(Character*, Character*)
+  0.00      0.00     0.00        2     0.00     0.00  void std::_Destroy<Character*, Character>(Character*, Character*, std::allocator<Character>&)
+  0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN3MapC2Ev
+  0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN4GameC2Ev
+  0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN5GaugeC2Ev
+  0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN5SkillC2Ev
+  0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN9CharacterC2Ev
+  0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I__ZN9Interface14afficheTHEGAMEEv
+  0.00      0.00     0.00        1     0.00     0.00  _GLOBAL__sub_I_main
+  0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.00     0.00        1     0.00     0.00  __static_initialization_and_destruction_0(int, int)
+  0.00      0.00     0.00        1     0.00     0.00  Map::operator=(Map&&)
+  0.00      0.00     0.00        1     0.00     0.00  Game::setPileMob()
+  0.00      0.00     0.00        1     0.00     0.00  Game::selection_perso(int&)
+  0.00      0.00     0.00        1     0.00     0.00  Game::partie()
+  0.00      0.00     0.00        1     0.00     0.00  Game::Game()
+  0.00      0.00     0.00        1     0.00     0.00  Game::~Game()
+  0.00      0.00     0.00        1     0.00     0.00  Interface::afficheLoose()
+  0.00      0.00     0.00        1     0.00     0.00  Interface::afficheTHEGAME()
+  0.00      0.00     0.00        1     0.00     0.00  Interface::afficheDebutJeu()
+  0.00      0.00     0.00        1     0.00     0.00  __gnu_cxx::new_allocator<Character>::new_allocator()
+  0.00      0.00     0.00        1     0.00     0.00  __gnu_cxx::new_allocator<Character>::new_allocator(__gnu_cxx::new_allocator<Character> const&)
+  0.00      0.00     0.00        1     0.00     0.00  std::allocator<Character>::allocator()
+  0.00      0.00     0.00        1     0.00     0.00  std::allocator<Character>::allocator(std::allocator<Character> const&)
+  0.00      0.00     0.00        1     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl(std::allocator<Character>&&)
+  0.00      0.00     0.00        1     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl()
+  0.00      0.00     0.00        1     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_Deque_base()
+  0.00      0.00     0.00        1     0.00     0.00  std::_Deque_base<Character, std::allocator<Character> >::_Deque_base(std::_Deque_base<Character, std::allocator<Character> >&&)
+  0.00      0.00     0.00        1     0.00     0.00  std::deque<Character, std::allocator<Character> >::deque(std::deque<Character, std::allocator<Character> >&&)
+  0.00      0.00     0.00        1     0.00     0.00  std::deque<Character, std::allocator<Character> >::deque()
+  0.00      0.00     0.00        1     0.00     0.00  std::stack<Character, std::deque<Character, std::allocator<Character> > >::stack(std::deque<Character, std::allocator<Character> >&&)
+  0.00      0.00     0.00        1     0.00     0.00  std::stack<Character, std::deque<Character, std::allocator<Character> > >::~stack()
+  0.00      0.00     0.00        1     0.00     0.00  void std::swap<Character**>(Character**&, Character**&)
+  0.00      0.00     0.00        1     0.00     0.00  void std::swap<unsigned long>(unsigned long&, unsigned long&)
+
+ %         the percentage of the total running time of the
+time       program used by this function.
+
+cumulative a running sum of the number of seconds accounted
+ seconds   for by this function and those listed above it.
+
+ self      the number of seconds accounted for by this
+seconds    function alone.  This is the major sort for this
+           listing.
+
+calls      the number of times this function was invoked, if
+           this function is profiled, else blank.
+ 
+ self      the average number of milliseconds spent in this
+ms/call    function per call, if this function is profiled,
+	   else blank.
+
+ total     the average number of milliseconds spent in this
+ms/call    function and its descendents per call, if this 
+	   function is profiled, else blank.
+
+name       the name of the function.  This is the minor sort
+           for this listing. The index shows the location of
+	   the function in the gprof listing. If the index is
+	   in parenthesis it shows where it would appear in
+	   the gprof listing if it were to be printed.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+		     Call graph (explanation follows)
+
+
+granularity: each sample hit covers 2 byte(s) no time propagated
+
+index % time    self  children    called     name
+                0.00    0.00     156/866         Character::getMana() [20]
+                0.00    0.00     710/866         Character::getLife() [10]
+[8]      0.0    0.00    0.00     866         Gauge::getValMax() [8]
+-----------------------------------------------
+                0.00    0.00     143/818         Character::getMaxMana() [21]
+                0.00    0.00     675/818         Character::getMaxLife() [11]
+[9]      0.0    0.00    0.00     818         Gauge::getMax() [9]
+-----------------------------------------------
+                0.00    0.00     204/710         Interface::afficheMob(Character) [61]
+                0.00    0.00     220/710         Interface::afficheMap(Map, Character) [67]
+                0.00    0.00     286/710         Interface::affichePerso(Character) [58]
+[10]     0.0    0.00    0.00     710         Character::getLife() [10]
+                0.00    0.00     710/866         Gauge::getValMax() [8]
+-----------------------------------------------
+                0.00    0.00     192/675         Interface::afficheMob(Character) [61]
+                0.00    0.00     210/675         Interface::afficheMap(Map, Character) [67]
+                0.00    0.00     273/675         Interface::affichePerso(Character) [58]
+[11]     0.0    0.00    0.00     675         Character::getMaxLife() [11]
+                0.00    0.00     675/818         Gauge::getMax() [9]
+-----------------------------------------------
+                0.00    0.00       6/390         std::pair<int, int>::pair<int&, int, void>(int&, int&&) [74]
+                0.00    0.00       6/390         std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int&, int>(int&, int&&) [76]
+                0.00    0.00      40/390         std::pair<int, int>::pair<int, int&, void>(int&&, int&) [39]
+                0.00    0.00      40/390         std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int, int&>(int&&, int&) [40]
+                0.00    0.00      64/390         std::pair<int, int>::pair<int, int, void>(int&&, int&&) [41]
+                0.00    0.00      64/390         std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int, int>(int&&, int&&) [42]
+                0.00    0.00     170/390         std::pair<int, int>::operator=(std::pair<int, int>&&) [26]
+[12]     0.0    0.00    0.00     390         int&& std::forward<int>(std::remove_reference<int>::type&) [12]
+-----------------------------------------------
+                0.00    0.00     330/330         Interface::afficheMap(Map, Character) [67]
+[13]     0.0    0.00    0.00     330         Map::getTaille() [13]
+-----------------------------------------------
+                0.00    0.00     300/300         Interface::afficheMap(Map, Character) [67]
+[14]     0.0    0.00    0.00     300         Map::getPosition() [14]
+-----------------------------------------------
+                0.00    0.00      14/252         Character::Character(std::string) [72]
+                0.00    0.00     238/252         Character::~Character() [22]
+[15]     0.0    0.00    0.00     252         Gauge::~Gauge() [15]
+-----------------------------------------------
+                0.00    0.00     220/220         Character::Character(Character const&) [24]
+[16]     0.0    0.00    0.00     220         Gauge::Gauge(Gauge const&) [16]
+-----------------------------------------------
+                0.00    0.00       2/168         Character::Character() [110]
+                0.00    0.00      16/168         Game::tour(Skill, Character&, Skill, bool&) [70]
+                0.00    0.00      18/168         Game::selectSkillJoueur(bool&) [68]
+                0.00    0.00      18/168         Game::selectSkillMonstre(Character) [69]
+                0.00    0.00      21/168         Character::Character(std::string) [72]
+                0.00    0.00      39/168         Interface::afficheSkill(Character) [59]
+                0.00    0.00      54/168         Game::combat(Character, bool&) [92]
+[17]     0.0    0.00    0.00     168         Skill::~Skill() [17]
+-----------------------------------------------
+                0.00    0.00     167/167         std::stoi(std::string const&, unsigned long*, int) [19]
+[18]     0.0    0.00    0.00     167         int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) [18]
+-----------------------------------------------
+                0.00    0.00       4/167         Map::FormatTest() [108]
+                0.00    0.00       9/167         Game::selectSkillJoueur(bool&) [68]
+                0.00    0.00      28/167         Gauge::Gauge(std::string, std::string) [55]
+                0.00    0.00      42/167         Character::Character(std::string) [72]
+                0.00    0.00      84/167         Skill::Skill(std::string) [46]
+[19]     0.0    0.00    0.00     167         std::stoi(std::string const&, unsigned long*, int) [19]
+                0.00    0.00     167/167         int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) [18]
+-----------------------------------------------
+                0.00    0.00     156/156         Interface::affichePerso(Character) [58]
+[20]     0.0    0.00    0.00     156         Character::getMana() [20]
+                0.00    0.00     156/866         Gauge::getValMax() [8]
+-----------------------------------------------
+                0.00    0.00     143/143         Interface::affichePerso(Character) [58]
+[21]     0.0    0.00    0.00     143         Character::getMaxMana() [21]
+                0.00    0.00     143/818         Gauge::getMax() [9]
+-----------------------------------------------
+                0.00    0.00       1/119         Game::~Game() [159]
+                0.00    0.00       3/119         void __gnu_cxx::new_allocator<Character>::destroy<Character>(Character*) [94]
+                0.00    0.00       3/119         Interface::afficheCombatDebut(Character, Character) [93]
+                0.00    0.00       4/119         Game::setPileMob() [155]
+                0.00    0.00       4/119         Interface::afficheSelectP(Character) [81]
+                0.00    0.00       8/119         Game::selection_perso(int&) [156]
+                0.00    0.00      13/119         Interface::affichePerso(Character) [58]
+                0.00    0.00      16/119         Game::partie() [157]
+                0.00    0.00      16/119         Game::tour(Skill, Character&, Skill, bool&) [70]
+                0.00    0.00      18/119         Interface::afficheCombat(Character, Character) [71]
+                0.00    0.00      33/119         Game::combat(Character, bool&) [92]
+[22]     0.0    0.00    0.00     119         Character::~Character() [22]
+                0.00    0.00     238/252         Gauge::~Gauge() [15]
+-----------------------------------------------
+                0.00    0.00       6/112         std::pair<int, int>::pair<int&, int, void>(int&, int&&) [74]
+                0.00    0.00       6/112         std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int&, int>(int&, int&&) [76]
+                0.00    0.00      10/112         std::pair<int, int>::pair<int&, int&, void>(int&, int&) [78]
+                0.00    0.00      10/112         std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int&, int&>(int&, int&) [80]
+                0.00    0.00      40/112         std::pair<int, int>::pair<int, int&, void>(int&&, int&) [39]
+                0.00    0.00      40/112         std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int, int&>(int&&, int&) [40]
+[23]     0.0    0.00    0.00     112         int& std::forward<int&>(std::remove_reference<int&>::type&) [23]
+-----------------------------------------------
+                0.00    0.00       3/110         _ZN9__gnu_cxx13new_allocatorI9CharacterE9constructIS1_IRKS1_EEEvPT_DpOT0_ [95]
+                0.00    0.00       3/110         Interface::afficheCombatDebut(Character, Character) [93]
+                0.00    0.00       4/110         Game::selection_perso(int&) [156]
+                0.00    0.00       4/110         Interface::afficheSelectP(Character) [81]
+                0.00    0.00      13/110         Interface::affichePerso(Character) [58]
+                0.00    0.00      16/110         Game::partie() [157]
+                0.00    0.00      16/110         Game::tour(Skill, Character&, Skill, bool&) [70]
+                0.00    0.00      18/110         Interface::afficheCombat(Character, Character) [71]
+                0.00    0.00      33/110         Game::combat(Character, bool&) [92]
+[24]     0.0    0.00    0.00     110         Character::Character(Character const&) [24]
+                0.00    0.00     220/220         Gauge::Gauge(Gauge const&) [16]
+-----------------------------------------------
+                0.00    0.00       9/109         Game::selectSkillJoueur(bool&) [68]
+                0.00    0.00       9/109         Game::selectSkillMonstre(Character) [69]
+                0.00    0.00      16/109         Game::tour(Skill, Character&, Skill, bool&) [70]
+                0.00    0.00      18/109         Game::combat(Character, bool&) [92]
+                0.00    0.00      57/109         Character::getSkill(int) [33]
+[25]     0.0    0.00    0.00     109         Skill::Skill(Skill const&) [25]
+-----------------------------------------------
+                0.00    0.00       2/85          Map::operator=(Map&&) [154]
+                0.00    0.00       4/85          Map::Map() [109]
+                0.00    0.00      10/85          Map::deplacer(char) [66]
+                0.00    0.00      14/85          Gauge::Gauge(std::string, std::string) [55]
+                0.00    0.00      18/85          Gauge::Gauge() [47]
+                0.00    0.00      37/85          Gauge::edit(int) [37]
+[26]     0.0    0.00    0.00      85         std::pair<int, int>::operator=(std::pair<int, int>&&) [26]
+                0.00    0.00     170/390         int&& std::forward<int>(std::remove_reference<int>::type&) [12]
+-----------------------------------------------
+                0.00    0.00      16/73          Interface::afficheCombatDetails(Character, Skill) [54]
+                0.00    0.00      18/73          Game::tour(Skill, Character&, Skill, bool&) [70]
+                0.00    0.00      39/73          Interface::afficheSkill(Character) [59]
+[27]     0.0    0.00    0.00      73         Skill::getDamage() [27]
+-----------------------------------------------
+                0.00    0.00       9/70          Game::selectSkillJoueur(bool&) [68]
+                0.00    0.00       9/70          Game::selectSkillMonstre(Character) [69]
+                0.00    0.00      52/70          Interface::afficheSkill(Character) [59]
+[28]     0.0    0.00    0.00      70         Character::getNbSkills() [28]
+-----------------------------------------------
+                0.00    0.00      18/66          Character::available(Skill) [51]
+                0.00    0.00      48/66          Character::isAlive() [36]
+[29]     0.0    0.00    0.00      66         Gauge::getVal() [29]
+-----------------------------------------------
+                0.00    0.00       4/61          Character::Character() [110]
+                0.00    0.00       9/61          Game::selectSkillJoueur(bool&) [68]
+                0.00    0.00       9/61          Game::selectSkillMonstre(Character) [69]
+                0.00    0.00      18/61          Game::combat(Character, bool&) [92]
+                0.00    0.00      21/61          Character::Character(std::string) [72]
+[30]     0.0    0.00    0.00      61         Skill::Skill() [30]
+-----------------------------------------------
+                0.00    0.00       2/59          Character::Character() [110]
+                0.00    0.00       9/59          Game::selectSkillJoueur(bool&) [68]
+                0.00    0.00       9/59          Game::selectSkillMonstre(Character) [69]
+                0.00    0.00      18/59          Game::combat(Character, bool&) [92]
+                0.00    0.00      21/59          Character::Character(std::string) [72]
+[31]     0.0    0.00    0.00      59         Skill::operator=(Skill const&) [31]
+-----------------------------------------------
+                0.00    0.00      18/57          Game::tour(Skill, Character&, Skill, bool&) [70]
+                0.00    0.00      39/57          Interface::afficheSkill(Character) [59]
+[32]     0.0    0.00    0.00      57         Skill::getManaCost() [32]
+-----------------------------------------------
+                0.00    0.00       9/57          Game::selectSkillJoueur(bool&) [68]
+                0.00    0.00       9/57          Game::selectSkillMonstre(Character) [69]
+                0.00    0.00      39/57          Interface::afficheSkill(Character) [59]
+[33]     0.0    0.00    0.00      57         Character::getSkill(int) [33]
+                0.00    0.00      57/109         Skill::Skill(Skill const&) [25]
+-----------------------------------------------
+                0.00    0.00      16/55          Interface::afficheCombatDetails(Character, Skill) [54]
+                0.00    0.00      39/55          Interface::afficheSkill(Character) [59]
+[34]     0.0    0.00    0.00      55         Skill::getName() [34]
+-----------------------------------------------
+                0.00    0.00      10/51          Interface::afficheMap(Map, Character) [67]
+                0.00    0.00      12/51          Interface::afficheMob(Character) [61]
+                0.00    0.00      13/51          Interface::affichePerso(Character) [58]
+                0.00    0.00      16/51          Interface::afficheCombatDetails(Character, Skill) [54]
+[35]     0.0    0.00    0.00      51         Character::getName() [35]
+-----------------------------------------------
+                0.00    0.00      48/48          Game::tour(Skill, Character&, Skill, bool&) [70]
+[36]     0.0    0.00    0.00      48         Character::isAlive() [36]
+                0.00    0.00      48/66          Gauge::getVal() [29]
+-----------------------------------------------
+                0.00    0.00      16/44          Character::editLife(int) [53]
+                0.00    0.00      28/44          Character::editMana(int) [44]
+[37]     0.0    0.00    0.00      44         Gauge::edit(int) [37]
+                0.00    0.00      37/85          std::pair<int, int>::operator=(std::pair<int, int>&&) [26]
+                0.00    0.00      36/40          std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int, int&>(int&&, int&) [40]
+                0.00    0.00       1/5           std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int&, int&>(int&, int&) [80]
+-----------------------------------------------
+                0.00    0.00       9/42          Game::selectSkillJoueur(bool&) [68]
+                0.00    0.00      10/42          Game::partie() [157]
+                0.00    0.00      11/42          bool std::operator!=<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [63]
+                0.00    0.00      12/42          Game::selection_perso(int&) [156]
+[38]     0.0    0.00    0.00      42         bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [38]
+-----------------------------------------------
+                0.00    0.00      40/40          std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int, int&>(int&&, int&) [40]
+[39]     0.0    0.00    0.00      40         std::pair<int, int>::pair<int, int&, void>(int&&, int&) [39]
+                0.00    0.00      40/390         int&& std::forward<int>(std::remove_reference<int>::type&) [12]
+                0.00    0.00      40/112         int& std::forward<int&>(std::remove_reference<int&>::type&) [23]
+-----------------------------------------------
+                0.00    0.00       4/40          Map::deplacer(char) [66]
+                0.00    0.00      36/40          Gauge::edit(int) [37]
+[40]     0.0    0.00    0.00      40         std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int, int&>(int&&, int&) [40]
+                0.00    0.00      40/112         int& std::forward<int&>(std::remove_reference<int&>::type&) [23]
+                0.00    0.00      40/390         int&& std::forward<int>(std::remove_reference<int>::type&) [12]
+                0.00    0.00      40/40          std::pair<int, int>::pair<int, int&, void>(int&&, int&) [39]
+-----------------------------------------------
+                0.00    0.00      32/32          std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int, int>(int&&, int&&) [42]
+[41]     0.0    0.00    0.00      32         std::pair<int, int>::pair<int, int, void>(int&&, int&&) [41]
+                0.00    0.00      64/390         int&& std::forward<int>(std::remove_reference<int>::type&) [12]
+-----------------------------------------------
+                0.00    0.00      14/32          Gauge::Gauge(std::string, std::string) [55]
+                0.00    0.00      18/32          Gauge::Gauge() [47]
+[42]     0.0    0.00    0.00      32         std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int, int>(int&&, int&&) [42]
+                0.00    0.00      64/390         int&& std::forward<int>(std::remove_reference<int>::type&) [12]
+                0.00    0.00      32/32          std::pair<int, int>::pair<int, int, void>(int&&, int&&) [41]
+-----------------------------------------------
+                0.00    0.00      14/28          Character::operator=(Character const&) [73]
+                0.00    0.00      14/28          Character::Character(std::string) [72]
+[43]     0.0    0.00    0.00      28         Gauge::operator=(Gauge const&) [43]
+                0.00    0.00      28/28          std::pair<int, int>::operator=(std::pair<int, int> const&) [45]
+-----------------------------------------------
+                0.00    0.00      28/28          Game::tour(Skill, Character&, Skill, bool&) [70]
+[44]     0.0    0.00    0.00      28         Character::editMana(int) [44]
+                0.00    0.00      28/44          Gauge::edit(int) [37]
+-----------------------------------------------
+                0.00    0.00      28/28          Gauge::operator=(Gauge const&) [43]
+[45]     0.0    0.00    0.00      28         std::pair<int, int>::operator=(std::pair<int, int> const&) [45]
+-----------------------------------------------
+                0.00    0.00      21/21          Character::Character(std::string) [72]
+[46]     0.0    0.00    0.00      21         Skill::Skill(std::string) [46]
+                0.00    0.00      84/167         std::stoi(std::string const&, unsigned long*, int) [19]
+-----------------------------------------------
+                0.00    0.00       4/18          Character::Character() [110]
+                0.00    0.00      14/18          Character::Character(std::string) [72]
+[47]     0.0    0.00    0.00      18         Gauge::Gauge() [47]
+                0.00    0.00      18/32          std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int, int>(int&&, int&&) [42]
+                0.00    0.00      18/85          std::pair<int, int>::operator=(std::pair<int, int>&&) [26]
+-----------------------------------------------
+                0.00    0.00      18/18          Game::tour(Skill, Character&, Skill, bool&) [70]
+[48]     0.0    0.00    0.00      18         Skill::getPriority() [48]
+-----------------------------------------------
+                0.00    0.00      18/18          Character::available(Skill) [51]
+[49]     0.0    0.00    0.00      18         Skill::available(int) [49]
+-----------------------------------------------
+                0.00    0.00      18/18          Game::tour(Skill, Character&, Skill, bool&) [70]
+[50]     0.0    0.00    0.00      18         Character::getSpeed() [50]
+-----------------------------------------------
+                0.00    0.00       9/18          Game::selectSkillJoueur(bool&) [68]
+                0.00    0.00       9/18          Game::selectSkillMonstre(Character) [69]
+[51]     0.0    0.00    0.00      18         Character::available(Skill) [51]
+                0.00    0.00      18/66          Gauge::getVal() [29]
+                0.00    0.00      18/18          Skill::available(int) [49]
+-----------------------------------------------
+                0.00    0.00      16/16          Game::tour(Skill, Character&, Skill, bool&) [70]
+[52]     0.0    0.00    0.00      16         Skill::getTarget() [52]
+-----------------------------------------------
+                0.00    0.00      16/16          Game::tour(Skill, Character&, Skill, bool&) [70]
+[53]     0.0    0.00    0.00      16         Character::editLife(int) [53]
+                0.00    0.00      16/44          Gauge::edit(int) [37]
+-----------------------------------------------
+                0.00    0.00      16/16          Game::tour(Skill, Character&, Skill, bool&) [70]
+[54]     0.0    0.00    0.00      16         Interface::afficheCombatDetails(Character, Skill) [54]
+                0.00    0.00      16/73          Skill::getDamage() [27]
+                0.00    0.00      16/55          Skill::getName() [34]
+                0.00    0.00      16/51          Character::getName() [35]
+-----------------------------------------------
+                0.00    0.00      14/14          Character::Character(std::string) [72]
+[55]     0.0    0.00    0.00      14         Gauge::Gauge(std::string, std::string) [55]
+                0.00    0.00      28/167         std::stoi(std::string const&, unsigned long*, int) [19]
+                0.00    0.00      14/32          std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int, int>(int&&, int&&) [42]
+                0.00    0.00      14/85          std::pair<int, int>::operator=(std::pair<int, int>&&) [26]
+-----------------------------------------------
+                0.00    0.00       1/13          Game::Game() [158]
+                0.00    0.00       2/13          Interface::afficheWinC(Map) [111]
+                0.00    0.00      10/13          Interface::afficheMap(Map, Character) [67]
+[56]     0.0    0.00    0.00      13         Map::mobRestants() [56]
+-----------------------------------------------
+                0.00    0.00      13/13          Game::partie() [157]
+[57]     0.0    0.00    0.00      13         Map::verif_monstre() [57]
+-----------------------------------------------
+                0.00    0.00       4/13          Interface::afficheSelectP(Character) [81]
+                0.00    0.00       9/13          Interface::afficheCombat(Character, Character) [71]
+[58]     0.0    0.00    0.00      13         Interface::affichePerso(Character) [58]
+                0.00    0.00     286/710         Character::getLife() [10]
+                0.00    0.00     273/675         Character::getMaxLife() [11]
+                0.00    0.00     156/156         Character::getMana() [20]
+                0.00    0.00     143/143         Character::getMaxMana() [21]
+                0.00    0.00      13/51          Character::getName() [35]
+                0.00    0.00      13/110         Character::Character(Character const&) [24]
+                0.00    0.00      13/13          Interface::afficheSkill(Character) [59]
+                0.00    0.00      13/119         Character::~Character() [22]
+-----------------------------------------------
+                0.00    0.00      13/13          Interface::affichePerso(Character) [58]
+[59]     0.0    0.00    0.00      13         Interface::afficheSkill(Character) [59]
+                0.00    0.00      52/70          Character::getNbSkills() [28]
+                0.00    0.00      39/57          Character::getSkill(int) [33]
+                0.00    0.00      39/57          Skill::getManaCost() [32]
+                0.00    0.00      39/73          Skill::getDamage() [27]
+                0.00    0.00      39/55          Skill::getName() [34]
+                0.00    0.00      39/168         Skill::~Skill() [17]
+-----------------------------------------------
+                0.00    0.00       2/13          std::deque<Character, std::allocator<Character> >::begin() [132]
+                0.00    0.00       2/13          void std::swap<std::_Deque_iterator<Character, Character&, Character*> >(std::_Deque_iterator<Character, Character&, Character*>&, std::_Deque_iterator<Character, Character&, Character*>&) [137]
+                0.00    0.00       4/13          std::deque<Character, std::allocator<Character> >::_M_destroy_data(std::_Deque_iterator<Character, Character&, Character*>, std::_Deque_iterator<Character, Character&, Character*>, std::allocator<Character> const&) [130]
+                0.00    0.00       5/13          std::deque<Character, std::allocator<Character> >::end() [79]
+[60]     0.0    0.00    0.00      13         std::_Deque_iterator<Character, Character&, Character*>::_Deque_iterator(std::_Deque_iterator<Character, Character&, Character*> const&) [60]
+-----------------------------------------------
+                0.00    0.00       3/12          Interface::afficheCombatDebut(Character, Character) [93]
+                0.00    0.00       9/12          Interface::afficheCombat(Character, Character) [71]
+[61]     0.0    0.00    0.00      12         Interface::afficheMob(Character) [61]
+                0.00    0.00     204/710         Character::getLife() [10]
+                0.00    0.00     192/675         Character::getMaxLife() [11]
+                0.00    0.00      12/51          Character::getName() [35]
+-----------------------------------------------
+                0.00    0.00       2/12          std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_node(Character*) [127]
+                0.00    0.00       2/12          std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_node() [123]
+                0.00    0.00       4/12          std::_Deque_base<Character, std::allocator<Character> >::_M_initialize_map(unsigned long) [126]
+                0.00    0.00       4/12          std::_Deque_iterator<Character, Character&, Character*>::_S_buffer_size() [89]
+[62]     0.0    0.00    0.00      12         std::__deque_buf_size(unsigned long) [62]
+-----------------------------------------------
+                0.00    0.00      11/11          Game::selection_perso(int&) [156]
+[63]     0.0    0.00    0.00      11         bool std::operator!=<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [63]
+                0.00    0.00      11/42          bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [38]
+-----------------------------------------------
+                0.00    0.00      10/10          Game::partie() [157]
+[64]     0.0    0.00    0.00      10         Map::verif_Soin() [64]
+-----------------------------------------------
+                0.00    0.00      10/10          Interface::afficheMap(Map, Character) [67]
+[65]     0.0    0.00    0.00      10         Map::getMapApparence() [65]
+-----------------------------------------------
+                0.00    0.00      10/10          Game::partie() [157]
+[66]     0.0    0.00    0.00      10         Map::deplacer(char) [66]
+                0.00    0.00      10/85          std::pair<int, int>::operator=(std::pair<int, int>&&) [26]
+                0.00    0.00       6/6           std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int&, int>(int&, int&&) [76]
+                0.00    0.00       4/40          std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int, int&>(int&&, int&) [40]
+-----------------------------------------------
+                0.00    0.00      10/10          Game::partie() [157]
+[67]     0.0    0.00    0.00      10         Interface::afficheMap(Map, Character) [67]
+                0.00    0.00     330/330         Map::getTaille() [13]
+                0.00    0.00     300/300         Map::getPosition() [14]
+                0.00    0.00     220/710         Character::getLife() [10]
+                0.00    0.00     210/675         Character::getMaxLife() [11]
+                0.00    0.00      10/51          Character::getName() [35]
+                0.00    0.00      10/13          Map::mobRestants() [56]
+                0.00    0.00      10/10          Map::getMapApparence() [65]
+-----------------------------------------------
+                0.00    0.00       9/9           Game::combat(Character, bool&) [92]
+[68]     0.0    0.00    0.00       9         Game::selectSkillJoueur(bool&) [68]
+                0.00    0.00      18/168         Skill::~Skill() [17]
+                0.00    0.00       9/61          Skill::Skill() [30]
+                0.00    0.00       9/42          bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [38]
+                0.00    0.00       9/167         std::stoi(std::string const&, unsigned long*, int) [19]
+                0.00    0.00       9/70          Character::getNbSkills() [28]
+                0.00    0.00       9/57          Character::getSkill(int) [33]
+                0.00    0.00       9/59          Skill::operator=(Skill const&) [31]
+                0.00    0.00       9/109         Skill::Skill(Skill const&) [25]
+                0.00    0.00       9/18          Character::available(Skill) [51]
+-----------------------------------------------
+                0.00    0.00       9/9           Game::combat(Character, bool&) [92]
+[69]     0.0    0.00    0.00       9         Game::selectSkillMonstre(Character) [69]
+                0.00    0.00      18/168         Skill::~Skill() [17]
+                0.00    0.00       9/61          Skill::Skill() [30]
+                0.00    0.00       9/70          Character::getNbSkills() [28]
+                0.00    0.00       9/57          Character::getSkill(int) [33]
+                0.00    0.00       9/59          Skill::operator=(Skill const&) [31]
+                0.00    0.00       9/109         Skill::Skill(Skill const&) [25]
+                0.00    0.00       9/18          Character::available(Skill) [51]
+-----------------------------------------------
+                0.00    0.00       9/9           Game::combat(Character, bool&) [92]
+[70]     0.0    0.00    0.00       9         Game::tour(Skill, Character&, Skill, bool&) [70]
+                0.00    0.00      48/48          Character::isAlive() [36]
+                0.00    0.00      28/28          Character::editMana(int) [44]
+                0.00    0.00      18/57          Skill::getManaCost() [32]
+                0.00    0.00      18/73          Skill::getDamage() [27]
+                0.00    0.00      18/18          Character::getSpeed() [50]
+                0.00    0.00      18/18          Skill::getPriority() [48]
+                0.00    0.00      16/109         Skill::Skill(Skill const&) [25]
+                0.00    0.00      16/110         Character::Character(Character const&) [24]
+                0.00    0.00      16/16          Interface::afficheCombatDetails(Character, Skill) [54]
+                0.00    0.00      16/119         Character::~Character() [22]
+                0.00    0.00      16/168         Skill::~Skill() [17]
+                0.00    0.00      16/16          Skill::getTarget() [52]
+                0.00    0.00      16/16          Character::editLife(int) [53]
+-----------------------------------------------
+                0.00    0.00       9/9           Game::combat(Character, bool&) [92]
+[71]     0.0    0.00    0.00       9         Interface::afficheCombat(Character, Character) [71]
+                0.00    0.00      18/110         Character::Character(Character const&) [24]
+                0.00    0.00      18/119         Character::~Character() [22]
+                0.00    0.00       9/12          Interface::afficheMob(Character) [61]
+                0.00    0.00       9/13          Interface::affichePerso(Character) [58]
+-----------------------------------------------
+                0.00    0.00       3/7           Game::setPileMob() [155]
+                0.00    0.00       4/7           Game::selection_perso(int&) [156]
+[72]     0.0    0.00    0.00       7         Character::Character(std::string) [72]
+                0.00    0.00      42/167         std::stoi(std::string const&, unsigned long*, int) [19]
+                0.00    0.00      21/61          Skill::Skill() [30]
+                0.00    0.00      21/21          Skill::Skill(std::string) [46]
+                0.00    0.00      21/168         Skill::~Skill() [17]
+                0.00    0.00      21/59          Skill::operator=(Skill const&) [31]
+                0.00    0.00      14/18          Gauge::Gauge() [47]
+                0.00    0.00      14/14          Gauge::Gauge(std::string, std::string) [55]
+                0.00    0.00      14/28          Gauge::operator=(Gauge const&) [43]
+                0.00    0.00      14/252         Gauge::~Gauge() [15]
+-----------------------------------------------
+                0.00    0.00       3/7           Game::setPileMob() [155]
+                0.00    0.00       4/7           Game::selection_perso(int&) [156]
+[73]     0.0    0.00    0.00       7         Character::operator=(Character const&) [73]
+                0.00    0.00      14/28          Gauge::operator=(Gauge const&) [43]
+-----------------------------------------------
+                0.00    0.00       6/6           std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int&, int>(int&, int&&) [76]
+[74]     0.0    0.00    0.00       6         std::pair<int, int>::pair<int&, int, void>(int&, int&&) [74]
+                0.00    0.00       6/112         int& std::forward<int&>(std::remove_reference<int&>::type&) [23]
+                0.00    0.00       6/390         int&& std::forward<int>(std::remove_reference<int>::type&) [12]
+-----------------------------------------------
+                0.00    0.00       6/6           void std::swap<std::_Deque_iterator<Character, Character&, Character*> >(std::_Deque_iterator<Character, Character&, Character*>&, std::_Deque_iterator<Character, Character&, Character*>&) [137]
+[75]     0.0    0.00    0.00       6         std::remove_reference<std::_Deque_iterator<Character, Character&, Character*>&>::type&& std::move<std::_Deque_iterator<Character, Character&, Character*>&>(std::_Deque_iterator<Character, Character&, Character*>&) [75]
+-----------------------------------------------
+                0.00    0.00       6/6           Map::deplacer(char) [66]
+[76]     0.0    0.00    0.00       6         std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int&, int>(int&, int&&) [76]
+                0.00    0.00       6/390         int&& std::forward<int>(std::remove_reference<int>::type&) [12]
+                0.00    0.00       6/112         int& std::forward<int&>(std::remove_reference<int&>::type&) [23]
+                0.00    0.00       6/6           std::pair<int, int>::pair<int&, int, void>(int&, int&&) [74]
+-----------------------------------------------
+                0.00    0.00       1/5           std::_Deque_base<Character, std::allocator<Character> >::_Deque_base(std::_Deque_base<Character, std::allocator<Character> >&&) [170]
+                0.00    0.00       2/5           std::deque<Character, std::allocator<Character> >::~deque() [133]
+                0.00    0.00       2/5           std::deque<Character, std::allocator<Character> >::_M_destroy_data_aux(std::_Deque_iterator<Character, Character&, Character*>, std::_Deque_iterator<Character, Character&, Character*>) [131]
+[77]     0.0    0.00    0.00       5         std::_Deque_base<Character, std::allocator<Character> >::_M_get_Tp_allocator() [77]
+-----------------------------------------------
+                0.00    0.00       5/5           std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int&, int&>(int&, int&) [80]
+[78]     0.0    0.00    0.00       5         std::pair<int, int>::pair<int&, int&, void>(int&, int&) [78]
+                0.00    0.00      10/112         int& std::forward<int&>(std::remove_reference<int&>::type&) [23]
+-----------------------------------------------
+                0.00    0.00       2/5           std::deque<Character, std::allocator<Character> >::~deque() [133]
+                0.00    0.00       3/5           std::deque<Character, std::allocator<Character> >::back() [98]
+[79]     0.0    0.00    0.00       5         std::deque<Character, std::allocator<Character> >::end() [79]
+                0.00    0.00       5/13          std::_Deque_iterator<Character, Character&, Character*>::_Deque_iterator(std::_Deque_iterator<Character, Character&, Character*> const&) [60]
+-----------------------------------------------
+                0.00    0.00       1/5           Gauge::edit(int) [37]
+                0.00    0.00       4/5           Map::Map() [109]
+[80]     0.0    0.00    0.00       5         std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int&, int&>(int&, int&) [80]
+                0.00    0.00      10/112         int& std::forward<int&>(std::remove_reference<int&>::type&) [23]
+                0.00    0.00       5/5           std::pair<int, int>::pair<int&, int&, void>(int&, int&) [78]
+-----------------------------------------------
+                0.00    0.00       4/4           Game::selection_perso(int&) [156]
+[81]     0.0    0.00    0.00       4         Interface::afficheSelectP(Character) [81]
+                0.00    0.00       4/110         Character::Character(Character const&) [24]
+                0.00    0.00       4/13          Interface::affichePerso(Character) [58]
+                0.00    0.00       4/119         Character::~Character() [22]
+-----------------------------------------------
+                0.00    0.00       4/4           std::allocator<Character*>::allocator<Character>(std::allocator<Character> const&) [86]
+[82]     0.0    0.00    0.00       4         __gnu_cxx::new_allocator<Character*>::new_allocator() [82]
+-----------------------------------------------
+                0.00    0.00       4/4           std::allocator<Character*>::~allocator() [87]
+[83]     0.0    0.00    0.00       4         __gnu_cxx::new_allocator<Character*>::~new_allocator() [83]
+-----------------------------------------------
+                0.00    0.00       4/4           std::_Deque_base<Character, std::allocator<Character> >::_M_get_map_allocator() const [85]
+[84]     0.0    0.00    0.00       4         std::_Deque_base<Character, std::allocator<Character> >::_M_get_Tp_allocator() const [84]
+-----------------------------------------------
+                0.00    0.00       2/4           std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_map(Character**, unsigned long) [125]
+                0.00    0.00       2/4           std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_map(unsigned long) [121]
+[85]     0.0    0.00    0.00       4         std::_Deque_base<Character, std::allocator<Character> >::_M_get_map_allocator() const [85]
+                0.00    0.00       4/4           std::_Deque_base<Character, std::allocator<Character> >::_M_get_Tp_allocator() const [84]
+                0.00    0.00       4/4           std::allocator<Character*>::allocator<Character>(std::allocator<Character> const&) [86]
+-----------------------------------------------
+                0.00    0.00       4/4           std::_Deque_base<Character, std::allocator<Character> >::_M_get_map_allocator() const [85]
+[86]     0.0    0.00    0.00       4         std::allocator<Character*>::allocator<Character>(std::allocator<Character> const&) [86]
+                0.00    0.00       4/4           __gnu_cxx::new_allocator<Character*>::new_allocator() [82]
+-----------------------------------------------
+                0.00    0.00       2/4           std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_map(Character**, unsigned long) [125]
+                0.00    0.00       2/4           std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_map(unsigned long) [121]
+[87]     0.0    0.00    0.00       4         std::allocator<Character*>::~allocator() [87]
+                0.00    0.00       4/4           __gnu_cxx::new_allocator<Character*>::~new_allocator() [83]
+-----------------------------------------------
+                0.00    0.00       4/4           std::_Deque_base<Character, std::allocator<Character> >::_M_initialize_map(unsigned long) [126]
+[88]     0.0    0.00    0.00       4         std::_Deque_iterator<Character, Character&, Character*>::_M_set_node(Character**) [88]
+                0.00    0.00       4/4           std::_Deque_iterator<Character, Character&, Character*>::_S_buffer_size() [89]
+-----------------------------------------------
+                0.00    0.00       4/4           std::_Deque_iterator<Character, Character&, Character*>::_M_set_node(Character**) [88]
+[89]     0.0    0.00    0.00       4         std::_Deque_iterator<Character, Character&, Character*>::_S_buffer_size() [89]
+                0.00    0.00       4/12          std::__deque_buf_size(unsigned long) [62]
+-----------------------------------------------
+                0.00    0.00       2/4           std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl() [168]
+                0.00    0.00       2/4           std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl(std::allocator<Character>&&) [167]
+[90]     0.0    0.00    0.00       4         std::_Deque_iterator<Character, Character&, Character*>::_Deque_iterator() [90]
+-----------------------------------------------
+                0.00    0.00       3/3           Game::partie() [157]
+[91]     0.0    0.00    0.00       3         Map::unsetmob() [91]
+-----------------------------------------------
+                0.00    0.00       3/3           Game::partie() [157]
+[92]     0.0    0.00    0.00       3         Game::combat(Character, bool&) [92]
+                0.00    0.00      54/168         Skill::~Skill() [17]
+                0.00    0.00      33/110         Character::Character(Character const&) [24]
+                0.00    0.00      33/119         Character::~Character() [22]
+                0.00    0.00      18/61          Skill::Skill() [30]
+                0.00    0.00      18/59          Skill::operator=(Skill const&) [31]
+                0.00    0.00      18/109         Skill::Skill(Skill const&) [25]
+                0.00    0.00       9/9           Interface::afficheCombat(Character, Character) [71]
+                0.00    0.00       9/9           Game::selectSkillJoueur(bool&) [68]
+                0.00    0.00       9/9           Game::selectSkillMonstre(Character) [69]
+                0.00    0.00       9/9           Game::tour(Skill, Character&, Skill, bool&) [70]
+                0.00    0.00       3/3           Interface::afficheCombatDebut(Character, Character) [93]
+-----------------------------------------------
+                0.00    0.00       3/3           Game::combat(Character, bool&) [92]
+[93]     0.0    0.00    0.00       3         Interface::afficheCombatDebut(Character, Character) [93]
+                0.00    0.00       3/110         Character::Character(Character const&) [24]
+                0.00    0.00       3/12          Interface::afficheMob(Character) [61]
+                0.00    0.00       3/119         Character::~Character() [22]
+-----------------------------------------------
+                0.00    0.00       3/3           std::deque<Character, std::allocator<Character> >::pop_back() [99]
+[94]     0.0    0.00    0.00       3         void __gnu_cxx::new_allocator<Character>::destroy<Character>(Character*) [94]
+                0.00    0.00       3/119         Character::~Character() [22]
+-----------------------------------------------
+                0.00    0.00       3/3           std::deque<Character, std::allocator<Character> >::push_back(Character const&) [100]
+[95]     0.0    0.00    0.00       3         _ZN9__gnu_cxx13new_allocatorI9CharacterE9constructIS1_IRKS1_EEEvPT_DpOT0_ [95]
+                0.00    0.00       3/3           Character const& std::forward<Character const&>(std::remove_reference<Character const&>::type&) [106]
+                0.00    0.00       3/3           operator new(unsigned long, void*) [107]
+                0.00    0.00       3/110         Character::Character(Character const&) [24]
+-----------------------------------------------
+                0.00    0.00       3/3           std::deque<Character, std::allocator<Character> >::back() [98]
+[96]     0.0    0.00    0.00       3         std::_Deque_iterator<Character, Character&, Character*>::operator*() const [96]
+-----------------------------------------------
+                0.00    0.00       3/3           std::deque<Character, std::allocator<Character> >::back() [98]
+[97]     0.0    0.00    0.00       3         std::_Deque_iterator<Character, Character&, Character*>::operator--() [97]
+-----------------------------------------------
+                0.00    0.00       3/3           std::stack<Character, std::deque<Character, std::allocator<Character> > >::top() [102]
+[98]     0.0    0.00    0.00       3         std::deque<Character, std::allocator<Character> >::back() [98]
+                0.00    0.00       3/5           std::deque<Character, std::allocator<Character> >::end() [79]
+                0.00    0.00       3/3           std::_Deque_iterator<Character, Character&, Character*>::operator*() const [96]
+                0.00    0.00       3/3           std::_Deque_iterator<Character, Character&, Character*>::operator--() [97]
+-----------------------------------------------
+                0.00    0.00       3/3           std::stack<Character, std::deque<Character, std::allocator<Character> > >::pop() [101]
+[99]     0.0    0.00    0.00       3         std::deque<Character, std::allocator<Character> >::pop_back() [99]
+                0.00    0.00       3/3           void __gnu_cxx::new_allocator<Character>::destroy<Character>(Character*) [94]
+-----------------------------------------------
+                0.00    0.00       3/3           std::stack<Character, std::deque<Character, std::allocator<Character> > >::push(Character const&) [103]
+[100]    0.0    0.00    0.00       3         std::deque<Character, std::allocator<Character> >::push_back(Character const&) [100]
+                0.00    0.00       3/3           _ZN9__gnu_cxx13new_allocatorI9CharacterE9constructIS1_IRKS1_EEEvPT_DpOT0_ [95]
+-----------------------------------------------
+                0.00    0.00       3/3           Game::partie() [157]
+[101]    0.0    0.00    0.00       3         std::stack<Character, std::deque<Character, std::allocator<Character> > >::pop() [101]
+                0.00    0.00       3/3           std::deque<Character, std::allocator<Character> >::pop_back() [99]
+-----------------------------------------------
+                0.00    0.00       3/3           Game::partie() [157]
+[102]    0.0    0.00    0.00       3         std::stack<Character, std::deque<Character, std::allocator<Character> > >::top() [102]
+                0.00    0.00       3/3           std::deque<Character, std::allocator<Character> >::back() [98]
+-----------------------------------------------
+                0.00    0.00       3/3           Game::setPileMob() [155]
+[103]    0.0    0.00    0.00       3         std::stack<Character, std::deque<Character, std::allocator<Character> > >::push(Character const&) [103]
+                0.00    0.00       3/3           std::deque<Character, std::allocator<Character> >::push_back(Character const&) [100]
+-----------------------------------------------
+                0.00    0.00       3/3           void std::swap<Character**>(Character**&, Character**&) [175]
+[104]    0.0    0.00    0.00       3         std::remove_reference<Character**&>::type&& std::move<Character**&>(Character**&) [104]
+-----------------------------------------------
+                0.00    0.00       3/3           void std::swap<unsigned long>(unsigned long&, unsigned long&) [176]
+[105]    0.0    0.00    0.00       3         std::remove_reference<unsigned long&>::type&& std::move<unsigned long&>(unsigned long&) [105]
+-----------------------------------------------
+                0.00    0.00       3/3           _ZN9__gnu_cxx13new_allocatorI9CharacterE9constructIS1_IRKS1_EEEvPT_DpOT0_ [95]
+[106]    0.0    0.00    0.00       3         Character const& std::forward<Character const&>(std::remove_reference<Character const&>::type&) [106]
+-----------------------------------------------
+                0.00    0.00       3/3           _ZN9__gnu_cxx13new_allocatorI9CharacterE9constructIS1_IRKS1_EEEvPT_DpOT0_ [95]
+[107]    0.0    0.00    0.00       3         operator new(unsigned long, void*) [107]
+-----------------------------------------------
+                0.00    0.00       2/2           Map::Map() [109]
+[108]    0.0    0.00    0.00       2         Map::FormatTest() [108]
+                0.00    0.00       4/167         std::stoi(std::string const&, unsigned long*, int) [19]
+-----------------------------------------------
+                0.00    0.00       2/2           Game::Game() [158]
+[109]    0.0    0.00    0.00       2         Map::Map() [109]
+                0.00    0.00       4/5           std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int&, int&>(int&, int&) [80]
+                0.00    0.00       4/85          std::pair<int, int>::operator=(std::pair<int, int>&&) [26]
+                0.00    0.00       2/2           Map::FormatTest() [108]
+-----------------------------------------------
+                0.00    0.00       1/2           Game::Game() [158]
+                0.00    0.00       1/2           Game::setPileMob() [155]
+[110]    0.0    0.00    0.00       2         Character::Character() [110]
+                0.00    0.00       4/18          Gauge::Gauge() [47]
+                0.00    0.00       4/61          Skill::Skill() [30]
+                0.00    0.00       2/59          Skill::operator=(Skill const&) [31]
+                0.00    0.00       2/168         Skill::~Skill() [17]
+-----------------------------------------------
+                0.00    0.00       2/2           Game::partie() [157]
+[111]    0.0    0.00    0.00       2         Interface::afficheWinC(Map) [111]
+                0.00    0.00       2/13          Map::mobRestants() [56]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_node(Character*) [127]
+[112]    0.0    0.00    0.00       2         __gnu_cxx::new_allocator<Character>::deallocate(Character*, unsigned long) [112]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_node() [123]
+[113]    0.0    0.00    0.00       2         __gnu_cxx::new_allocator<Character>::allocate(unsigned long, void const*) [113]
+                0.00    0.00       2/2           __gnu_cxx::new_allocator<Character>::max_size() const [117]
+-----------------------------------------------
+                0.00    0.00       2/2           std::allocator<Character>::~allocator() [119]
+[114]    0.0    0.00    0.00       2         __gnu_cxx::new_allocator<Character>::~new_allocator() [114]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_map(Character**, unsigned long) [125]
+[115]    0.0    0.00    0.00       2         __gnu_cxx::new_allocator<Character*>::deallocate(Character**, unsigned long) [115]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_map(unsigned long) [121]
+[116]    0.0    0.00    0.00       2         __gnu_cxx::new_allocator<Character*>::allocate(unsigned long, void const*) [116]
+                0.00    0.00       2/2           __gnu_cxx::new_allocator<Character*>::max_size() const [118]
+-----------------------------------------------
+                0.00    0.00       2/2           __gnu_cxx::new_allocator<Character>::allocate(unsigned long, void const*) [113]
+[117]    0.0    0.00    0.00       2         __gnu_cxx::new_allocator<Character>::max_size() const [117]
+-----------------------------------------------
+                0.00    0.00       2/2           __gnu_cxx::new_allocator<Character*>::allocate(unsigned long, void const*) [116]
+[118]    0.0    0.00    0.00       2         __gnu_cxx::new_allocator<Character*>::max_size() const [118]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::~_Deque_impl() [120]
+[119]    0.0    0.00    0.00       2         std::allocator<Character>::~allocator() [119]
+                0.00    0.00       2/2           __gnu_cxx::new_allocator<Character>::~new_allocator() [114]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::~_Deque_base() [128]
+[120]    0.0    0.00    0.00       2         std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::~_Deque_impl() [120]
+                0.00    0.00       2/2           std::allocator<Character>::~allocator() [119]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_initialize_map(unsigned long) [126]
+[121]    0.0    0.00    0.00       2         std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_map(unsigned long) [121]
+                0.00    0.00       2/4           std::_Deque_base<Character, std::allocator<Character> >::_M_get_map_allocator() const [85]
+                0.00    0.00       2/2           __gnu_cxx::new_allocator<Character*>::allocate(unsigned long, void const*) [116]
+                0.00    0.00       2/4           std::allocator<Character*>::~allocator() [87]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_initialize_map(unsigned long) [126]
+[122]    0.0    0.00    0.00       2         std::_Deque_base<Character, std::allocator<Character> >::_M_create_nodes(Character**, Character**) [122]
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_node() [123]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_create_nodes(Character**, Character**) [122]
+[123]    0.0    0.00    0.00       2         std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_node() [123]
+                0.00    0.00       2/12          std::__deque_buf_size(unsigned long) [62]
+                0.00    0.00       2/2           __gnu_cxx::new_allocator<Character>::allocate(unsigned long, void const*) [113]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::~_Deque_base() [128]
+[124]    0.0    0.00    0.00       2         std::_Deque_base<Character, std::allocator<Character> >::_M_destroy_nodes(Character**, Character**) [124]
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_node(Character*) [127]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::~_Deque_base() [128]
+[125]    0.0    0.00    0.00       2         std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_map(Character**, unsigned long) [125]
+                0.00    0.00       2/4           std::_Deque_base<Character, std::allocator<Character> >::_M_get_map_allocator() const [85]
+                0.00    0.00       2/2           __gnu_cxx::new_allocator<Character*>::deallocate(Character**, unsigned long) [115]
+                0.00    0.00       2/4           std::allocator<Character*>::~allocator() [87]
+-----------------------------------------------
+                0.00    0.00       1/2           std::_Deque_base<Character, std::allocator<Character> >::_Deque_base() [169]
+                0.00    0.00       1/2           std::_Deque_base<Character, std::allocator<Character> >::_Deque_base(std::_Deque_base<Character, std::allocator<Character> >&&) [170]
+[126]    0.0    0.00    0.00       2         std::_Deque_base<Character, std::allocator<Character> >::_M_initialize_map(unsigned long) [126]
+                0.00    0.00       4/12          std::__deque_buf_size(unsigned long) [62]
+                0.00    0.00       4/4           std::_Deque_iterator<Character, Character&, Character*>::_M_set_node(Character**) [88]
+                0.00    0.00       2/2           unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [134]
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_map(unsigned long) [121]
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_create_nodes(Character**, Character**) [122]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_destroy_nodes(Character**, Character**) [124]
+[127]    0.0    0.00    0.00       2         std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_node(Character*) [127]
+                0.00    0.00       2/12          std::__deque_buf_size(unsigned long) [62]
+                0.00    0.00       2/2           __gnu_cxx::new_allocator<Character>::deallocate(Character*, unsigned long) [112]
+-----------------------------------------------
+                0.00    0.00       2/2           std::deque<Character, std::allocator<Character> >::~deque() [133]
+[128]    0.0    0.00    0.00       2         std::_Deque_base<Character, std::allocator<Character> >::~_Deque_base() [128]
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_destroy_nodes(Character**, Character**) [124]
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_map(Character**, unsigned long) [125]
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::~_Deque_impl() [120]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::_Destroy<Character*>(Character*, Character*) [138]
+[129]    0.0    0.00    0.00       2         void std::_Destroy_aux<false>::__destroy<Character*>(Character*, Character*) [129]
+-----------------------------------------------
+                0.00    0.00       2/2           std::deque<Character, std::allocator<Character> >::~deque() [133]
+[130]    0.0    0.00    0.00       2         std::deque<Character, std::allocator<Character> >::_M_destroy_data(std::_Deque_iterator<Character, Character&, Character*>, std::_Deque_iterator<Character, Character&, Character*>, std::allocator<Character> const&) [130]
+                0.00    0.00       4/13          std::_Deque_iterator<Character, Character&, Character*>::_Deque_iterator(std::_Deque_iterator<Character, Character&, Character*> const&) [60]
+                0.00    0.00       2/2           std::deque<Character, std::allocator<Character> >::_M_destroy_data_aux(std::_Deque_iterator<Character, Character&, Character*>, std::_Deque_iterator<Character, Character&, Character*>) [131]
+-----------------------------------------------
+                0.00    0.00       2/2           std::deque<Character, std::allocator<Character> >::_M_destroy_data(std::_Deque_iterator<Character, Character&, Character*>, std::_Deque_iterator<Character, Character&, Character*>, std::allocator<Character> const&) [130]
+[131]    0.0    0.00    0.00       2         std::deque<Character, std::allocator<Character> >::_M_destroy_data_aux(std::_Deque_iterator<Character, Character&, Character*>, std::_Deque_iterator<Character, Character&, Character*>) [131]
+                0.00    0.00       2/5           std::_Deque_base<Character, std::allocator<Character> >::_M_get_Tp_allocator() [77]
+                0.00    0.00       2/2           void std::_Destroy<Character*, Character>(Character*, Character*, std::allocator<Character>&) [139]
+-----------------------------------------------
+                0.00    0.00       2/2           std::deque<Character, std::allocator<Character> >::~deque() [133]
+[132]    0.0    0.00    0.00       2         std::deque<Character, std::allocator<Character> >::begin() [132]
+                0.00    0.00       2/13          std::_Deque_iterator<Character, Character&, Character*>::_Deque_iterator(std::_Deque_iterator<Character, Character&, Character*> const&) [60]
+-----------------------------------------------
+                0.00    0.00       1/2           std::stack<Character, std::deque<Character, std::allocator<Character> > >::~stack() [174]
+                0.00    0.00       1/2           Game::Game() [158]
+[133]    0.0    0.00    0.00       2         std::deque<Character, std::allocator<Character> >::~deque() [133]
+                0.00    0.00       2/5           std::_Deque_base<Character, std::allocator<Character> >::_M_get_Tp_allocator() [77]
+                0.00    0.00       2/5           std::deque<Character, std::allocator<Character> >::end() [79]
+                0.00    0.00       2/2           std::deque<Character, std::allocator<Character> >::begin() [132]
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::~_Deque_base() [128]
+                0.00    0.00       2/2           std::deque<Character, std::allocator<Character> >::_M_destroy_data(std::_Deque_iterator<Character, Character&, Character*>, std::_Deque_iterator<Character, Character&, Character*>, std::allocator<Character> const&) [130]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_M_initialize_map(unsigned long) [126]
+[134]    0.0    0.00    0.00       2         unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&) [134]
+-----------------------------------------------
+                0.00    0.00       1/2           std::_Deque_base<Character, std::allocator<Character> >::_Deque_base(std::_Deque_base<Character, std::allocator<Character> >&&) [170]
+                0.00    0.00       1/2           std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl(std::allocator<Character>&&) [167]
+[135]    0.0    0.00    0.00       2         std::remove_reference<std::allocator<Character>&>::type&& std::move<std::allocator<Character>&>(std::allocator<Character>&) [135]
+-----------------------------------------------
+                0.00    0.00       1/2           std::stack<Character, std::deque<Character, std::allocator<Character> > >::stack(std::deque<Character, std::allocator<Character> >&&) [173]
+                0.00    0.00       1/2           std::deque<Character, std::allocator<Character> >::deque(std::deque<Character, std::allocator<Character> >&&) [171]
+[136]    0.0    0.00    0.00       2         std::remove_reference<std::deque<Character, std::allocator<Character> >&>::type&& std::move<std::deque<Character, std::allocator<Character> >&>(std::deque<Character, std::allocator<Character> >&) [136]
+-----------------------------------------------
+                0.00    0.00       2/2           std::_Deque_base<Character, std::allocator<Character> >::_Deque_base(std::_Deque_base<Character, std::allocator<Character> >&&) [170]
+[137]    0.0    0.00    0.00       2         void std::swap<std::_Deque_iterator<Character, Character&, Character*> >(std::_Deque_iterator<Character, Character&, Character*>&, std::_Deque_iterator<Character, Character&, Character*>&) [137]
+                0.00    0.00       6/6           std::remove_reference<std::_Deque_iterator<Character, Character&, Character*>&>::type&& std::move<std::_Deque_iterator<Character, Character&, Character*>&>(std::_Deque_iterator<Character, Character&, Character*>&) [75]
+                0.00    0.00       2/13          std::_Deque_iterator<Character, Character&, Character*>::_Deque_iterator(std::_Deque_iterator<Character, Character&, Character*> const&) [60]
+-----------------------------------------------
+                0.00    0.00       2/2           void std::_Destroy<Character*, Character>(Character*, Character*, std::allocator<Character>&) [139]
+[138]    0.0    0.00    0.00       2         void std::_Destroy<Character*>(Character*, Character*) [138]
+                0.00    0.00       2/2           void std::_Destroy_aux<false>::__destroy<Character*>(Character*, Character*) [129]
+-----------------------------------------------
+                0.00    0.00       2/2           std::deque<Character, std::allocator<Character> >::_M_destroy_data_aux(std::_Deque_iterator<Character, Character&, Character*>, std::_Deque_iterator<Character, Character&, Character*>) [131]
+[139]    0.0    0.00    0.00       2         void std::_Destroy<Character*, Character>(Character*, Character*, std::allocator<Character>&) [139]
+                0.00    0.00       2/2           void std::_Destroy<Character*>(Character*, Character*) [138]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [210]
+[140]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN3MapC2Ev [140]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [150]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [210]
+[141]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN4GameC2Ev [141]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [148]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [210]
+[142]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN5GaugeC2Ev [142]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [153]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [210]
+[143]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN5SkillC2Ev [143]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [152]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [210]
+[144]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN9CharacterC2Ev [144]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [151]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [210]
+[145]    0.0    0.00    0.00       1         _GLOBAL__sub_I__ZN9Interface14afficheTHEGAMEEv [145]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [149]
+-----------------------------------------------
+                0.00    0.00       1/1           __libc_csu_init [210]
+[146]    0.0    0.00    0.00       1         _GLOBAL__sub_I_main [146]
+                0.00    0.00       1/1           __static_initialization_and_destruction_0(int, int) [147]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I_main [146]
+[147]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [147]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN4GameC2Ev [141]
+[148]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [148]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN9Interface14afficheTHEGAMEEv [145]
+[149]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [149]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN3MapC2Ev [140]
+[150]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [150]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN9CharacterC2Ev [144]
+[151]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [151]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN5SkillC2Ev [143]
+[152]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [152]
+-----------------------------------------------
+                0.00    0.00       1/1           _GLOBAL__sub_I__ZN5GaugeC2Ev [142]
+[153]    0.0    0.00    0.00       1         __static_initialization_and_destruction_0(int, int) [153]
+-----------------------------------------------
+                0.00    0.00       1/1           Game::Game() [158]
+[154]    0.0    0.00    0.00       1         Map::operator=(Map&&) [154]
+                0.00    0.00       2/85          std::pair<int, int>::operator=(std::pair<int, int>&&) [26]
+-----------------------------------------------
+                0.00    0.00       1/1           Game::Game() [158]
+[155]    0.0    0.00    0.00       1         Game::setPileMob() [155]
+                0.00    0.00       4/119         Character::~Character() [22]
+                0.00    0.00       3/7           Character::Character(std::string) [72]
+                0.00    0.00       3/7           Character::operator=(Character const&) [73]
+                0.00    0.00       3/3           std::stack<Character, std::deque<Character, std::allocator<Character> > >::push(Character const&) [103]
+                0.00    0.00       1/2           Character::Character() [110]
+-----------------------------------------------
+                                   2             Game::selection_perso(int&) [156]
+                0.00    0.00       1/1           Game::partie() [157]
+[156]    0.0    0.00    0.00       1+2       Game::selection_perso(int&) [156]
+                0.00    0.00      12/42          bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [38]
+                0.00    0.00      11/11          bool std::operator!=<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [63]
+                0.00    0.00       8/119         Character::~Character() [22]
+                0.00    0.00       4/7           Character::Character(std::string) [72]
+                0.00    0.00       4/7           Character::operator=(Character const&) [73]
+                0.00    0.00       4/110         Character::Character(Character const&) [24]
+                0.00    0.00       4/4           Interface::afficheSelectP(Character) [81]
+                                   2             Game::selection_perso(int&) [156]
+-----------------------------------------------
+                0.00    0.00       1/1           Game::Game() [158]
+[157]    0.0    0.00    0.00       1         Game::partie() [157]
+                0.00    0.00      16/110         Character::Character(Character const&) [24]
+                0.00    0.00      16/119         Character::~Character() [22]
+                0.00    0.00      13/13          Map::verif_monstre() [57]
+                0.00    0.00      10/10          Interface::afficheMap(Map, Character) [67]
+                0.00    0.00      10/42          bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*) [38]
+                0.00    0.00      10/10          Map::deplacer(char) [66]
+                0.00    0.00      10/10          Map::verif_Soin() [64]
+                0.00    0.00       3/3           std::stack<Character, std::deque<Character, std::allocator<Character> > >::top() [102]
+                0.00    0.00       3/3           std::stack<Character, std::deque<Character, std::allocator<Character> > >::pop() [101]
+                0.00    0.00       3/3           Map::unsetmob() [91]
+                0.00    0.00       3/3           Game::combat(Character, bool&) [92]
+                0.00    0.00       2/2           Interface::afficheWinC(Map) [111]
+                0.00    0.00       1/1           Game::selection_perso(int&) [156]
+                0.00    0.00       1/1           Interface::afficheDebutJeu() [162]
+                0.00    0.00       1/1           Interface::afficheLoose() [160]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[158]    0.0    0.00    0.00       1         Game::Game() [158]
+                0.00    0.00       2/2           Map::Map() [109]
+                0.00    0.00       1/2           Character::Character() [110]
+                0.00    0.00       1/1           std::deque<Character, std::allocator<Character> >::deque() [172]
+                0.00    0.00       1/1           std::stack<Character, std::deque<Character, std::allocator<Character> > >::stack(std::deque<Character, std::allocator<Character> >&&) [173]
+                0.00    0.00       1/2           std::deque<Character, std::allocator<Character> >::~deque() [133]
+                0.00    0.00       1/1           Interface::afficheTHEGAME() [161]
+                0.00    0.00       1/1           Map::operator=(Map&&) [154]
+                0.00    0.00       1/13          Map::mobRestants() [56]
+                0.00    0.00       1/1           Game::setPileMob() [155]
+                0.00    0.00       1/1           Game::partie() [157]
+-----------------------------------------------
+                0.00    0.00       1/1           main [6]
+[159]    0.0    0.00    0.00       1         Game::~Game() [159]
+                0.00    0.00       1/1           std::stack<Character, std::deque<Character, std::allocator<Character> > >::~stack() [174]
+                0.00    0.00       1/119         Character::~Character() [22]
+-----------------------------------------------
+                0.00    0.00       1/1           Game::partie() [157]
+[160]    0.0    0.00    0.00       1         Interface::afficheLoose() [160]
+-----------------------------------------------
+                0.00    0.00       1/1           Game::Game() [158]
+[161]    0.0    0.00    0.00       1         Interface::afficheTHEGAME() [161]
+-----------------------------------------------
+                0.00    0.00       1/1           Game::partie() [157]
+[162]    0.0    0.00    0.00       1         Interface::afficheDebutJeu() [162]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator<Character>::allocator() [165]
+[163]    0.0    0.00    0.00       1         __gnu_cxx::new_allocator<Character>::new_allocator() [163]
+-----------------------------------------------
+                0.00    0.00       1/1           std::allocator<Character>::allocator(std::allocator<Character> const&) [166]
+[164]    0.0    0.00    0.00       1         __gnu_cxx::new_allocator<Character>::new_allocator(__gnu_cxx::new_allocator<Character> const&) [164]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl() [168]
+[165]    0.0    0.00    0.00       1         std::allocator<Character>::allocator() [165]
+                0.00    0.00       1/1           __gnu_cxx::new_allocator<Character>::new_allocator() [163]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl(std::allocator<Character>&&) [167]
+[166]    0.0    0.00    0.00       1         std::allocator<Character>::allocator(std::allocator<Character> const&) [166]
+                0.00    0.00       1/1           __gnu_cxx::new_allocator<Character>::new_allocator(__gnu_cxx::new_allocator<Character> const&) [164]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Deque_base<Character, std::allocator<Character> >::_Deque_base(std::_Deque_base<Character, std::allocator<Character> >&&) [170]
+[167]    0.0    0.00    0.00       1         std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl(std::allocator<Character>&&) [167]
+                0.00    0.00       2/4           std::_Deque_iterator<Character, Character&, Character*>::_Deque_iterator() [90]
+                0.00    0.00       1/2           std::remove_reference<std::allocator<Character>&>::type&& std::move<std::allocator<Character>&>(std::allocator<Character>&) [135]
+                0.00    0.00       1/1           std::allocator<Character>::allocator(std::allocator<Character> const&) [166]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Deque_base<Character, std::allocator<Character> >::_Deque_base() [169]
+[168]    0.0    0.00    0.00       1         std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl() [168]
+                0.00    0.00       2/4           std::_Deque_iterator<Character, Character&, Character*>::_Deque_iterator() [90]
+                0.00    0.00       1/1           std::allocator<Character>::allocator() [165]
+-----------------------------------------------
+                0.00    0.00       1/1           std::deque<Character, std::allocator<Character> >::deque() [172]
+[169]    0.0    0.00    0.00       1         std::_Deque_base<Character, std::allocator<Character> >::_Deque_base() [169]
+                0.00    0.00       1/1           std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl() [168]
+                0.00    0.00       1/2           std::_Deque_base<Character, std::allocator<Character> >::_M_initialize_map(unsigned long) [126]
+-----------------------------------------------
+                0.00    0.00       1/1           std::deque<Character, std::allocator<Character> >::deque(std::deque<Character, std::allocator<Character> >&&) [171]
+[170]    0.0    0.00    0.00       1         std::_Deque_base<Character, std::allocator<Character> >::_Deque_base(std::_Deque_base<Character, std::allocator<Character> >&&) [170]
+                0.00    0.00       2/2           void std::swap<std::_Deque_iterator<Character, Character&, Character*> >(std::_Deque_iterator<Character, Character&, Character*>&, std::_Deque_iterator<Character, Character&, Character*>&) [137]
+                0.00    0.00       1/5           std::_Deque_base<Character, std::allocator<Character> >::_M_get_Tp_allocator() [77]
+                0.00    0.00       1/2           std::remove_reference<std::allocator<Character>&>::type&& std::move<std::allocator<Character>&>(std::allocator<Character>&) [135]
+                0.00    0.00       1/1           std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl(std::allocator<Character>&&) [167]
+                0.00    0.00       1/2           std::_Deque_base<Character, std::allocator<Character> >::_M_initialize_map(unsigned long) [126]
+                0.00    0.00       1/1           void std::swap<Character**>(Character**&, Character**&) [175]
+                0.00    0.00       1/1           void std::swap<unsigned long>(unsigned long&, unsigned long&) [176]
+-----------------------------------------------
+                0.00    0.00       1/1           std::stack<Character, std::deque<Character, std::allocator<Character> > >::stack(std::deque<Character, std::allocator<Character> >&&) [173]
+[171]    0.0    0.00    0.00       1         std::deque<Character, std::allocator<Character> >::deque(std::deque<Character, std::allocator<Character> >&&) [171]
+                0.00    0.00       1/2           std::remove_reference<std::deque<Character, std::allocator<Character> >&>::type&& std::move<std::deque<Character, std::allocator<Character> >&>(std::deque<Character, std::allocator<Character> >&) [136]
+                0.00    0.00       1/1           std::_Deque_base<Character, std::allocator<Character> >::_Deque_base(std::_Deque_base<Character, std::allocator<Character> >&&) [170]
+-----------------------------------------------
+                0.00    0.00       1/1           Game::Game() [158]
+[172]    0.0    0.00    0.00       1         std::deque<Character, std::allocator<Character> >::deque() [172]
+                0.00    0.00       1/1           std::_Deque_base<Character, std::allocator<Character> >::_Deque_base() [169]
+-----------------------------------------------
+                0.00    0.00       1/1           Game::Game() [158]
+[173]    0.0    0.00    0.00       1         std::stack<Character, std::deque<Character, std::allocator<Character> > >::stack(std::deque<Character, std::allocator<Character> >&&) [173]
+                0.00    0.00       1/2           std::remove_reference<std::deque<Character, std::allocator<Character> >&>::type&& std::move<std::deque<Character, std::allocator<Character> >&>(std::deque<Character, std::allocator<Character> >&) [136]
+                0.00    0.00       1/1           std::deque<Character, std::allocator<Character> >::deque(std::deque<Character, std::allocator<Character> >&&) [171]
+-----------------------------------------------
+                0.00    0.00       1/1           Game::~Game() [159]
+[174]    0.0    0.00    0.00       1         std::stack<Character, std::deque<Character, std::allocator<Character> > >::~stack() [174]
+                0.00    0.00       1/2           std::deque<Character, std::allocator<Character> >::~deque() [133]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Deque_base<Character, std::allocator<Character> >::_Deque_base(std::_Deque_base<Character, std::allocator<Character> >&&) [170]
+[175]    0.0    0.00    0.00       1         void std::swap<Character**>(Character**&, Character**&) [175]
+                0.00    0.00       3/3           std::remove_reference<Character**&>::type&& std::move<Character**&>(Character**&) [104]
+-----------------------------------------------
+                0.00    0.00       1/1           std::_Deque_base<Character, std::allocator<Character> >::_Deque_base(std::_Deque_base<Character, std::allocator<Character> >&&) [170]
+[176]    0.0    0.00    0.00       1         void std::swap<unsigned long>(unsigned long&, unsigned long&) [176]
+                0.00    0.00       3/3           std::remove_reference<unsigned long&>::type&& std::move<unsigned long&>(unsigned long&) [105]
+-----------------------------------------------
+
+ This table describes the call tree of the program, and was sorted by
+ the total amount of time spent in each function and its children.
+
+ Each entry in this table consists of several lines.  The line with the
+ index number at the left hand margin lists the current function.
+ The lines above it list the functions that called this function,
+ and the lines below it list the functions this one called.
+ This line lists:
+     index	A unique number given to each element of the table.
+		Index numbers are sorted numerically.
+		The index number is printed next to every function name so
+		it is easier to look up where the function is in the table.
+
+     % time	This is the percentage of the `total' time that was spent
+		in this function and its children.  Note that due to
+		different viewpoints, functions excluded by options, etc,
+		these numbers will NOT add up to 100%.
+
+     self	This is the total amount of time spent in this function.
+
+     children	This is the total amount of time propagated into this
+		function by its children.
+
+     called	This is the number of times the function was called.
+		If the function called itself recursively, the number
+		only includes non-recursive calls, and is followed by
+		a `+' and the number of recursive calls.
+
+     name	The name of the current function.  The index number is
+		printed after it.  If the function is a member of a
+		cycle, the cycle number is printed between the
+		function's name and the index number.
+
+
+ For the function's parents, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the function into this parent.
+
+     children	This is the amount of time that was propagated from
+		the function's children into this parent.
+
+     called	This is the number of times this parent called the
+		function `/' the total number of times the function
+		was called.  Recursive calls to the function are not
+		included in the number after the `/'.
+
+     name	This is the name of the parent.  The parent's index
+		number is printed after it.  If the parent is a
+		member of a cycle, the cycle number is printed between
+		the name and the index number.
+
+ If the parents of the function cannot be determined, the word
+ `<spontaneous>' is printed in the `name' field, and all the other
+ fields are blank.
+
+ For the function's children, the fields have the following meanings:
+
+     self	This is the amount of time that was propagated directly
+		from the child into the function.
+
+     children	This is the amount of time that was propagated from the
+		child's children to the function.
+
+     called	This is the number of times the function called
+		this child `/' the total number of times the child
+		was called.  Recursive calls by the child are not
+		listed in the number after the `/'.
+
+     name	This is the name of the child.  The child's index
+		number is printed after it.  If the child is a
+		member of a cycle, the cycle number is printed
+		between the name and the index number.
+
+ If there are any cycles (circles) in the call graph, there is an
+ entry for the cycle-as-a-whole.  This entry shows who called the
+ cycle (as parents) and the members of the cycle (as children.)
+ The `+' recursive calls entry shows the number of function calls that
+ were internal to the cycle, and the calls entry for each member shows,
+ for that member, how many times it was called from other members of
+ the cycle.
+
+Copyright (C) 2012 Free Software Foundation, Inc.
+
+Copying and distribution of this file, with or without modification,
+are permitted in any medium without royalty provided the copyright
+notice and this notice are preserved.
+
+Index by function name
+
+ [140] _GLOBAL__sub_I__ZN3MapC2Ev [10] Character::getLife() [127] std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_node(Character*)
+ [141] _GLOBAL__sub_I__ZN4GameC2Ev [20] Character::getMana() [77] std::_Deque_base<Character, std::allocator<Character> >::_M_get_Tp_allocator()
+ [142] _GLOBAL__sub_I__ZN5GaugeC2Ev [35] Character::getName() [169] std::_Deque_base<Character, std::allocator<Character> >::_Deque_base()
+ [143] _GLOBAL__sub_I__ZN5SkillC2Ev [36] Character::isAlive() [170] std::_Deque_base<Character, std::allocator<Character> >::_Deque_base(std::_Deque_base<Character, std::allocator<Character> >&&)
+ [144] _GLOBAL__sub_I__ZN9CharacterC2Ev [53] Character::editLife(int) [128] std::_Deque_base<Character, std::allocator<Character> >::~_Deque_base()
+ [145] _GLOBAL__sub_I__ZN9Interface14afficheTHEGAMEEv [44] Character::editMana(int) [129] void std::_Destroy_aux<false>::__destroy<Character*>(Character*, Character*)
+ [146] _GLOBAL__sub_I_main    [33] Character::getSkill(int) [88] std::_Deque_iterator<Character, Character&, Character*>::_M_set_node(Character**)
+ [147] __static_initialization_and_destruction_0(int, int) [50] Character::getSpeed() [89] std::_Deque_iterator<Character, Character&, Character*>::_S_buffer_size()
+ [148] __static_initialization_and_destruction_0(int, int) [51] Character::available(Skill) [60] std::_Deque_iterator<Character, Character&, Character*>::_Deque_iterator(std::_Deque_iterator<Character, Character&, Character*> const&)
+ [149] __static_initialization_and_destruction_0(int, int) [24] Character::Character(Character const&) [90] std::_Deque_iterator<Character, Character&, Character*>::_Deque_iterator()
+ [150] __static_initialization_and_destruction_0(int, int) [72] Character::Character(std::string) [97] std::_Deque_iterator<Character, Character&, Character*>::operator--()
+ [151] __static_initialization_and_destruction_0(int, int) [110] Character::Character() [78] std::pair<int, int>::pair<int&, int&, void>(int&, int&)
+ [152] __static_initialization_and_destruction_0(int, int) [22] Character::~Character() [74] std::pair<int, int>::pair<int&, int, void>(int&, int&&)
+ [153] __static_initialization_and_destruction_0(int, int) [73] Character::operator=(Character const&) [39] std::pair<int, int>::pair<int, int&, void>(int&&, int&)
+ [108] Map::FormatTest()      [67] Interface::afficheMap(Map, Character) [41] std::pair<int, int>::pair<int, int, void>(int&&, int&&)
+  [64] Map::verif_Soin()      [61] Interface::afficheMob(Character) [26] std::pair<int, int>::operator=(std::pair<int, int>&&)
+  [14] Map::getPosition()    [111] Interface::afficheWinC(Map) [45] std::pair<int, int>::operator=(std::pair<int, int> const&)
+  [56] Map::mobRestants()    [160] Interface::afficheLoose() [130] std::deque<Character, std::allocator<Character> >::_M_destroy_data(std::_Deque_iterator<Character, Character&, Character*>, std::_Deque_iterator<Character, Character&, Character*>, std::allocator<Character> const&)
+  [57] Map::verif_monstre()   [58] Interface::affichePerso(Character) [131] std::deque<Character, std::allocator<Character> >::_M_destroy_data_aux(std::_Deque_iterator<Character, Character&, Character*>, std::_Deque_iterator<Character, Character&, Character*>)
+  [65] Map::getMapApparence() [59] Interface::afficheSkill(Character) [79] std::deque<Character, std::allocator<Character> >::end()
+  [66] Map::deplacer(char)    [71] Interface::afficheCombat(Character, Character) [98] std::deque<Character, std::allocator<Character> >::back()
+  [91] Map::unsetmob()        [81] Interface::afficheSelectP(Character) [132] std::deque<Character, std::allocator<Character> >::begin()
+  [13] Map::getTaille()      [161] Interface::afficheTHEGAME() [99] std::deque<Character, std::allocator<Character> >::pop_back()
+ [109] Map::Map()            [162] Interface::afficheDebutJeu() [100] std::deque<Character, std::allocator<Character> >::push_back(Character const&)
+ [154] Map::operator=(Map&&)  [93] Interface::afficheCombatDebut(Character, Character) [171] std::deque<Character, std::allocator<Character> >::deque(std::deque<Character, std::allocator<Character> >&&)
+ [155] Game::setPileMob()     [54] Interface::afficheCombatDetails(Character, Skill) [172] std::deque<Character, std::allocator<Character> >::deque()
+ [156] Game::selection_perso(int&) [112] __gnu_cxx::new_allocator<Character>::deallocate(Character*, unsigned long) [133] std::deque<Character, std::allocator<Character> >::~deque()
+  [68] Game::selectSkillJoueur(bool&) [94] void __gnu_cxx::new_allocator<Character>::destroy<Character>(Character*) [101] std::stack<Character, std::deque<Character, std::allocator<Character> > >::pop()
+  [69] Game::selectSkillMonstre(Character) [113] __gnu_cxx::new_allocator<Character>::allocate(unsigned long, void const*) [102] std::stack<Character, std::deque<Character, std::allocator<Character> > >::top()
+  [70] Game::tour(Skill, Character&, Skill, bool&) [95] _ZN9__gnu_cxx13new_allocatorI9CharacterE9constructIS1_IRKS1_EEEvPT_DpOT0_ [103] std::stack<Character, std::deque<Character, std::allocator<Character> > >::push(Character const&)
+  [92] Game::combat(Character, bool&) [163] __gnu_cxx::new_allocator<Character>::new_allocator() [173] std::stack<Character, std::deque<Character, std::allocator<Character> > >::stack(std::deque<Character, std::allocator<Character> >&&)
+ [157] Game::partie()        [164] __gnu_cxx::new_allocator<Character>::new_allocator(__gnu_cxx::new_allocator<Character> const&) [174] std::stack<Character, std::deque<Character, std::allocator<Character> > >::~stack()
+ [158] Game::Game()          [114] __gnu_cxx::new_allocator<Character>::~new_allocator() [62] std::__deque_buf_size(unsigned long)
+ [159] Game::~Game()         [115] __gnu_cxx::new_allocator<Character*>::deallocate(Character**, unsigned long) [134] unsigned long const& std::max<unsigned long>(unsigned long const&, unsigned long const&)
+  [37] Gauge::edit(int)      [116] __gnu_cxx::new_allocator<Character*>::allocate(unsigned long, void const*) [104] std::remove_reference<Character**&>::type&& std::move<Character**&>(Character**&)
+   [9] Gauge::getMax()        [82] __gnu_cxx::new_allocator<Character*>::new_allocator() [135] std::remove_reference<std::allocator<Character>&>::type&& std::move<std::allocator<Character>&>(std::allocator<Character>&)
+  [29] Gauge::getVal()        [83] __gnu_cxx::new_allocator<Character*>::~new_allocator() [75] std::remove_reference<std::_Deque_iterator<Character, Character&, Character*>&>::type&& std::move<std::_Deque_iterator<Character, Character&, Character*>&>(std::_Deque_iterator<Character, Character&, Character*>&)
+   [8] Gauge::getValMax()     [18] int __gnu_cxx::__stoa<long, int, char, int>(long (*)(char const*, char**, int), char const*, char const*, unsigned long*, int) [136] std::remove_reference<std::deque<Character, std::allocator<Character> >&>::type&& std::move<std::deque<Character, std::allocator<Character> >&>(std::deque<Character, std::allocator<Character> >&)
+  [16] Gauge::Gauge(Gauge const&) [117] __gnu_cxx::new_allocator<Character>::max_size() const [105] std::remove_reference<unsigned long&>::type&& std::move<unsigned long&>(unsigned long&)
+  [47] Gauge::Gauge()        [118] __gnu_cxx::new_allocator<Character*>::max_size() const [19] std::stoi(std::string const&, unsigned long*, int)
+  [55] Gauge::Gauge(std::string, std::string) [84] std::_Deque_base<Character, std::allocator<Character> >::_M_get_Tp_allocator() const [175] void std::swap<Character**>(Character**&, Character**&)
+  [15] Gauge::~Gauge()        [85] std::_Deque_base<Character, std::allocator<Character> >::_M_get_map_allocator() const [137] void std::swap<std::_Deque_iterator<Character, Character&, Character*> >(std::_Deque_iterator<Character, Character&, Character*>&, std::_Deque_iterator<Character, Character&, Character*>&)
+  [43] Gauge::operator=(Gauge const&) [96] std::_Deque_iterator<Character, Character&, Character*>::operator*() const [176] void std::swap<unsigned long>(unsigned long&, unsigned long&)
+  [32] Skill::getManaCost()  [165] std::allocator<Character>::allocator() [106] Character const& std::forward<Character const&>(std::remove_reference<Character const&>::type&)
+  [48] Skill::getPriority()  [166] std::allocator<Character>::allocator(std::allocator<Character> const&) [23] int& std::forward<int&>(std::remove_reference<int&>::type&)
+  [34] Skill::getName()      [119] std::allocator<Character>::~allocator() [12] int&& std::forward<int>(std::remove_reference<int>::type&)
+  [49] Skill::available(int)  [86] std::allocator<Character*>::allocator<Character>(std::allocator<Character> const&) [138] void std::_Destroy<Character*>(Character*, Character*)
+  [27] Skill::getDamage()     [87] std::allocator<Character*>::~allocator() [139] void std::_Destroy<Character*, Character>(Character*, Character*, std::allocator<Character>&)
+  [52] Skill::getTarget()    [167] std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl(std::allocator<Character>&&) [80] std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int&, int&>(int&, int&)
+  [30] Skill::Skill()        [168] std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::_Deque_impl() [76] std::pair<std::__decay_and_strip<int&>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int&, int>(int&, int&&)
+  [25] Skill::Skill(Skill const&) [120] std::_Deque_base<Character, std::allocator<Character> >::_Deque_impl::~_Deque_impl() [40] std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int&>::__type> std::make_pair<int, int&>(int&&, int&)
+  [46] Skill::Skill(std::string) [121] std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_map(unsigned long) [42] std::pair<std::__decay_and_strip<int>::__type, std::__decay_and_strip<int>::__type> std::make_pair<int, int>(int&&, int&&)
+  [17] Skill::~Skill()       [122] std::_Deque_base<Character, std::allocator<Character> >::_M_create_nodes(Character**, Character**) [38] bool std::operator==<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
+  [31] Skill::operator=(Skill const&) [123] std::_Deque_base<Character, std::allocator<Character> >::_M_allocate_node() [63] bool std::operator!=<char, std::char_traits<char>, std::allocator<char> >(std::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, char const*)
+  [11] Character::getMaxLife() [124] std::_Deque_base<Character, std::allocator<Character> >::_M_destroy_nodes(Character**, Character**) [107] operator new(unsigned long, void*)
+  [21] Character::getMaxMana() [125] std::_Deque_base<Character, std::allocator<Character> >::_M_deallocate_map(Character**, unsigned long)
+  [28] Character::getNbSkills() [126] std::_Deque_base<Character, std::allocator<Character> >::_M_initialize_map(unsigned long)

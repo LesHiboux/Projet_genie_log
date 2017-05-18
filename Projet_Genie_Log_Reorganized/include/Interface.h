@@ -20,7 +20,7 @@ class Interface
         void afficheWinF();                                 
         void afficheWinC(Map carte);                        
         void afficheLoose();                                
-        void afficheSelectP(Character);                     
+        void afficheSelectP(Character,int,int);                     
 };
 
 #endif // INTERFACE_H

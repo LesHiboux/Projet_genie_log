@@ -23,6 +23,11 @@ Game::Game()
 	}
 }
 
+Game::Game(Character joueur)
+{
+	this->joueur=joueur;
+}
+
 int Game::getNbRestant()
 {
 	return nbRestant;
@@ -48,18 +53,9 @@ void Game::setPileMob()
 		string characterString;
 		for (int i=0; i<nbRestant; i++)
 		{
-			/*try 
-			{
-				mobFile.eof();
-			}
-			catch (const out_of_range& err)
-			{
-				throw string("erreur pas assez de monstres");
-			}*/
 			if (!mobFile.eof())
 			{
 				getline(mobFile, characterString);
-				//cerr << characterString << endl;
 				try
 				{
 					mobTmp=Character(characterString);
@@ -68,10 +64,6 @@ void Game::setPileMob()
 				{
 					throw err;
 				}
-				/*catch (...)
-				{
-					throw string("erreur de configuration du fichier monstres");
-				}*/
 				pileMob.push(mobTmp);
 			}
 			else throw string("erreur pas assé de monstres");
@@ -81,7 +73,6 @@ void Game::setPileMob()
 	else
 	{
 		throw string("Lecture du fichier monstres impossible");
-		//cerr << "Lecture du fichier monstres impossible" << endl;
 	}
 }
 
@@ -100,7 +91,8 @@ void Game::setPileMob()
 		bool finPartie=false;
 		try
 		{
-			if(!selection_perso()) return;
+			int nbPersos=0;
+			if(!selection_perso(nbPersos)) return;
 		}
 		catch (const string & err)
 		{
@@ -162,7 +154,6 @@ void Game::setPileMob()
 			{
 					//Affiche perdu...
 				vue.afficheLoose();
-				//cerr<<"you died..."<<endl;
 				return;
 				//Afficher you died
 			}
@@ -171,12 +162,25 @@ void Game::setPileMob()
 		//Afficher victoire totale!!!
 	}
 
-bool Game::selection_perso() {
+bool Game::selection_perso(int &nbPersos) {
 	ifstream liste_persos("./config/liste_persos.db");
 	if(liste_persos){
 		string perso;
 		string choix;
 		getline(liste_persos, perso);
+
+		if (nbPersos==0)
+		{
+			while(!liste_persos.eof())
+			{
+				nbPersos++;
+				getline(liste_persos, perso);
+			}
+			return selection_perso(nbPersos);
+		}
+
+		int i=1;
+
 		while (!liste_persos.eof()){
 			try
 			{
@@ -186,14 +190,8 @@ bool Game::selection_perso() {
 			{
 				throw err;
 			}
-			/*catch (...)
-			{
-				throw string("erreur de configuration du fichier liste_persos");
-			}*/
 				//affichage_selection_perso;
-			vue.afficheSelectP(joueur);
-			//cerr << joueur.getName() << endl;
-			//cerr << "o: joueur | n: suivant" << endl;
+			vue.afficheSelectP(joueur, nbPersos, i);
 			cin >> choix;
 			if (choix=="quitter") {
 				cout<<"Merci d'avoir joué!"<<endl;
@@ -211,11 +209,11 @@ bool Game::selection_perso() {
  				if (choix=="o" || choix=="O") return true;
 				getline(liste_persos, perso);
 			}
+			i++;
 		}
 		liste_persos.close();
-		return selection_perso();
+		return selection_perso(nbPersos);
 	}
-	//else cerr<<"Impossible d'ouvrir le fichier"<<endl;
 	throw  string("Impossible d'ouvrir le fichier liste_persos");
 	return false;
 }
@@ -239,12 +237,9 @@ bool Game::combat(Character monstre, bool &quitter)
 		Skill sortJoueur, sortMonstre;
 		sortJoueur=selectSkillJoueur(quitter);
 		if (quitter==true) return victoire;
-		//cerr<<sortJoueur.getName()<<", "<<sortJoueur.getDamage()<<", "<<joueur.getLife().first<<endl;
 		sortMonstre=selectSkillMonstre(monstre);
-		//cerr<<sortMonstre.getName()<<", "<<sortMonstre.getDamage()<<", "<<monstre.getLife().first<<endl;
 		finCombat=tour(sortJoueur, monstre, sortMonstre, victoire);
 	}
-	//cerr<<victoire<<endl;
 	return victoire;
 }
 
@@ -252,7 +247,6 @@ Skill Game::selectSkillJoueur(bool &quitter)
 {
 	bool done=false; //vérifie si la compétence a bien été choisie
 	Skill sort;
-	//cerr << "sélectionnez une compétence" << endl;
 	while (done!=true)
 	{
 		string select;	//faire des sélections
@@ -304,12 +298,10 @@ bool Game::tour(Skill sortJoueur, Character &monstre, Skill sortMonstre, bool &v
 	int prioriteJoueur;
 	int manaCostJoueur=sortJoueur.getManaCost();
 	int damageJoueur=sortJoueur.getDamage();
-	//cerr<<"mana cost:"<<manaCostJoueur<<", damage joueur:"<<damageJoueur<<endl;
 
 	int manaCostMonstre=sortMonstre.getManaCost();
 	int damageMonstre=sortMonstre.getDamage();
 	int prioriteMonstre;
-	//cerr<<"mana cost monstre:"<<manaCostMonstre<<", damage mob:"<<damageJoueur<<endl;
 
 	prioriteJoueur=joueur.getSpeed() + sortJoueur.getPriority();
 	prioriteMonstre=monstre.getSpeed() + sortMonstre.getPriority();
@@ -332,20 +324,16 @@ bool Game::tour(Skill sortJoueur, Character &monstre, Skill sortMonstre, bool &v
 
 			if (monstre.isAlive()==false && joueur.isAlive()==false)
 			{
-				//cerr << "la1" << endl;
 				victoire=false;
 				return true;
 			}
 			else if (monstre.isAlive()==false)
 			{
-				//cerr << "la2" << endl;
-				//cerr<<"monstre vie:"<<monstre.getLife().first<<endl;
 				victoire=true;
 				return  true;
 			}
 			else if (joueur.isAlive()==false)
 			{
-				//cerr << "la3" << endl;
 				victoire=false;
 				return  true;
 			}
